@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JBModule.Data.Repo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JBModule.Data.Repo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfSpecialLeaveOfYear">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialLeaveOfYear" nillable="true" type="tns:SpecialLeaveOfYear" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialLeaveOfYear" nillable="true" type="tns:ArrayOfSpecialLeaveOfYear" />
+  <xs:complexType name="SpecialLeaveOfYear">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ABS_HOURS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullHours1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FullHours2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FullHours3" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FullHours4" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FullHours5" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FullHours6" type="xs:decimal" />
+      <xs:element minOccurs="0" name="GET_HOURS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HalfHours1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HalfHours2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="INDT" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LEAVE_HOURS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NAME_C" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOL_HOURS" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpecialLeaveOfYear" nillable="true" type="tns:SpecialLeaveOfYear" />
+</xs:schema>

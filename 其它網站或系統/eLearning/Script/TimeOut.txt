@@ -1,0 +1,43 @@
+var running = false;
+var endTime = null;
+var timerID = null;
+
+function startTimer()
+{
+  running = true;
+  var now = new Date();
+  now = now.getTime();
+  endTime = now + (<Minute>);	// 倒數十分鐘
+  <FormID>.<OutTimeID>.value = "";
+  showCountDown();
+}
+
+function showCountDown()
+{
+  var now = new Date();
+  now = now.getTime();
+  if (endTime - now <= 0)		// 時間到
+  {
+    stopTimer();   
+	//document.<FormID>.submit();
+  }
+  else
+  {
+    var delta = new Date(endTime - now);
+    var msg = delta.getMinutes() + ((delta.getSeconds() < 10) ? ":0" : ":") + delta.getSeconds();
+	<FormID>.<ShowTimeID>.value = msg;
+	//status = " 剩餘時間 ： " + msg;
+    if (running)    
+      timerID = setTimeout("showCountDown()", 1000);    
+  }
+}
+
+function stopTimer()
+{
+  <FormID>.<OutTimeID>.value = "false";
+  clearTimeout(timerID);
+  running = false;
+  document.<FormID>.<ShowTimeID>.value = "0:00";
+}
+
+//startTimer();

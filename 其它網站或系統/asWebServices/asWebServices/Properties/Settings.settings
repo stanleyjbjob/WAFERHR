@@ -1,0 +1,32 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="asWebServices.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="asWebServices_AbsWS_AbsWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ezFlow_WAFER/Forms/FlowForms/ws/AbsWS.asmx</Value>
+    </Setting>
+    <Setting Name="asWebServices_AbscWS_AbscWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ezFlow_WAFER/Forms/FlowForms/ws/AbscWS.asmx</Value>
+    </Setting>
+    <Setting Name="asWebServices_CardWS_CardWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ezFlow_WAFER/Forms/FlowForms/ws/CardWS.asmx</Value>
+    </Setting>
+    <Setting Name="asWebServices_OtWS_OtWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ezFlow_WAFER/Forms/FlowForms/ws/OtWS.asmx</Value>
+    </Setting>
+    <Setting Name="asWebServices_RepairWS_RepairWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ezFlow_WAFER/Forms/FlowForms/ws/RepairWS.asmx</Value>
+    </Setting>
+    <Setting Name="flow" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=JOUMINGT\SQL2005;Initial Catalog=ezFlow_WAFER;Persist Security Info=True;User ID=sa;Password=jb8421&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=JOUMINGT\SQL2005;Initial Catalog=ezFlow_WAFER;Persist Security Info=True;User ID=sa;Password=jb8421</Value>
+    </Setting>
+    <Setting Name="asWebServices_DynamicSrv_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ezFlow_WAFER/ezEngine/DynamicSrv/Service.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

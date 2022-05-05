@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="EFASTHR" Class="dcHRDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=jb-ming\sql2000;Initial Catalog=EFASTHR;Persist Security Info=True;User ID=jb" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="JBHR.Dll.Properties.Settings.JBHRConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.FORMCD" Member="FORMCD">
+    <Type Name="FORMCD">
+      <Column Name="FORMCD" Member="sCode" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="FRM_NAME" Member="sName" Type="System.String" DbType="Char(12) NOT NULL" CanBeNull="false" />
+      <Column Name="KEY_DATE" Member="dKeyDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="KEY_MAN" Member="sKeyName" Type="System.String" DbType="Char(8) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

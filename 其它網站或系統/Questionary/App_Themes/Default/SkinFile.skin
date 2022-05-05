@@ -1,0 +1,39 @@
+﻿<%--
+預設面板範本。下列面板僅提供做為範例的用途。
+
+1. 具名控制面板。SkinId 應為唯一定義，因為在相同主題中，一個控制項型別不能具有重複的 SkinId。
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. 預設面板。SkinId 未定義。在相同主題中，每個控制項型別只能有一個預設控制面板。
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:Menu runat="server" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False" DynamicEnableDefaultPopOutImage="False" MaximumDynamicDisplayLevels="0" StaticDisplayLevels="2">			
+	<DynamicMenuItemStyle CssClass="menuItem" ForeColor="#0000C0" />
+	<StaticMenuItemStyle CssClass="menuItem" ForeColor="#0000C0" />
+	<StaticSelectedStyle CssClass="menuSelectedItem" ForeColor="#0000C0" />
+	<DynamicHoverStyle CssClass="menuItemHover" ForeColor="#0000C0" />
+	<StaticHoverStyle CssClass="menuItemHover" ForeColor="#0000C0" />
+</asp:Menu>
+
+<asp:GridView runat="server" CellPadding="3" BackColor="#C0C0FF" CellSpacing="1" GridLines="None" Font-Size="Smaller">
+	<RowStyle BackColor="WhiteSmoke" ForeColor="Black" Font-Bold="False" />
+	<HeaderStyle BackColor="SteelBlue" Font-Bold="True" ForeColor="White" />
+	<SelectedRowStyle BackColor="#FFFFC0" Font-Bold="True" ForeColor="Navy" />
+	<PagerStyle BackColor="#C0C0FF" ForeColor="#0000C0" HorizontalAlign="Center" Font-Bold="False" />
+	<AlternatingRowStyle BackColor="White" />
+	<EditRowStyle BackColor="#FFFFC0" />	
+	<EmptyDataRowStyle BackColor="WhiteSmoke" HorizontalAlign="Center" />
+</asp:GridView>
+
+<asp:TreeView runat="server" Font-Bold="False" ShowLines="True" Width="99%" Height="99%" ExpandDepth="2" NodeWrap="True">
+	<NodeStyle Font-Size="Smaller" />
+</asp:TreeView>
+
+<asp:DataList runat="server" Font-Size="Smaller" ForeColor="Navy" Width="100%">
+</asp:DataList>
+
+

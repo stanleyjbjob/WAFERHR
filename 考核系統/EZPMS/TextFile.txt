@@ -1,0 +1,9 @@
+<!--
+                                            <asp:MenuItem NavigateUrl="~/EMP/EFF003.aspx" Text="平日績效記要"  ></asp:MenuItem>
+                                             <asp:MenuItem NavigateUrl="~/EMP/EFFS007.aspx" Text="非直線人員考核"></asp:MenuItem>
+                                                <asp:MenuItem Text="績效考核設定事項">
+                                                    
+                                                        <asp:MenuItem NavigateUrl="~/EMP/EFF006.aspx" Text="工作目標與行為態度比重查詢"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/EMP/EFF005.aspx" Text="評核者查詢"></asp:MenuItem>
+                                                    </asp:MenuItem>
+                                            -->

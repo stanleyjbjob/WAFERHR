@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 9.625" name="dcFlow">
+  <DataContextMoniker Name="/dcFlowDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0e8a963d-b8a1-48b5-9987-ccdf9d1aa6f1" absoluteBounds="0.75, 0.75, 2, 1.7220992024739581">
+      <DataClassMoniker Name="/dcFlowDataContext/Dept" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9620ff9-d88d-41ef-91f5-ee5dfb83b8b9" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="49b97caf-ed99-4406-8c14-811ee7370614" absoluteBounds="3.75, 0.75, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/dcFlowDataContext/DeptLevel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32277550-7b5d-4f01-a789-000f7858dc74" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b913929e-d83e-48de-a014-da3649afd025" absoluteBounds="0.75, 3.75, 2, 2.4612756347656246">
+      <DataClassMoniker Name="/dcFlowDataContext/Emp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3755ebd-0843-47ea-a828-4b94e61a2c97" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd1a5b61-2c5f-41e2-bf7f-9a12d92403a4" absoluteBounds="3.75, 3.75, 2, 2.4612756347656246">
+      <DataClassMoniker Name="/dcFlowDataContext/EmpBak" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab9f96e5-96b0-484c-b72f-e29628d728c2" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df79ca05-5682-4756-bb37-1d193f6b1455" absoluteBounds="6.75, 0.75, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/dcFlowDataContext/Pos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9048d22-f0d4-46ab-9b18-f2cba2aebf38" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27047db2-f38c-46a0-bad7-f0c8ae54d0f0" absoluteBounds="6.75, 3.75, 2, 1.3525109863281246">
+      <DataClassMoniker Name="/dcFlowDataContext/PosLevel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7cbfa327-a854-48d4-a672-bb16fc5f9ff7" absoluteBounds="6.765, 4.21, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9304dfdd-ce46-4849-b134-c8fb17f7a283" absoluteBounds="6.75, 6.75, 2, 2.6460697428385416">
+      <DataClassMoniker Name="/dcFlowDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e9b7db0-e759-45c3-b21a-cd6aa8a7633d" absoluteBounds="6.765, 7.21, 1.9700000000000002, 2.0860697428385415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a745c22-0fe3-4840-9905-8d2c493565b7" absoluteBounds="9.75, 0.75, 2, 2.8308638509114581">
+      <DataClassMoniker Name="/dcFlowDataContext/OrgImport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09b3a883-4dae-44fa-a587-c087e1ce27f9" absoluteBounds="9.765, 1.21, 1.9700000000000002, 2.270863850911458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f4810b59-5c85-4f19-ab1f-1a24b9886250" absoluteBounds="0.875, 7.125, 2, 2.2764815266927085">
+      <DataClassMoniker Name="/dcFlowDataContext/SysVar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91219038-a742-48ea-ba88-04e99d143498" absoluteBounds="0.88999999999999968, 7.5850000000000009, 1.9700000000000002, 1.7164815266927085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

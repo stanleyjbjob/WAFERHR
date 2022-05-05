@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JbhrService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://61.222.40.10/ezPortal/Service/JbhrService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://61.222.40.10/ezPortal/Service/JbhrService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://61.222.40.10/ezPortal/Service/JbhrService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://61.222.40.10/ezPortal/Service/JbhrService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJbhrService_GetCompanyInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyInfo" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetCompanyInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetJobLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobLevel" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetJobLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetTitleData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleData" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetTitleData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetHRCostCenter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHRCostCenter" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetHRCostCenter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHRCostCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetUserDept_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDept" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetUserDept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDeptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetDepartmentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentData" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetDepartmentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetHRUSER_DEPT_BAS_FLOWA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHRUSER_DEPT_BAS_FLOWA" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetHRUSER_DEPT_BAS_FLOWA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHRUSER_DEPT_BAS_FLOWAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetCardWeb_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCardWeb" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetCardWeb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCardWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetHRUSER_DEPT_FLOWA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHRUSER_DEPT_FLOWA" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetHRUSER_DEPT_FLOWA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHRUSER_DEPT_FLOWAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserData" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetUserDataById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDataById" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetUserDataById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDataByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetHiredUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHiredUserData" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetHiredUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHiredUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetNotHiredUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotHiredUserData" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetNotHiredUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotHiredUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetRotetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRotetData" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetRotetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRotetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_IsInRoleHR_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsInRoleHR" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_IsInRoleHR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsInRoleHRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetEmpPhoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpPhoto" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetEmpPhoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetHumanReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHumanReport" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_GetHumanReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHumanReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_ImportResumeStream_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportResumeStream" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_ImportResumeStream_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportResumeStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_ImportResume_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportResume" />
+  </wsdl:message>
+  <wsdl:message name="IJbhrService_ImportResume_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportResumeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IJbhrService">
+    <wsdl:operation name="GetCompanyInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetCompanyInfo" message="tns:IJbhrService_GetCompanyInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetCompanyInfoResponse" message="tns:IJbhrService_GetCompanyInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobLevel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetJobLevel" message="tns:IJbhrService_GetJobLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetJobLevelResponse" message="tns:IJbhrService_GetJobLevel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetTitleData" message="tns:IJbhrService_GetTitleData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetTitleDataResponse" message="tns:IJbhrService_GetTitleData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHRCostCenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetHRCostCenter" message="tns:IJbhrService_GetHRCostCenter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetHRCostCenterResponse" message="tns:IJbhrService_GetHRCostCenter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetUserDept" message="tns:IJbhrService_GetUserDept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetUserDeptResponse" message="tns:IJbhrService_GetUserDept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetDepartmentData" message="tns:IJbhrService_GetDepartmentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetDepartmentDataResponse" message="tns:IJbhrService_GetDepartmentData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHRUSER_DEPT_BAS_FLOWA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetHRUSER_DEPT_BAS_FLOWA" message="tns:IJbhrService_GetHRUSER_DEPT_BAS_FLOWA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetHRUSER_DEPT_BAS_FLOWAResponse" message="tns:IJbhrService_GetHRUSER_DEPT_BAS_FLOWA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardWeb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetCardWeb" message="tns:IJbhrService_GetCardWeb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetCardWebResponse" message="tns:IJbhrService_GetCardWeb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHRUSER_DEPT_FLOWA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetHRUSER_DEPT_FLOWA" message="tns:IJbhrService_GetHRUSER_DEPT_FLOWA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetHRUSER_DEPT_FLOWAResponse" message="tns:IJbhrService_GetHRUSER_DEPT_FLOWA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetUserData" message="tns:IJbhrService_GetUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetUserDataResponse" message="tns:IJbhrService_GetUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetUserDataById" message="tns:IJbhrService_GetUserDataById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetUserDataByIdResponse" message="tns:IJbhrService_GetUserDataById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHiredUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetHiredUserData" message="tns:IJbhrService_GetHiredUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetHiredUserDataResponse" message="tns:IJbhrService_GetHiredUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotHiredUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetNotHiredUserData" message="tns:IJbhrService_GetNotHiredUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetNotHiredUserDataResponse" message="tns:IJbhrService_GetNotHiredUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRotetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetRotetData" message="tns:IJbhrService_GetRotetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetRotetDataResponse" message="tns:IJbhrService_GetRotetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsInRoleHR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/IsInRoleHR" message="tns:IJbhrService_IsInRoleHR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/IsInRoleHRResponse" message="tns:IJbhrService_IsInRoleHR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpPhoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetEmpPhoto" message="tns:IJbhrService_GetEmpPhoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetEmpPhotoResponse" message="tns:IJbhrService_GetEmpPhoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHumanReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/GetHumanReport" message="tns:IJbhrService_GetHumanReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/GetHumanReportResponse" message="tns:IJbhrService_GetHumanReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportResumeStream">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/ImportResumeStream" message="tns:IJbhrService_ImportResumeStream_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/ImportResumeStreamResponse" message="tns:IJbhrService_ImportResumeStream_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportResume">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJbhrService/ImportResume" message="tns:IJbhrService_ImportResume_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJbhrService/ImportResumeResponse" message="tns:IJbhrService_ImportResume_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IJbhrService" type="tns:IJbhrService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCompanyInfo">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetCompanyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobLevel">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetJobLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleData">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetTitleData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHRCostCenter">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetHRCostCenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDept">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetUserDept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartmentData">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetDepartmentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHRUSER_DEPT_BAS_FLOWA">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetHRUSER_DEPT_BAS_FLOWA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardWeb">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetCardWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHRUSER_DEPT_FLOWA">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetHRUSER_DEPT_FLOWA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataById">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetUserDataById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHiredUserData">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetHiredUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotHiredUserData">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetNotHiredUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRotetData">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetRotetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInRoleHR">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/IsInRoleHR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpPhoto">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetEmpPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHumanReport">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/GetHumanReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportResumeStream">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/ImportResumeStream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportResume">
+      <soap:operation soapAction="http://tempuri.org/IJbhrService/ImportResume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JbhrService">
+    <wsdl:port name="BasicHttpBinding_IJbhrService" binding="tns:BasicHttpBinding_IJbhrService">
+      <soap:address location="http://61.222.40.10/ezPortal/Service/JbhrService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

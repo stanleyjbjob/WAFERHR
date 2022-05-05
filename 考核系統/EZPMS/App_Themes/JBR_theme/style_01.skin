@@ -1,0 +1,64 @@
+﻿<%--
+預設面板範本。下列面板僅提供做為範例的用途。
+
+1. 具名控制面板。SkinId 應為唯一定義，因為在相同主題中，一個控制項型別不能具有重複的 SkinId。
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. 預設面板。SkinId 未定義。在相同主題中，每個控制項型別只能有一個預設控制面板。
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:Image SkinID="LoginIcon" ImageUrl="images/style_01_icon_01.gif"  runat="server" />
+<asp:Image SkinID="ErrorIcon" ImageUrl="images/style_01_icon_02.gif"  runat="server" />
+<asp:Image SkinID="title" ImageUrl="images/title.gif"  runat="server" />
+<asp:Button runat="server" CssClass="Button_01" />
+<asp:TextBox runat="server" CssClass="Text_01" />
+<asp:Label runat="server" CssClass="Label_01" />
+
+<asp:Menu runat="server" Orientation="Vertical" DynamicVerticalOffset="0" DynamicHorizontalOffset="0" StaticSubMenuIndent="0px" DynamicEnableDefaultPopOutImage="false" StaticEnableDefaultPopOutImage="False" CssClass="SideMenu">
+                            <StaticMenuItemStyle Width="150px" CssClass="SideMenuSta" />
+                            <StaticSelectedStyle Width="150px" CssClass="SideMenuStaVis" />
+                            <StaticHoverStyle Width="150px" CssClass="SideMenuStaHor" />
+                            <DynamicMenuItemStyle Width="250px" CssClass="SideMenuDyn" />
+                            <DynamicSelectedStyle Width="250px" CssClass="SideMenuDynVis" />
+                            <DynamicHoverStyle Width="250px" CssClass="SideMenuDynHor" />
+                            </asp:Menu>
+
+<asp:GridView runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" ForeColor="#333333" EmptyDataText="" >
+        <FooterStyle BackColor="#CCCCCC" />
+        <RowStyle BackColor="#EEEEEE"　Font-Size="X-Small" />
+        <SelectedRowStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#EEEEEE" ForeColor="#333333" HorizontalAlign="Right" />
+        <HeaderStyle　Font-Size="X-Small"　 BackColor="#666666" Font-Bold="True" ForeColor="White" />
+        <AlternatingRowStyle BackColor="White" />
+      
+                
+    </asp:GridView>
+ 
+    <asp:GridView runat="server" SkinId="gridviewprint"  BackColor="White" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" ForeColor="#333333" EmptyDataText="" >
+        <FooterStyle BackColor="#CCCCCC" />
+        <RowStyle BackColor="#EEEEEE"　Font-Size="X-Small" BorderColor="Black" BorderStyle="Solid" BorderWidth="3px"  />
+        <SelectedRowStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#EEEEEE" ForeColor="#000000" HorizontalAlign="Right" />
+        <HeaderStyle　Font-Size="X-Small"　BorderColor="Black" BackColor="#EEEEEE" Font-Bold="True" ForeColor="#FFFFFF" />
+        <AlternatingRowStyle BackColor="White" />
+      
+                
+    </asp:GridView>
+ 
+    
+
+  <asp:FormView  runat="server" CellPadding="4"
+         ForeColor="#333333" Width="100%">
+        <FooterStyle BackColor="#FFFFFF" Font-Bold="True" ForeColor="White" />
+        <EditRowStyle BackColor="#FFFFFF" />
+        <RowStyle BackColor="#FFFFFF" />
+        <PagerStyle BackColor="#FFFFFF" ForeColor="White" HorizontalAlign="Center" />
+
+        <HeaderStyle BackColor="#FFFFFF" Font-Bold="True" ForeColor="White" />
+     
+        <InsertRowStyle BackColor="#FFFFFF" />
+    </asp:FormView>

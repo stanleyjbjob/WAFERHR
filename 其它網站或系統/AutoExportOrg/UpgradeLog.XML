@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AutoExportOrg">
+</Property><Property Name="方案檔" Value="D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\AutoExportOrg.sln">
+</Property><Property Name="使用者選項檔" Value="D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\AutoExportOrg.suo">
+</Property><Property Name="Date" Value="2009年9月22日">
+</Property><Property Name="Time" Value="下午 14:14">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="AutoExportOrg.sln" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\AutoExportOrg.sln">
+</Event><Event ErrorLevel="0" Project="" Source="AutoExportOrg.suo" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\AutoExportOrg.suo">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="AutoExportOrg.csproj" Description="專案檔已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\AutoExportOrg.csproj">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="Auto.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\Auto.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="Auto.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\Auto.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="FlowDS.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\FlowDS.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="ProcessDS.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\ProcessDS.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="Program.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="Properties\AssemblyInfo.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="Properties\Resources.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="Properties\Settings.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="app.config" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\app.config">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="FlowDS.xsc" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\FlowDS.xsc">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="FlowDS.xsd" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\FlowDS.xsd">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="FlowDS.xss" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\FlowDS.xss">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="ProcessDS.xsc" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\ProcessDS.xsc">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="ProcessDS.xsd" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\ProcessDS.xsd">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="ProcessDS.xss" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\ProcessDS.xss">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="Properties\Settings.settings" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="Auto.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\Auto.resx">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="Properties\Resources.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\AutoExportOrg\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="AutoExportOrg.csproj" Description="專案轉換成功">
+</Event><Event ErrorLevel="3" Project="AutoExportOrg" Source="AutoExportOrg.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="AutoExportOrg.sln" Description="方案轉換成功">
+</Event><Event ErrorLevel="3" Project="" Source="AutoExportOrg.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="AutoExportOrg.csproj" Description="掃描完成: 專案檔不需要升級。">
+</Event></UpgradeLog>

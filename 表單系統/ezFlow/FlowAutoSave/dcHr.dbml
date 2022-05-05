@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="waferhr" Class="dcHrDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.24;Initial Catalog=waferhr;Persist Security Info=True;User ID=jb" SettingsObjectName="FlowAutoSave.Properties.Settings" SettingsPropertyName="waferhrConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ABS" Member="ABS">
+    <Type Name="ABS">
+      <Column Name="NOBR" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="BDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BTIME" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="ETIME" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="H_CODE" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="TOL_HOURS" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="KEY_MAN" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="KEY_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="YYMM" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="NOTEDIT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NOTE" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SYSCREATE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TOL_DAY" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="A_NAME" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="SERNO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RSYSCREATE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

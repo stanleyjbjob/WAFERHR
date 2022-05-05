@@ -1,0 +1,21 @@
+﻿html{SCROLLBAR-FACE-COLOR: #CCCCCC;
+      SCROLLBAR-ARROW-COLOR: #666666;
+      SCROLLBAR-TRACK-COLOR: #EEEEEE;
+      SCROLLBAR-SHADOW-COLOR: #CCCCCC;
+      SCROLLBAR-3DLIGHT-COLOR: #CCCCCC;}
+body { color : #000000; background : #ffffff; font-family : "Times New Roman", Times, serif; font-size : 12pt; } 
+
+
+a:link {text-decoration:none}
+a:visited {text-decoration:none}
+a:active {text-decoration:none}
+a:hover {text-decoration:none}
+
+H1, H2, H3 {background: white; color: black; padding-bottom: 1px;
+
+   border-bottom: 1px solid gray;}
+
+DIV.adbanner {display: none;}
+
+
+

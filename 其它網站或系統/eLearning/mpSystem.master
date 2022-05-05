@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mpSystem.master.cs" Inherits="mpSystem" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="keywords" content="關鍵字1,關鍵字2,關鍵字3,關鍵字4,關鍵字5,關鍵字6" />
+    <meta name="description" content="內容敘述" />
+    <meta name="author" content="KentonLiao" />
+    <meta name="robots" content="all" />
+    <title>eLearning-Manage</title>
+    <link href="css/StyleSheet.css" rel="stylesheet" type="text/css">
+    <!--  <object id="RSClientPrint" classid="CLSID:0D221D00-A6ED-477C-8A91-41F3B660A832" codebase="RSClientPrint.cab#version=2005.90.4053.0" style="display:none;"></object> -->
+    <object id="Object1" classid="CLSID:FA91DF8D-53AB-455D-AB20-F2F023E498D3" codebase="http://ap02/eLearning/RSClientPrint.cab" viewastext>
+    </object>
+
+    <asp:Literal runat="server" ID="ltModalProgress"></asp:Literal>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="True"
+        CombineScripts="True">
+    </asp:ToolkitScriptManager>
+
+    <script type="text/javascript" src="Script/jsUpdateProgress.js"></script>
+
+    <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+        <ProgressTemplate>
+            <asp:Panel ID="panelUpdateProgress" runat="server" CssClass="updateProgress" Style="left: 0px;
+                top: 0px">
+                <div style="position: relative; top: 30%; text-align: center;">
+                    <img src="Images/loading.gif" style="vertical-align: middle" alt="Processing" />
+                    資料讀取中，請稍後 ...
+                </div>
+            </asp:Panel>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+    <asp:ModalPopupExtender ID="ModalProgress" runat="server" TargetControlID="panelUpdateProgress"
+        BackgroundCssClass="modalBackground" PopupControlID="panelUpdateProgress" Enabled="True" />
+    <asp:UpdatePanel ID="uplMsg" runat="server">
+        <ContentTemplate>
+            <asp:Panel ID="panelMsg" runat="server" CssClass="updateMsg">
+                <div style="width: 100%; height: 100%; vertical-align: middle; text-align: center;">
+                    <anthem:Label ID="lblMsg" runat="server" Font-Bold="True" ForeColor="Red" Font-Size="XX-Large"
+                        BackColor="Yellow" Font-Strikeout="False" AutoUpdateAfterCallBack="True" UpdateAfterCallBack="True"></anthem:Label></div>
+            </asp:Panel>
+            <asp:AlwaysVisibleControlExtender ID="avceMsg" runat="server" TargetControlID="panelMsg"
+                HorizontalSide="Left" VerticalSide="Top" />
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    <asp:UpdatePanelAnimationExtender ID="upaeMsg" runat="server" BehaviorID="HighlightMsg"
+        TargetControlID="uplMsg">
+        <Animations>
+                <OnUpdated>
+                    <Sequence>
+                            <Parallel AnimationTarget="panelMsg" Duration="2" Fps="15">
+                                <FadeOut  />
+                            </Parallel>
+                    </Sequence>
+                </OnUpdated>
+        </Animations>
+    </asp:UpdatePanelAnimationExtender>
+    <asp:Panel ID="plFile" runat="server" CssClass="updateMsg">
+        <div style="width: 100%; height: 100%; vertical-align: middle; text-align: center;">
+            <blockquote id="UploadProgress" style="display: none">
+                <iframe id="UploadProgressFrame" scrolling="no" frameborder="0" width="300" height="25">
+                </iframe>
+            </blockquote>
+        </div>
+    </asp:Panel>
+    <asp:AlwaysVisibleControlExtender ID="avceFile" runat="server" TargetControlID="plFile"
+        HorizontalSide="Center" VerticalSide="Middle" />
+    <div id="scalePage">
+        <div id="mainPage">
+            <div id="titlePage">
+                <div id="topPage">
+                    <ul id="top">
+                        <li><a href="Files/eLearning.zip" target="_self">說明</a></li>
+                        <li class="end"><a href="Default.aspx?action=logout">登出</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="naviPage">
+                <ul id="navi">
+<%--                    <li>
+                        <asp:LinkButton ID="lbtnPersonal" runat="server" PostBackUrl="~/PersonalDefault.aspx"
+                            ToolTip="PersonalDefault.aspx">個人資訊</asp:LinkButton></li>--%>
+                    <li>
+                        <asp:LinkButton ID="lbtnLearning" runat="server" PostBackUrl="~/LearningDefault.aspx"
+                            ToolTip="LearningDefault.aspx">線上學習</asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton ID="lbtnTest" runat="server" PostBackUrl="~/TestDefault.aspx" ToolTip="TestDefault.aspx">線上測試</asp:LinkButton></li>
+                    <li class="end">
+                        <asp:LinkButton ID="lbtnManage" runat="server" PostBackUrl="~/sysRoot.aspx" ToolTip="sysRoot.aspx">系統管理</asp:LinkButton></li>
+                </ul>
+            </div>
+            <div id="menuPage">
+                <ul id="menu">
+                    <!--左邊開始-->
+                    <asp:TreeView ID="tv" runat="server" OnSelectedNodeChanged="tv_SelectedNodeChanged"
+                        ImageSet="XPFileExplorer" NodeIndent="15" BackColor="White">
+                        <ParentNodeStyle Font-Bold="False" />
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#6666AA" />
+                        <SelectedNodeStyle BackColor="#B5B5B5" Font-Underline="False" HorizontalPadding="0px"
+                            VerticalPadding="0px" />
+                        <NodeStyle Font-Names="Tahoma" Font-Size="8pt" ForeColor="Black" HorizontalPadding="2px"
+                            NodeSpacing="0px" VerticalPadding="2px" />
+                    </asp:TreeView>
+                    <!--左邊結束-->
+                </ul>
+            </div>
+            <div id="detailPage">
+                <!--中間開始-->
+                <asp:ContentPlaceHolder ID="cph" runat="server">
+                </asp:ContentPlaceHolder>
+                <!--中間結束-->
+            </div>
+            <div id="sidePage">
+                <!--右邊開始-->
+                親愛的
+                <asp:Label ID="lblUserName" runat="server" Text="使用者"></asp:Label>
+                您好！<table class="TableFullBorder">
+                    <tr>
+                        <th nowrap="nowrap">
+                            您上次登入IP為
+                        </th>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap">
+                            <asp:Label ID="lblIP" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th nowrap="nowrap">
+                            您上次登入時間為
+                        </th>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap">
+                            <asp:Label ID="lblDateTime" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th nowrap="nowrap">
+                            最新消息
+                        </th>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap">
+                            目前無最新消息。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap">
+                            <asp:ContentPlaceHolder ID="cphR" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+                &nbsp;
+                <!--右邊結束-->
+            </div>
+            <asp:Panel ID="plFooter" runat="server" Width="100%">
+                <div id="footerPage">
+                    <a href="http://www.jbjob.com.tw/" target="_blank">版權所有©2006 傑報資訊</a>
+                </div>
+            </asp:Panel>
+            <asp:AlwaysVisibleControlExtender ID="avceFooter" runat="server" TargetControlID="plFooter"
+                HorizontalSide="Center" VerticalSide="Bottom" />
+        </div>
+    </div>
+    </form>
+</body>
+</html>

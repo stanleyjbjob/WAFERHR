@@ -1,0 +1,22 @@
+﻿.multipleRowsColumns .rcbItem, .multipleRowsColumns .rcbHovered
+{
+	float: left;
+	margin: 0 1px;
+	min-height: 13px;
+	overflow: hidden;
+	padding: 2px 19px 2px 6px;
+	width: 30px;
+}
+
+.module1
+{
+	background-color: #dff3ff;
+	border: 1px solid #c6e1f2;
+}
+
+.loading
+{
+	background-color: #fff;
+	height: 100%;
+	width: 100%;
+}

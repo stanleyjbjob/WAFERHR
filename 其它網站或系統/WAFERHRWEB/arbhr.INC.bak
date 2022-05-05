@@ -1,0 +1,3 @@
+<%
+Const ctstr="Driver=SQL SERVER;SERVER=.;uid=sa;pwd=;database=JBHR"
+%>

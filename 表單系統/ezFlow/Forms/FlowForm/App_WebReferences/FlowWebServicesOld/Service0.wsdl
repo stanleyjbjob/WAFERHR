@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://jbjob.com.tw/Flow" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://jbjob.com.tw/Flow" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://jbjob.com.tw/Flow/Imports">
+      <xsd:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd0" namespace="http://jbjob.com.tw/Flow" />
+      <xsd:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" />
+      <xsd:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Bll.Att.Vdb" />
+      <xsd:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/JBModule.Data.Repo" />
+      <xsd:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" />
+      <xsd:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System.Data.Linq" />
+      <xsd:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/JBModule.Data.Dto" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFormTreeToList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFormTreeToList" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFormTreeToList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFormTreeToListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowProgressFlow_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowProgressFlow" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowProgressFlow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowProgressFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowProgressFlowCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowProgressFlowCount" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowProgressFlowCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowProgressFlowCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowProgressFlowAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowProgressFlowAll" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowProgressFlowAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowProgressFlowAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowProgressFlowComplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowProgressFlowComplete" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowProgressFlowComplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowProgressFlowCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetProcessApParm_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetProcessApParm" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetProcessApParm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetProcessApParmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowSearchIng_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowSearchIng" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowSearchIng_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowSearchIngResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowSearchComplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowSearchComplete" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowSearchComplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowSearchCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoles" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgent" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAgent" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowAbs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowAbs" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowAbs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowAbsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowAbs1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowAbs1" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowAbs1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowAbs1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowOt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowOt" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowOt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowOtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowOt1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowOt1" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFlowOt1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowOt1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_WorkFinish_InputMessage">
+    <wsdl:part name="parameters" element="tns:WorkFinish" />
+  </wsdl:message>
+  <wsdl:message name="IService_WorkFinish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WorkFinishResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetCancelForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCancelForm" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetCancelForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCancelFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetResetForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetResetForm" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetResetForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetResetFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetCancelFormByHr_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCancelFormByHr" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetCancelFormByHr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCancelFormByHrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetCancelProcess_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCancelProcess" />
+  </wsdl:message>
+  <wsdl:message name="IService_SetCancelProcess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCancelProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetHocde_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHocde" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetHocde_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHocdeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetYearAbsenceDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearAbsenceDetail" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetYearAbsenceDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetYearAbsenceDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetBasettsByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasettsByDate" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetBasettsByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasettsByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddBasetts_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBasetts" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddBasetts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBasettsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAbsEntitleByTakenGuid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsEntitleByTakenGuid" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAbsEntitleByTakenGuid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsEntitleByTakenGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAbsTakenByEntitleGuid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsTakenByEntitleGuid" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAbsTakenByEntitleGuid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsTakenByEntitleGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAbsTakenByByEmployeeIdList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsTakenByByEmployeeIdList" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAbsTakenByByEmployeeIdList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsTakenByByEmployeeIdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAbsEntitleByEmployeeIdList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsEntitleByEmployeeIdList" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAbsEntitleByEmployeeIdList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbsEntitleByEmployeeIdListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetData" message="tns:IService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetDataResponse" message="tns:IService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetDataUsingDataContract" message="tns:IService_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetDataUsingDataContractResponse" message="tns:IService_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFormTreeToList">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFormTreeToList" message="tns:IService_GetFormTreeToList_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFormTreeToListResponse" message="tns:IService_GetFormTreeToList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowProgressFlow">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowProgressFlow" message="tns:IService_GetFlowProgressFlow_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowProgressFlowResponse" message="tns:IService_GetFlowProgressFlow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowProgressFlowCount">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowProgressFlowCount" message="tns:IService_GetFlowProgressFlowCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowProgressFlowCountResponse" message="tns:IService_GetFlowProgressFlowCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowProgressFlowAll">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowProgressFlowAll" message="tns:IService_GetFlowProgressFlowAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowProgressFlowAllResponse" message="tns:IService_GetFlowProgressFlowAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowProgressFlowComplete">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowProgressFlowComplete" message="tns:IService_GetFlowProgressFlowComplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowProgressFlowCompleteResponse" message="tns:IService_GetFlowProgressFlowComplete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetProcessApParm">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/SetProcessApParm" message="tns:IService_SetProcessApParm_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/SetProcessApParmResponse" message="tns:IService_SetProcessApParm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowSearchIng">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowSearchIng" message="tns:IService_GetFlowSearchIng_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowSearchIngResponse" message="tns:IService_GetFlowSearchIng_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowSearchComplete">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowSearchComplete" message="tns:IService_GetFlowSearchComplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowSearchCompleteResponse" message="tns:IService_GetFlowSearchComplete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetRoles" message="tns:IService_GetRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetRolesResponse" message="tns:IService_GetRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgent">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetAgent" message="tns:IService_GetAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetAgentResponse" message="tns:IService_GetAgent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAgent">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/SetAgent" message="tns:IService_SetAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/SetAgentResponse" message="tns:IService_SetAgent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowAbs">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowAbs" message="tns:IService_GetFlowAbs_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowAbsResponse" message="tns:IService_GetFlowAbs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowAbs1">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowAbs1" message="tns:IService_GetFlowAbs1_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowAbs1Response" message="tns:IService_GetFlowAbs1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowOt">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowOt" message="tns:IService_GetFlowOt_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowOtResponse" message="tns:IService_GetFlowOt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowOt1">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowOt1" message="tns:IService_GetFlowOt1_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetFlowOt1Response" message="tns:IService_GetFlowOt1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WorkFinish">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/WorkFinish" message="tns:IService_WorkFinish_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/WorkFinishResponse" message="tns:IService_WorkFinish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCancelForm">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/SetCancelForm" message="tns:IService_SetCancelForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/SetCancelFormResponse" message="tns:IService_SetCancelForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetResetForm">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/SetResetForm" message="tns:IService_SetResetForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/SetResetFormResponse" message="tns:IService_SetResetForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCancelFormByHr">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/SetCancelFormByHr" message="tns:IService_SetCancelFormByHr_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/SetCancelFormByHrResponse" message="tns:IService_SetCancelFormByHr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCancelProcess">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/SetCancelProcess" message="tns:IService_SetCancelProcess_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/SetCancelProcessResponse" message="tns:IService_SetCancelProcess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHocde">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetHocde" message="tns:IService_GetHocde_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetHocdeResponse" message="tns:IService_GetHocde_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearAbsenceDetail">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetYearAbsenceDetail" message="tns:IService_GetYearAbsenceDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetYearAbsenceDetailResponse" message="tns:IService_GetYearAbsenceDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBasettsByDate">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetBasettsByDate" message="tns:IService_GetBasettsByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetBasettsByDateResponse" message="tns:IService_GetBasettsByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBasetts">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/AddBasetts" message="tns:IService_AddBasetts_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/AddBasettsResponse" message="tns:IService_AddBasetts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsEntitleByTakenGuid">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetAbsEntitleByTakenGuid" message="tns:IService_GetAbsEntitleByTakenGuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetAbsEntitleByTakenGuidResponse" message="tns:IService_GetAbsEntitleByTakenGuid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsTakenByEntitleGuid">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetAbsTakenByEntitleGuid" message="tns:IService_GetAbsTakenByEntitleGuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetAbsTakenByEntitleGuidResponse" message="tns:IService_GetAbsTakenByEntitleGuid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsTakenByByEmployeeIdList">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetAbsTakenByByEmployeeIdList" message="tns:IService_GetAbsTakenByByEmployeeIdList_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetAbsTakenByByEmployeeIdListResponse" message="tns:IService_GetAbsTakenByByEmployeeIdList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbsEntitleByEmployeeIdList">
+      <wsdl:input wsaw:Action="http://jbjob.com.tw/Flow/IService/GetAbsEntitleByEmployeeIdList" message="tns:IService_GetAbsEntitleByEmployeeIdList_InputMessage" />
+      <wsdl:output wsaw:Action="http://jbjob.com.tw/Flow/IService/GetAbsEntitleByEmployeeIdListResponse" message="tns:IService_GetAbsEntitleByEmployeeIdList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

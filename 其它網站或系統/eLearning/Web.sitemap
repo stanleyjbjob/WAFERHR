@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="Manage.aspx" title="管理"  description="">	
+		<siteMapNode url="qTitle.aspx" title="答案-評量抬頭"  description=""/>		
+		<siteMapNode url="qTheme.aspx" title="題目-小分類"  description="" />
+		<siteMapNode url="qCastM.aspx" title="分類-中分類"  description="" />
+		<siteMapNode url="qQuestionaryM.aspx" title="問卷-大分類" description="" />
+		<siteMapNode url="qAmountQuestionary.aspx" title="產生問卷" description="" />
+	</siteMapNode>
+</siteMap>

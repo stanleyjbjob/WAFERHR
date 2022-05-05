@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+   <configSections></configSections>
+   <connectionStrings>
+      <add name="OrgImport.Properties.Settings.JBHRConnectionString" connectionString="uid=sa;persist security info=true;initial catalog=ppt_dti_hr;data source=.;pwd=;" providerName="System.Data.SqlClient" />
+      <add name="OrgImport.Properties.Settings.ezFlowHungTaiConnectionString" connectionString="uid=sa;persist security info=true;initial catalog=ezflow_ppt;data source=.;pwd=;" providerName="System.Data.SqlClient" />
+   </connectionStrings>
+</configuration>

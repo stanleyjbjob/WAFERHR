@@ -1,0 +1,3 @@
+SELECT     Nobr, company, title, bdate, edate, job, note
+FROM         works
+WHERE     (company <> '')

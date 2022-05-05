@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://61.222.40.10/ezPortal/Service/JbhrService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfSCompanyInfoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SCompanyInfoDto" nillable="true" type="tns:SCompanyInfoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSCompanyInfoDto" nillable="true" type="tns:ArrayOfSCompanyInfoDto" />
+  <xs:complexType name="SCompanyInfoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CI_ENABLED" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CI_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CI_NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SCompanyInfoDto" nillable="true" type="tns:SCompanyInfoDto" />
+  <xs:complexType name="ArrayOfSJobLevelDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SJobLevelDto" nillable="true" type="tns:SJobLevelDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSJobLevelDto" nillable="true" type="tns:ArrayOfSJobLevelDto" />
+  <xs:complexType name="SJobLevelDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SJobLevelDto" nillable="true" type="tns:SJobLevelDto" />
+  <xs:complexType name="ArrayOfSTitleDataDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="STitleDataDto" nillable="true" type="tns:STitleDataDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSTitleDataDto" nillable="true" type="tns:ArrayOfSTitleDataDto" />
+  <xs:complexType name="STitleDataDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="STitleDataDto" nillable="true" type="tns:STitleDataDto" />
+  <xs:complexType name="ArrayOfSHRCostCenterDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SHRCostCenterDto" nillable="true" type="tns:SHRCostCenterDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSHRCostCenterDto" nillable="true" type="tns:ArrayOfSHRCostCenterDto" />
+  <xs:complexType name="SHRCostCenterDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Costname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Costno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sdate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SHRCostCenterDto" nillable="true" type="tns:SHRCostCenterDto" />
+  <xs:complexType name="ArrayOfSUserDeptDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SUserDeptDto" nillable="true" type="tns:SUserDeptDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSUserDeptDto" nillable="true" type="tns:ArrayOfSUserDeptDto" />
+  <xs:complexType name="SUserDeptDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Company_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SUserDeptDto" nillable="true" type="tns:SUserDeptDto" />
+  <xs:complexType name="ArrayOfSDepartmentDataDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SDepartmentDataDto" nillable="true" type="tns:SDepartmentDataDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSDepartmentDataDto" nillable="true" type="tns:ArrayOfSDepartmentDataDto" />
+  <xs:complexType name="SDepartmentDataDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="D_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dbname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="End_date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Father_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Level" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manage_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Start_date" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SDepartmentDataDto" nillable="true" type="tns:SDepartmentDataDto" />
+  <xs:complexType name="ArrayOfSHRUSER_DEPT_BAS_FLOWADto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SHRUSER_DEPT_BAS_FLOWADto" nillable="true" type="tns:SHRUSER_DEPT_BAS_FLOWADto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSHRUSER_DEPT_BAS_FLOWADto" nillable="true" type="tns:ArrayOfSHRUSER_DEPT_BAS_FLOWADto" />
+  <xs:complexType name="SHRUSER_DEPT_BAS_FLOWADto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dbname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dep_type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Father_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manage_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SHRUSER_DEPT_BAS_FLOWADto" nillable="true" type="tns:SHRUSER_DEPT_BAS_FLOWADto" />
+  <xs:complexType name="ArrayOfSCardWebDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SCardWebDto" nillable="true" type="tns:SCardWebDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSCardWebDto" nillable="true" type="tns:ArrayOfSCardWebDto" />
+  <xs:complexType name="SCardWebDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CARCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CARDNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COMPANY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GTCODE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JOB_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME_C" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OUDT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TTSCODE" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SCardWebDto" nillable="true" type="tns:SCardWebDto" />
+  <xs:complexType name="ArrayOfSUserDataDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SUserDataDto" nillable="true" type="tns:SUserDataDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSUserDataDto" nillable="true" type="tns:ArrayOfSUserDataDto" />
+  <xs:complexType name="SUserDataDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Cardgroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cardno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Depts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Depts_type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deptsname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Di" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empcd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="End_time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="English_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jobl_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Login_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manage_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Office_tel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Oil_type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rotet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Start_time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UD_BANKACCOUNT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UD_BANKNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Work_location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Work_location_code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Workingage" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SUserDataDto" nillable="true" type="tns:SUserDataDto" />
+  <xs:complexType name="ArrayOfSRotetDataDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SRotetDataDto" nillable="true" type="tns:SRotetDataDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSRotetDataDto" nillable="true" type="tns:ArrayOfSRotetDataDto" />
+  <xs:complexType name="SRotetDataDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Disp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SRotetDataDto" nillable="true" type="tns:SRotetDataDto" />
+  <xs:complexType name="ArrayOfSHumanReportDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SHumanReportDto" nillable="true" type="tns:SHumanReportDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSHumanReportDto" nillable="true" type="tns:ArrayOfSHumanReportDto" />
+  <xs:complexType name="SHumanReportDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CostCenterCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CostCenterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SHumanReportDto" nillable="true" type="tns:SHumanReportDto" />
+</xs:schema>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ezFlowManage">
+</Property><Property Name="方案檔" Value="D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\ezFlowManage.sln">
+</Property><Property Name="使用者選項檔" Value="D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\ezFlowManage.suo">
+</Property><Property Name="Date" Value="2014年4月15日">
+</Property><Property Name="Time" Value="下午 14:48">
+</Property><Property Name="記錄檔編號" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ezFlowManage.sln" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\ezFlowManage.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ezFlowManage.suo" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\ezFlowManage.suo">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ezFlowManage.csproj" Description="專案檔已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\ezFlowManage.csproj">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="FlowDS.Designer.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\FlowDS.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmDeptSelector.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmDeptSelector.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmDeptSelector.Designer.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmDeptSelector.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmEmpSelector.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmEmpSelector.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmEmpSelector.Designer.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmEmpSelector.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmFlowTreeSelector.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmFlowTreeSelector.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmFlowTreeSelector.Designer.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmFlowTreeSelector.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmMain.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmMain.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmMain.Designer.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmMain.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ProcessDS.Designer.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\ProcessDS.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Program.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\Program.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Properties\AssemblyInfo.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Properties\Resources.Designer.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Properties\Settings.Designer.cs" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="app.config" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\app.config">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="FlowDS.xsc" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\FlowDS.xsc">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="FlowDS.xsd" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\FlowDS.xsd">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="FlowDS.xss" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\FlowDS.xss">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ProcessDS.xsc" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\ProcessDS.xsc">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ProcessDS.xsd" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\ProcessDS.xsd">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ProcessDS.xss" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\ProcessDS.xss">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Properties\Settings.settings" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmDeptSelector.resx" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmDeptSelector.resx">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmEmpSelector.resx" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmEmpSelector.resx">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmFlowTreeSelector.resx" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmFlowTreeSelector.resx">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmMain.resx" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\fmMain.resx">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Properties\Resources.resx" Description="檔案已成功備份為 D:\SVN\Customer\WAFERHR\表單系統\ezFlowManage\Backup1\Properties\Resources.resx">
+</Event><Event ErrorLevel="1" Project="ezFlowManage" Source="ezFlowManage.csproj" Description="您的專案是以 .NET Framework 2.0 或 3.0 為目標。如果您的專案使用需要較新版 .NET Framework 的組件，專案建置將會失敗。您可以變更 .NET Framework 版本，方法是按一下專案功能表上的 [屬性]，然後在 [.NET Framework] 下拉式方塊中選取新的版本 (在 Visual Basic 中，它的位置是在按一下 [進階編譯選項...] 按鈕時顯示的 [編譯] 索引標籤上)。">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ezFlowManage.csproj" Description="專案轉換成功">
+</Event><Event ErrorLevel="3" Project="ezFlowManage" Source="ezFlowManage.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="AutoExportOrg" Source="..\AutoExportOrg\AutoExportOrg.csproj" Description="警告: 專案檔正備份到與原始方案相對路徑不同的相對路徑。不同的資料夾階層架構可能會在開啟或建置備份方案和專案時產生問題。">
+</Event><Event ErrorLevel="2" Project="AutoExportOrg" Source="..\AutoExportOrg\AutoExportOrg.csproj" Description="無法開啟專案檔執行升級。">
+</Event><Event ErrorLevel="1" Project="asWebServices" Source="..\asWebServices\asWebServices\asWebServices.csproj" Description="警告: 專案檔正備份到與原始方案相對路徑不同的相對路徑。不同的資料夾階層架構可能會在開啟或建置備份方案和專案時產生問題。">
+</Event><Event ErrorLevel="2" Project="asWebServices" Source="..\asWebServices\asWebServices\asWebServices.csproj" Description="無法開啟專案檔執行升級。">
+</Event><Event ErrorLevel="0" Project="" Source="ezFlowManage.sln" Description="方案轉換成功">
+</Event><Event ErrorLevel="3" Project="" Source="ezFlowManage.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ezFlowManage.csproj" Description="掃描完成: 專案檔不需要升級。">
+</Event></UpgradeLog>

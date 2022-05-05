@@ -1,0 +1,1788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FlowDS" targetNamespace="http://tempuri.org/FlowDS.xsd" xmlns:mstns="http://tempuri.org/FlowDS.xsd" xmlns="http://tempuri.org/FlowDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="flow" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="flow (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.flow.ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BaseDataFlowTableAdapter" GeneratorDataComponentClassName="BaseDataFlowTableAdapter" Name="BaseDataFlow" UserDataComponentName="BaseDataFlowTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT Role.Emp_id, Emp.pw, Emp.name, Emp.email, Emp.login, Emp.sex, Role.Dept_id, Dept.name AS Dept_Name, Role.Pos_id, Pos.name AS Pos_Name, Dept.path, Role.dateB, Role.dateE, Role.mgDefault, Role.deptMg, Role.id FROM Emp INNER JOIN Role ON Emp.id = Role.Emp_id INNER JOIN Pos ON Role.Pos_id = Pos.id INNER JOIN Dept ON Role.Dept_id = Dept.id</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Emp_id" DataSetColumn="Emp_id" />
+              <Mapping SourceColumn="pw" DataSetColumn="pw" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="login" DataSetColumn="login" />
+              <Mapping SourceColumn="sex" DataSetColumn="sex" />
+              <Mapping SourceColumn="Dept_id" DataSetColumn="Dept_id" />
+              <Mapping SourceColumn="Dept_Name" DataSetColumn="Dept_Name" />
+              <Mapping SourceColumn="Pos_id" DataSetColumn="Pos_id" />
+              <Mapping SourceColumn="Pos_Name" DataSetColumn="Pos_Name" />
+              <Mapping SourceColumn="path" DataSetColumn="path" />
+              <Mapping SourceColumn="dateB" DataSetColumn="dateB" />
+              <Mapping SourceColumn="dateE" DataSetColumn="dateE" />
+              <Mapping SourceColumn="mgDefault" DataSetColumn="mgDefault" />
+              <Mapping SourceColumn="deptMg" DataSetColumn="deptMg" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByNobr" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByNobr" GeneratorSourceName="FillByNobr" GetMethodModifier="Public" GetMethodName="GetDataByNobr" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByNobr" UserSourceName="FillByNobr">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         Role.Emp_id, Emp.pw, Emp.name, Emp.email, Emp.login, Emp.sex, 
+                          Role.Dept_id, Dept.name AS Dept_Name, Role.Pos_id, 
+                          Pos.name AS Pos_Name, Dept.path, Role.dateB, Role.dateE, Role.mgDefault, 
+                          Role.deptMg, Role.id
+FROM             Emp INNER JOIN
+                          Role ON Emp.id = Role.Emp_id INNER JOIN
+                          Pos ON Role.Pos_id = Pos.id INNER JOIN
+                          Dept ON Role.Dept_id = Dept.id
+WHERE         (Emp.id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="id" ColumnName="id" DataSourceName="ezFlow.dbo.Emp" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@id" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProcessFlowShareTableAdapter" GeneratorDataComponentClassName="ProcessFlowShareTableAdapter" Name="ProcessFlowShare" UserDataComponentName="ProcessFlowShareTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_TMTHR.dbo.ProcessFlowShare" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [ProcessFlowShare] WHERE (([auto] = @Original_auto))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [ProcessFlowShare] ([ProcessFlow_id], [Role_id], [Emp_id], [isStarter]) VALUES (@ProcessFlow_id, @Role_id, @Emp_id, @isStarter)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProcessFlow_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProcessFlow_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Role_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Role_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Emp_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Emp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@isStarter" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="isStarter" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         ProcessFlowShare.*
+FROM             ProcessFlowShare</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [ProcessFlowShare] SET [ProcessFlow_id] = @ProcessFlow_id, [Role_id] = @Role_id, [Emp_id] = @Emp_id, [isStarter] = @isStarter WHERE (([auto] = @Original_auto))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProcessFlow_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProcessFlow_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Role_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Role_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Emp_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Emp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@isStarter" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="isStarter" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="auto" DataSetColumn="auto" />
+              <Mapping SourceColumn="ProcessFlow_id" DataSetColumn="ProcessFlow_id" />
+              <Mapping SourceColumn="Role_id" DataSetColumn="Role_id" />
+              <Mapping SourceColumn="Emp_id" DataSetColumn="Emp_id" />
+              <Mapping SourceColumn="isStarter" DataSetColumn="isStarter" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProcessApParmTableAdapter" GeneratorDataComponentClassName="ProcessApParmTableAdapter" Name="ProcessApParm" UserDataComponentName="ProcessApParmTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_TMTHR.dbo.ProcessApParm" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [ProcessApParm] WHERE (([auto] = @Original_auto))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [ProcessApParm] ([ProcessFlow_id], [ProcessNode_auto], [ProcessCheck_auto], [Role_id], [Emp_id]) VALUES (@ProcessFlow_id, @ProcessNode_auto, @ProcessCheck_auto, @Role_id, @Emp_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProcessFlow_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProcessFlow_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProcessNode_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProcessNode_auto" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProcessCheck_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProcessCheck_auto" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Role_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Role_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Emp_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Emp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         ProcessApParm.*
+FROM             ProcessApParm</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [ProcessApParm] SET [ProcessFlow_id] = @ProcessFlow_id, [ProcessNode_auto] = @ProcessNode_auto, [ProcessCheck_auto] = @ProcessCheck_auto, [Role_id] = @Role_id, [Emp_id] = @Emp_id WHERE (([auto] = @Original_auto))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProcessFlow_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProcessFlow_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProcessNode_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProcessNode_auto" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProcessCheck_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProcessCheck_auto" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Role_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Role_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Emp_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Emp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="auto" DataSetColumn="auto" />
+              <Mapping SourceColumn="ProcessFlow_id" DataSetColumn="ProcessFlow_id" />
+              <Mapping SourceColumn="ProcessNode_auto" DataSetColumn="ProcessNode_auto" />
+              <Mapping SourceColumn="ProcessCheck_auto" DataSetColumn="ProcessCheck_auto" />
+              <Mapping SourceColumn="Role_id" DataSetColumn="Role_id" />
+              <Mapping SourceColumn="Emp_id" DataSetColumn="Emp_id" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_TMTHR.dbo.ProcessApParm" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByKey" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByKey" GeneratorSourceName="FillByKey" GetMethodModifier="Public" GetMethodName="GetDataByKey" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByKey" UserSourceName="FillByKey">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         auto, ProcessFlow_id, ProcessNode_auto, ProcessCheck_auto, Role_id, 
+                          Emp_id
+FROM             ProcessApParm
+WHERE         (auto = @auto)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="auto" ColumnName="auto" DataSourceName="ezFlow_TMTHR.dbo.ProcessApParm" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@auto" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_TMT.dbo.ProcessApParm" DbObjectType="Table" GenerateShortCommands="True" GeneratorSourceName="QueryAuto" Modifier="Public" Name="QueryAuto" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="QueryAuto">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT auto FROM ProcessApParm WHERE (ProcessFlow_id = @ProcessFlow_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="ProcessFlow_id" ColumnName="ProcessFlow_id" DataSourceName="ezFlow_TMT.dbo.ProcessApParm" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ProcessFlow_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ProcessFlow_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.ProcessApParm" DbObjectType="Table" GenerateShortCommands="True" GeneratorSourceName="QueryKey" Modifier="Public" Name="QueryKey" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy1" UserSourceName="QueryKey">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ProcessFlow_id FROM ProcessApParm WHERE (auto = @auto)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="auto" ColumnName="auto" DataSourceName="ezFlow.dbo.ProcessApParm" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@auto" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProcessApViewTableAdapter" GeneratorDataComponentClassName="ProcessApViewTableAdapter" Name="ProcessApView" UserDataComponentName="ProcessApViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_TMTHR.dbo.ProcessApView" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [ProcessApView] WHERE (([auto] = @Original_auto))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [ProcessApView] ([ProcessFlow_id], [Role_id], [Emp_id], [tag1], [tag2], [tag3]) VALUES (@ProcessFlow_id, @Role_id, @Emp_id, @tag1, @tag2, @tag3)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProcessFlow_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProcessFlow_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Role_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Role_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Emp_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Emp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tag1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tag1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tag2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tag2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tag3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tag3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         ProcessApView.*
+FROM             ProcessApView</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [ProcessApView] SET [ProcessFlow_id] = @ProcessFlow_id, [Role_id] = @Role_id, [Emp_id] = @Emp_id, [tag1] = @tag1, [tag2] = @tag2, [tag3] = @tag3 WHERE (([auto] = @Original_auto))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProcessFlow_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProcessFlow_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Role_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Role_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Emp_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Emp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tag1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tag1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tag2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tag2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@tag3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tag3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="auto" DataSetColumn="auto" />
+              <Mapping SourceColumn="ProcessFlow_id" DataSetColumn="ProcessFlow_id" />
+              <Mapping SourceColumn="Role_id" DataSetColumn="Role_id" />
+              <Mapping SourceColumn="Emp_id" DataSetColumn="Emp_id" />
+              <Mapping SourceColumn="tag1" DataSetColumn="tag1" />
+              <Mapping SourceColumn="tag2" DataSetColumn="tag2" />
+              <Mapping SourceColumn="tag3" DataSetColumn="tag3" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_TMTHR.dbo.ProcessApView" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByKey" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByKey" GeneratorSourceName="FillByKey" GetMethodModifier="Public" GetMethodName="GetDataByKey" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByKey" UserSourceName="FillByKey">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         auto, ProcessFlow_id, Role_id, Emp_id, tag1, tag2, tag3
+FROM             ProcessApView
+WHERE         (auto = @auto)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="auto" ColumnName="auto" DataSourceName="ezFlow_TMTHR.dbo.ProcessApView" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@auto" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_TMT.dbo.ProcessApView" DbObjectType="Table" GenerateShortCommands="True" GeneratorSourceName="QueryAuto" Modifier="Public" Name="QueryAuto" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="QueryAuto">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT auto FROM ProcessApView WHERE (ProcessFlow_id = @ProcessFlow_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="ProcessFlow_id" ColumnName="ProcessFlow_id" DataSourceName="ezFlow_TMT.dbo.ProcessApView" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ProcessFlow_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ProcessFlow_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.ProcessApView" DbObjectType="Table" GenerateShortCommands="True" GeneratorSourceName="QueryKey" Modifier="Public" Name="QueryKey" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy1" UserSourceName="QueryKey">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ProcessFlow_id FROM ProcessApView WHERE (auto = @auto)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="auto" ColumnName="auto" DataSourceName="ezFlow.dbo.ProcessApView" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@auto" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SysAdminTableAdapter" GeneratorDataComponentClassName="SysAdminTableAdapter" Name="SysAdmin" UserDataComponentName="SysAdminTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_TMTHR.dbo.SysAdmin" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [SysAdmin] WHERE (([auto] = @Original_auto))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [SysAdmin] ([Emp_id]) VALUES (@Emp_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Emp_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Emp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         SysAdmin.*
+FROM             SysAdmin</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [SysAdmin] SET [Emp_id] = @Emp_id WHERE (([auto] = @Original_auto))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Emp_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Emp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_auto" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="auto" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="auto" DataSetColumn="auto" />
+              <Mapping SourceColumn="Emp_id" DataSetColumn="Emp_id" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_TMTHR.dbo.SysAdmin" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByKey" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByKey" GeneratorSourceName="FillByKey" GetMethodModifier="Public" GetMethodName="GetDataByKey" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByKey" UserSourceName="FillByKey">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         auto, Emp_id
+FROM             SysAdmin
+WHERE         (Emp_id = @Emp_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Emp_id" ColumnName="Emp_id" DataSourceName="ezFlow_TMTHR.dbo.SysAdmin" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Emp_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Emp_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="wfHcodeTableAdapter" GeneratorDataComponentClassName="wfHcodeTableAdapter" Name="wfHcode" UserDataComponentName="wfHcodeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.wfHcode" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [wfHcode] WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [wfHcode] ([sHcodeWF], [sHnameWF], [sHcodeHR], [bDisplay], [sKeyMan], [dKeyDate]) VALUES (@sHcodeWF, @sHnameWF, @sHcodeHR, @bDisplay, @sKeyMan, @dKeyDate)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sHcodeWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sHcodeWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sHnameWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sHnameWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sHcodeHR" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sHcodeHR" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@bDisplay" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="bDisplay" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sKeyMan" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sKeyMan" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dKeyDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dKeyDate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT wfHcode.* FROM wfHcode</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [wfHcode] SET [sHcodeWF] = @sHcodeWF, [sHnameWF] = @sHnameWF, [sHcodeHR] = @sHcodeHR, [bDisplay] = @bDisplay, [sKeyMan] = @sKeyMan, [dKeyDate] = @dKeyDate WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sHcodeWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sHcodeWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sHnameWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sHnameWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sHcodeHR" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sHcodeHR" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@bDisplay" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="bDisplay" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sKeyMan" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sKeyMan" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dKeyDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dKeyDate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="iAutoKey" DataSetColumn="iAutoKey" />
+              <Mapping SourceColumn="sHcodeWF" DataSetColumn="sHcodeWF" />
+              <Mapping SourceColumn="sHnameWF" DataSetColumn="sHnameWF" />
+              <Mapping SourceColumn="sHcodeHR" DataSetColumn="sHcodeHR" />
+              <Mapping SourceColumn="bDisplay" DataSetColumn="bDisplay" />
+              <Mapping SourceColumn="sKeyMan" DataSetColumn="sKeyMan" />
+              <Mapping SourceColumn="dKeyDate" DataSetColumn="dKeyDate" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.wfHcode" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByKey" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByKey" GeneratorSourceName="FillByKey" GetMethodModifier="Public" GetMethodName="GetDataByKey" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByKey" UserSourceName="FillByKey">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT iAutoKey, sHcodeWF, sHnameWF, sHcodeHR, bDisplay, sKeyMan, dKeyDate FROM wfHcode WHERE (sHcodeWF = @sHcodeWF)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="sHcodeWF" ColumnName="sHcodeWF" DataSourceName="ezFlow.dbo.wfHcode" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@sHcodeWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="sHcodeWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.wfHcode" DbObjectType="Table" GenerateShortCommands="True" GeneratorSourceName="QueryByKey" Modifier="Public" Name="QueryByKey" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="QueryByKey">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT sHcodeHR FROM wfHcode WHERE (sHcodeWF = @sHcodeWF)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="sHcodeWF" ColumnName="sHcodeWF" DataSourceName="ezFlow.dbo.wfHcode" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@sHcodeWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="sHcodeWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="wfRoteTableAdapter" GeneratorDataComponentClassName="wfRoteTableAdapter" Name="wfRote" UserDataComponentName="wfRoteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.wfRote" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [wfRote] WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [wfRote] ([sRcodeWF], [sRnameWF], [sRcodeHR], [sKeyMan], [dKeyDate]) VALUES (@sRcodeWF, @sRnameWF, @sRcodeHR, @sKeyMan, @dKeyDate)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sRcodeWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sRcodeWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sRnameWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sRnameWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sRcodeHR" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sRcodeHR" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sKeyMan" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sKeyMan" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dKeyDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dKeyDate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT wfRote.* FROM wfRote</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [wfRote] SET [sRcodeWF] = @sRcodeWF, [sRnameWF] = @sRnameWF, [sRcodeHR] = @sRcodeHR, [sKeyMan] = @sKeyMan, [dKeyDate] = @dKeyDate WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sRcodeWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sRcodeWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sRnameWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sRnameWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sRcodeHR" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sRcodeHR" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sKeyMan" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sKeyMan" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dKeyDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dKeyDate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="iAutoKey" DataSetColumn="iAutoKey" />
+              <Mapping SourceColumn="sRcodeWF" DataSetColumn="sRcodeWF" />
+              <Mapping SourceColumn="sRnameWF" DataSetColumn="sRnameWF" />
+              <Mapping SourceColumn="sRcodeHR" DataSetColumn="sRcodeHR" />
+              <Mapping SourceColumn="sKeyMan" DataSetColumn="sKeyMan" />
+              <Mapping SourceColumn="dKeyDate" DataSetColumn="dKeyDate" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.wfRote" DbObjectType="Table" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="QueryByKey" Modifier="Public" Name="QueryByKey" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="QueryByKey">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT sRcodeHR FROM wfRote WHERE (sRcodeWF = @sRcodeWF)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="sRcodeWF" ColumnName="sRcodeWF" DataSourceName="ezFlow.dbo.wfRote" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@sRcodeWF" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="sRcodeWF" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="wfSignTableAdapter" GeneratorDataComponentClassName="wfSignTableAdapter" Name="wfSign" UserDataComponentName="wfSignTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.wfSign" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [wfSign] WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [wfSign] ([sFromCode], [sFromName], [sProcessID], [idProcess], [sNobr], [sName], [sDept], [sDeptName], [sNote], [bSign], [sSign], [dKeyDate]) VALUES (@sFromCode, @sFromName, @sProcessID, @idProcess, @sNobr, @sName, @sDept, @sDeptName, @sNote, @bSign, @sSign, @dKeyDate)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFromCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sFromCode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFromName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sFromName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sProcessID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sProcessID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idProcess" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idProcess" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sNobr" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sNobr" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sDept" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sDept" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sDeptName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sDeptName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sNote" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="sNote" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@bSign" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="bSign" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sSign" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="sSign" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dKeyDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dKeyDate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         wfSign.*
+FROM             wfSign</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [wfSign] SET [sFromCode] = @sFromCode, [sFromName] = @sFromName, [sProcessID] = @sProcessID, [idProcess] = @idProcess, [sNobr] = @sNobr, [sName] = @sName, [sDept] = @sDept, [sDeptName] = @sDeptName, [sNote] = @sNote, [bSign] = @bSign, [sSign] = @sSign, [dKeyDate] = @dKeyDate WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFromCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sFromCode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFromName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sFromName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sProcessID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sProcessID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idProcess" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idProcess" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sNobr" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sNobr" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sDept" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sDept" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sDeptName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sDeptName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sNote" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="sNote" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@bSign" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="bSign" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sSign" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="sSign" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dKeyDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dKeyDate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="iAutoKey" DataSetColumn="iAutoKey" />
+              <Mapping SourceColumn="sFromCode" DataSetColumn="sFromCode" />
+              <Mapping SourceColumn="sFromName" DataSetColumn="sFromName" />
+              <Mapping SourceColumn="sProcessID" DataSetColumn="sProcessID" />
+              <Mapping SourceColumn="idProcess" DataSetColumn="idProcess" />
+              <Mapping SourceColumn="sNobr" DataSetColumn="sNobr" />
+              <Mapping SourceColumn="sName" DataSetColumn="sName" />
+              <Mapping SourceColumn="sDept" DataSetColumn="sDept" />
+              <Mapping SourceColumn="sDeptName" DataSetColumn="sDeptName" />
+              <Mapping SourceColumn="sNote" DataSetColumn="sNote" />
+              <Mapping SourceColumn="bSign" DataSetColumn="bSign" />
+              <Mapping SourceColumn="sSign" DataSetColumn="sSign" />
+              <Mapping SourceColumn="dKeyDate" DataSetColumn="dKeyDate" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="wfUpFileTableAdapter" GeneratorDataComponentClassName="wfUpFileTableAdapter" Name="wfUpFile" UserDataComponentName="wfUpFileTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.wfUpFile" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [wfUpFile] WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [wfUpFile] ([sFromCode], [sFromName], [sProcessID], [idProcess], [sNobr], [sUpName], [sServerName], [sDesc], [sType], [iSize], [dUpDate]) VALUES (@sFromCode, @sFromName, @sProcessID, @idProcess, @sNobr, @sUpName, @sServerName, @sDesc, @sType, @iSize, @dUpDate)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFromCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sFromCode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFromName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sFromName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sProcessID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sProcessID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idProcess" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idProcess" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sNobr" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sNobr" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sUpName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sUpName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sServerName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sServerName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sDesc" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="sDesc" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sType" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@iSize" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iSize" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dUpDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dUpDate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         wfUpFile.*
+FROM             wfUpFile</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [wfUpFile] SET [sFromCode] = @sFromCode, [sFromName] = @sFromName, [sProcessID] = @sProcessID, [idProcess] = @idProcess, [sNobr] = @sNobr, [sUpName] = @sUpName, [sServerName] = @sServerName, [sDesc] = @sDesc, [sType] = @sType, [iSize] = @iSize, [dUpDate] = @dUpDate WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFromCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sFromCode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sFromName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sFromName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sProcessID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sProcessID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idProcess" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idProcess" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sNobr" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sNobr" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sUpName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sUpName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sServerName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sServerName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sDesc" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="sDesc" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sType" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@iSize" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iSize" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dUpDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dUpDate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="iAutoKey" DataSetColumn="iAutoKey" />
+              <Mapping SourceColumn="sFromCode" DataSetColumn="sFromCode" />
+              <Mapping SourceColumn="sFromName" DataSetColumn="sFromName" />
+              <Mapping SourceColumn="sProcessID" DataSetColumn="sProcessID" />
+              <Mapping SourceColumn="idProcess" DataSetColumn="idProcess" />
+              <Mapping SourceColumn="sNobr" DataSetColumn="sNobr" />
+              <Mapping SourceColumn="sUpName" DataSetColumn="sUpName" />
+              <Mapping SourceColumn="sServerName" DataSetColumn="sServerName" />
+              <Mapping SourceColumn="sDesc" DataSetColumn="sDesc" />
+              <Mapping SourceColumn="sType" DataSetColumn="sType" />
+              <Mapping SourceColumn="iSize" DataSetColumn="iSize" />
+              <Mapping SourceColumn="dUpDate" DataSetColumn="dUpDate" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.wfUpFile" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByProcessID" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByProcessID" GeneratorSourceName="FillByProcessID" GetMethodModifier="Public" GetMethodName="GetDataByProcessID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByProcessID" UserSourceName="FillByProcessID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         iAutoKey, sFromCode, sFromName, sProcessID, idProcess, sNobr, sUpName, 
+                          sServerName, sDesc, sType, iSize, dUpDate
+FROM             wfUpFile
+WHERE         (sProcessID = @sProcessID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="sProcessID" ColumnName="sProcessID" DataSourceName="ezFlow.dbo.wfUpFile" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@sProcessID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="sProcessID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmpTableAdapter" GeneratorDataComponentClassName="EmpTableAdapter" Name="Emp" UserDataComponentName="EmpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow.dbo.Emp" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [Emp] WHERE (([id] = @Original_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [Emp] ([id], [pw], [name], [isNeedAgent], [dateB], [dateE], [email], [login], [sex]) VALUES (@id, @pw, @name, @isNeedAgent, @dateB, @dateE, @email, @login, @sex)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@pw" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="pw" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@isNeedAgent" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="isNeedAgent" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dateB" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dateB" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dateE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dateE" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="email" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@login" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="login" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sex" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sex" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         Emp.*
+FROM             Emp</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [Emp] SET [id] = @id, [pw] = @pw, [name] = @name, [isNeedAgent] = @isNeedAgent, [dateB] = @dateB, [dateE] = @dateE, [email] = @email, [login] = @login, [sex] = @sex WHERE (([id] = @Original_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@pw" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="pw" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="name" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@isNeedAgent" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="isNeedAgent" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dateB" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dateB" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@dateE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="dateE" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="email" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@login" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="login" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sex" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sex" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="pw" DataSetColumn="pw" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="isNeedAgent" DataSetColumn="isNeedAgent" />
+              <Mapping SourceColumn="dateB" DataSetColumn="dateB" />
+              <Mapping SourceColumn="dateE" DataSetColumn="dateE" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="login" DataSetColumn="login" />
+              <Mapping SourceColumn="sex" DataSetColumn="sex" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="WorkAgentTableAdapter" GeneratorDataComponentClassName="WorkAgentTableAdapter" Name="WorkAgent" UserDataComponentName="WorkAgentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         WorkAgent.Emp_idSource, WorkAgent.Emp_idTarget, 
+                          Emp.name AS Emp_nameTarget, Emp.email AS Emp_emailTarget
+FROM             FlowTree INNER JOIN
+                          WorkAgentPower ON FlowTree.id = WorkAgentPower.FlowTree_id INNER JOIN
+                          WorkAgent ON WorkAgentPower.WorkAgent_auto = WorkAgent.auto INNER JOIN
+                          Emp ON WorkAgent.Emp_idTarget = Emp.id
+WHERE         (WorkAgent.Emp_idSource = @Emp_idSource) AND 
+                          (FlowTree.name LIKE '%通知%')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Emp_idSource" ColumnName="Emp_idSource" DataSourceName="ezFlow_TMT.dbo.WorkAgent" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Emp_idSource" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Emp_idSource" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Emp_idSource" DataSetColumn="Emp_idSource" />
+              <Mapping SourceColumn="Emp_idTarget" DataSetColumn="Emp_idTarget" />
+              <Mapping SourceColumn="Emp_nameTarget" DataSetColumn="Emp_nameTarget" />
+              <Mapping SourceColumn="Emp_emailTarget" DataSetColumn="Emp_emailTarget" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="wfEncodeTableAdapter" GeneratorDataComponentClassName="wfEncodeTableAdapter" Name="wfEncode" UserDataComponentName="wfEncodeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_WAFER.dbo.wfEncode" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [wfEncode] WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [wfEncode] ([sEncode], [sDecode]) VALUES (@sEncode, @sDecode)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sEncode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sEncode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sDecode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sDecode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         wfEncode.*
+FROM             wfEncode</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [wfEncode] SET [sEncode] = @sEncode, [sDecode] = @sDecode WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sEncode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sEncode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sDecode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sDecode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="iAutoKey" DataSetColumn="iAutoKey" />
+              <Mapping SourceColumn="sEncode" DataSetColumn="sEncode" />
+              <Mapping SourceColumn="sDecode" DataSetColumn="sDecode" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_WAFER.dbo.wfEncode" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDecode" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByDecode" GeneratorSourceName="FillByDecode" GetMethodModifier="Public" GetMethodName="GetDataByDecode" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByDecode" UserSourceName="FillByDecode">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         wfEncode.*
+FROM             wfEncode
+WHERE         (sDecode = @sDecode)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="sDecode" ColumnName="sDecode" DataSourceName="ezFlow_WAFER.dbo.wfEncode" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@sDecode" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="sDecode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_WAFER.dbo.wfEncode" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByEncode" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByEncode" GeneratorSourceName="FillByEncode" GetMethodModifier="Public" GetMethodName="GetDataByEncode" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByEncode" UserSourceName="FillByEncode">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         wfEncode.*
+FROM             wfEncode
+WHERE         (sEncode = @sEncode)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="sEncode" ColumnName="sEncode" DataSourceName="ezFlow_WAFER.dbo.wfEncode" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@sEncode" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="sEncode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="wfJobSignTableAdapter" GeneratorDataComponentClassName="wfJobSignTableAdapter" Name="wfJobSign" UserDataComponentName="wfJobSignTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_WAFER.dbo.wfJobSign" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [wfJobSign] WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [wfJobSign] ([sJob], [sJobE], [iDay], [iDayE], [sSignCode], [sForm], [sR1], [sR2], [sR3]) VALUES (@sJob, @sJobE, @iDay, @iDayE, @sSignCode, @sForm, @sR1, @sR2, @sR3)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sJob" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sJob" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sJobE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sJobE" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@iDay" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iDay" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@iDayE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iDayE" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sSignCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sSignCode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sForm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sForm" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sR1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sR1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sR2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sR2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sR3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sR3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         wfJobSign.*
+FROM             wfJobSign</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [wfJobSign] SET [sJob] = @sJob, [sJobE] = @sJobE, [iDay] = @iDay, [iDayE] = @iDayE, [sSignCode] = @sSignCode, [sForm] = @sForm, [sR1] = @sR1, [sR2] = @sR2, [sR3] = @sR3 WHERE (([iAutoKey] = @Original_iAutoKey))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sJob" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sJob" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sJobE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sJobE" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@iDay" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iDay" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@iDayE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iDayE" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sSignCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sSignCode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sForm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sForm" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sR1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sR1" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sR2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sR2" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@sR3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="sR3" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_iAutoKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="iAutoKey" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="iAutoKey" DataSetColumn="iAutoKey" />
+              <Mapping SourceColumn="sJob" DataSetColumn="sJob" />
+              <Mapping SourceColumn="sJobE" DataSetColumn="sJobE" />
+              <Mapping SourceColumn="iDay" DataSetColumn="iDay" />
+              <Mapping SourceColumn="iDayE" DataSetColumn="iDayE" />
+              <Mapping SourceColumn="sSignCode" DataSetColumn="sSignCode" />
+              <Mapping SourceColumn="sForm" DataSetColumn="sForm" />
+              <Mapping SourceColumn="sR1" DataSetColumn="sR1" />
+              <Mapping SourceColumn="sR2" DataSetColumn="sR2" />
+              <Mapping SourceColumn="sR3" DataSetColumn="sR3" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectName="ezFlow_WAFER.dbo.wfJobSign" DbObjectType="Table" GenerateShortCommands="True" GeneratorSourceName="QuerySignCode" Modifier="Public" Name="QuerySignCode" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="QuerySignCode">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT         sSignCode
+FROM             wfJobSign
+WHERE         (@sJob BETWEEN sJob AND sJobE) AND (@iDay BETWEEN iDay AND iDayE)
+GROUP BY  sSignCode</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="sJob" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="AnsiString" Direction="Input" ParameterName="@sJob" Precision="0" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="iDay" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@iDay" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProcessCheckTableAdapter" GeneratorDataComponentClassName="ProcessCheckTableAdapter" Name="ProcessCheck" UserDataComponentName="ProcessCheckTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="flow (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT         ProcessNode.ProcessFlow_id, ProcessCheck.Emp_idDefault, 
+                          ProcessCheck.Role_idDefault, Role.Dept_id
+FROM             ProcessCheck INNER JOIN
+                          ProcessNode ON 
+                          ProcessCheck.ProcessNode_auto = ProcessNode.auto INNER JOIN
+                          Role ON ProcessCheck.Role_idDefault = Role.id
+WHERE         (ProcessNode.ProcessFlow_id = @ProcessFlow_id) AND 
+                          (ProcessCheck.Emp_idDefault = @Emp_idDefault)
+ORDER BY  ProcessCheck.auto DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="ProcessFlow_id" ColumnName="ProcessFlow_id" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ProcessFlow_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ProcessFlow_id" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Emp_idDefault" ColumnName="Emp_idDefault" DataSourceName="" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Emp_idDefault" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Emp_idDefault" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProcessFlow_id" DataSetColumn="ProcessFlow_id" />
+              <Mapping SourceColumn="Emp_idDefault" DataSetColumn="Emp_idDefault" />
+              <Mapping SourceColumn="Role_idDefault" DataSetColumn="Role_idDefault" />
+              <Mapping SourceColumn="Dept_id" DataSetColumn="Dept_id" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FlowDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="FlowDS" msprop:Generator_DataSetName="FlowDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BaseDataFlow" msprop:Generator_UserTableName="BaseDataFlow" msprop:Generator_RowDeletedName="BaseDataFlowRowDeleted" msprop:Generator_RowChangedName="BaseDataFlowRowChanged" msprop:Generator_RowClassName="BaseDataFlowRow" msprop:Generator_RowChangingName="BaseDataFlowRowChanging" msprop:Generator_RowEvArgName="BaseDataFlowRowChangeEvent" msprop:Generator_RowEvHandlerName="BaseDataFlowRowChangeEventHandler" msprop:Generator_TableClassName="BaseDataFlowDataTable" msprop:Generator_TableVarName="tableBaseDataFlow" msprop:Generator_RowDeletingName="BaseDataFlowRowDeleting" msprop:Generator_TablePropName="BaseDataFlow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Emp_id" msprop:Generator_UserColumnName="Emp_id" msprop:Generator_ColumnPropNameInRow="Emp_id" msprop:Generator_ColumnVarNameInTable="columnEmp_id" msprop:Generator_ColumnPropNameInTable="Emp_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pw" msprop:Generator_UserColumnName="pw" msprop:Generator_ColumnPropNameInRow="pw" msprop:Generator_ColumnVarNameInTable="columnpw" msprop:Generator_ColumnPropNameInTable="pwColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInTable="nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_UserColumnName="email" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInTable="emailColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="login" msprop:Generator_UserColumnName="login" msprop:Generator_ColumnPropNameInRow="login" msprop:Generator_ColumnVarNameInTable="columnlogin" msprop:Generator_ColumnPropNameInTable="loginColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sex" msprop:Generator_UserColumnName="sex" msprop:Generator_ColumnPropNameInRow="sex" msprop:Generator_ColumnVarNameInTable="columnsex" msprop:Generator_ColumnPropNameInTable="sexColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dept_id" msprop:Generator_UserColumnName="Dept_id" msprop:Generator_ColumnPropNameInRow="Dept_id" msprop:Generator_ColumnVarNameInTable="columnDept_id" msprop:Generator_ColumnPropNameInTable="Dept_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dept_Name" msprop:Generator_UserColumnName="Dept_Name" msprop:Generator_ColumnPropNameInRow="Dept_Name" msprop:Generator_ColumnVarNameInTable="columnDept_Name" msprop:Generator_ColumnPropNameInTable="Dept_NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pos_id" msprop:Generator_UserColumnName="Pos_id" msprop:Generator_ColumnPropNameInRow="Pos_id" msprop:Generator_ColumnVarNameInTable="columnPos_id" msprop:Generator_ColumnPropNameInTable="Pos_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pos_Name" msprop:Generator_UserColumnName="Pos_Name" msprop:Generator_ColumnPropNameInRow="Pos_Name" msprop:Generator_ColumnVarNameInTable="columnPos_Name" msprop:Generator_ColumnPropNameInTable="Pos_NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="path" msprop:Generator_UserColumnName="path" msprop:Generator_ColumnPropNameInRow="path" msprop:Generator_ColumnVarNameInTable="columnpath" msprop:Generator_ColumnPropNameInTable="pathColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dateB" msprop:Generator_UserColumnName="dateB" msprop:Generator_ColumnPropNameInRow="dateB" msprop:Generator_ColumnVarNameInTable="columndateB" msprop:Generator_ColumnPropNameInTable="dateBColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dateE" msprop:Generator_UserColumnName="dateE" msprop:Generator_ColumnPropNameInRow="dateE" msprop:Generator_ColumnVarNameInTable="columndateE" msprop:Generator_ColumnPropNameInTable="dateEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="mgDefault" msprop:Generator_UserColumnName="mgDefault" msprop:Generator_ColumnPropNameInRow="mgDefault" msprop:Generator_ColumnVarNameInTable="columnmgDefault" msprop:Generator_ColumnPropNameInTable="mgDefaultColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="deptMg" msprop:Generator_UserColumnName="deptMg" msprop:Generator_ColumnPropNameInRow="deptMg" msprop:Generator_ColumnVarNameInTable="columndeptMg" msprop:Generator_ColumnPropNameInTable="deptMgColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProcessFlowShare" msprop:Generator_UserTableName="ProcessFlowShare" msprop:Generator_RowDeletedName="ProcessFlowShareRowDeleted" msprop:Generator_RowChangedName="ProcessFlowShareRowChanged" msprop:Generator_RowClassName="ProcessFlowShareRow" msprop:Generator_RowChangingName="ProcessFlowShareRowChanging" msprop:Generator_RowEvArgName="ProcessFlowShareRowChangeEvent" msprop:Generator_RowEvHandlerName="ProcessFlowShareRowChangeEventHandler" msprop:Generator_TableClassName="ProcessFlowShareDataTable" msprop:Generator_TableVarName="tableProcessFlowShare" msprop:Generator_RowDeletingName="ProcessFlowShareRowDeleting" msprop:Generator_TablePropName="ProcessFlowShare">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="auto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="auto" msprop:Generator_ColumnVarNameInTable="columnauto" msprop:Generator_ColumnPropNameInRow="auto" msprop:Generator_ColumnPropNameInTable="autoColumn" type="xs:int" />
+              <xs:element name="ProcessFlow_id" msprop:Generator_UserColumnName="ProcessFlow_id" msprop:Generator_ColumnVarNameInTable="columnProcessFlow_id" msprop:Generator_ColumnPropNameInRow="ProcessFlow_id" msprop:Generator_ColumnPropNameInTable="ProcessFlow_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Role_id" msprop:Generator_UserColumnName="Role_id" msprop:Generator_ColumnVarNameInTable="columnRole_id" msprop:Generator_ColumnPropNameInRow="Role_id" msprop:Generator_ColumnPropNameInTable="Role_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_id" msprop:Generator_UserColumnName="Emp_id" msprop:Generator_ColumnVarNameInTable="columnEmp_id" msprop:Generator_ColumnPropNameInRow="Emp_id" msprop:Generator_ColumnPropNameInTable="Emp_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="isStarter" msprop:Generator_UserColumnName="isStarter" msprop:Generator_ColumnVarNameInTable="columnisStarter" msprop:Generator_ColumnPropNameInRow="isStarter" msprop:Generator_ColumnPropNameInTable="isStarterColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProcessApParm" msprop:Generator_UserTableName="ProcessApParm" msprop:Generator_RowDeletedName="ProcessApParmRowDeleted" msprop:Generator_RowChangedName="ProcessApParmRowChanged" msprop:Generator_RowClassName="ProcessApParmRow" msprop:Generator_RowChangingName="ProcessApParmRowChanging" msprop:Generator_RowEvArgName="ProcessApParmRowChangeEvent" msprop:Generator_RowEvHandlerName="ProcessApParmRowChangeEventHandler" msprop:Generator_TableClassName="ProcessApParmDataTable" msprop:Generator_TableVarName="tableProcessApParm" msprop:Generator_RowDeletingName="ProcessApParmRowDeleting" msprop:Generator_TablePropName="ProcessApParm">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="auto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="auto" msprop:Generator_ColumnPropNameInRow="auto" msprop:Generator_ColumnVarNameInTable="columnauto" msprop:Generator_ColumnPropNameInTable="autoColumn" type="xs:int" />
+              <xs:element name="ProcessFlow_id" msprop:Generator_UserColumnName="ProcessFlow_id" msprop:Generator_ColumnPropNameInRow="ProcessFlow_id" msprop:Generator_ColumnVarNameInTable="columnProcessFlow_id" msprop:Generator_ColumnPropNameInTable="ProcessFlow_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ProcessNode_auto" msprop:Generator_UserColumnName="ProcessNode_auto" msprop:Generator_ColumnPropNameInRow="ProcessNode_auto" msprop:Generator_ColumnVarNameInTable="columnProcessNode_auto" msprop:Generator_ColumnPropNameInTable="ProcessNode_autoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ProcessCheck_auto" msprop:Generator_UserColumnName="ProcessCheck_auto" msprop:Generator_ColumnPropNameInRow="ProcessCheck_auto" msprop:Generator_ColumnVarNameInTable="columnProcessCheck_auto" msprop:Generator_ColumnPropNameInTable="ProcessCheck_autoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Role_id" msprop:Generator_UserColumnName="Role_id" msprop:Generator_ColumnPropNameInRow="Role_id" msprop:Generator_ColumnVarNameInTable="columnRole_id" msprop:Generator_ColumnPropNameInTable="Role_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_id" msprop:Generator_UserColumnName="Emp_id" msprop:Generator_ColumnPropNameInRow="Emp_id" msprop:Generator_ColumnVarNameInTable="columnEmp_id" msprop:Generator_ColumnPropNameInTable="Emp_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProcessApView" msprop:Generator_UserTableName="ProcessApView" msprop:Generator_RowDeletedName="ProcessApViewRowDeleted" msprop:Generator_RowChangedName="ProcessApViewRowChanged" msprop:Generator_RowClassName="ProcessApViewRow" msprop:Generator_RowChangingName="ProcessApViewRowChanging" msprop:Generator_RowEvArgName="ProcessApViewRowChangeEvent" msprop:Generator_RowEvHandlerName="ProcessApViewRowChangeEventHandler" msprop:Generator_TableClassName="ProcessApViewDataTable" msprop:Generator_TableVarName="tableProcessApView" msprop:Generator_RowDeletingName="ProcessApViewRowDeleting" msprop:Generator_TablePropName="ProcessApView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="auto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="auto" msprop:Generator_ColumnPropNameInRow="auto" msprop:Generator_ColumnVarNameInTable="columnauto" msprop:Generator_ColumnPropNameInTable="autoColumn" type="xs:int" />
+              <xs:element name="ProcessFlow_id" msprop:Generator_UserColumnName="ProcessFlow_id" msprop:Generator_ColumnPropNameInRow="ProcessFlow_id" msprop:Generator_ColumnVarNameInTable="columnProcessFlow_id" msprop:Generator_ColumnPropNameInTable="ProcessFlow_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Role_id" msprop:Generator_UserColumnName="Role_id" msprop:Generator_ColumnPropNameInRow="Role_id" msprop:Generator_ColumnVarNameInTable="columnRole_id" msprop:Generator_ColumnPropNameInTable="Role_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_id" msprop:Generator_UserColumnName="Emp_id" msprop:Generator_ColumnPropNameInRow="Emp_id" msprop:Generator_ColumnVarNameInTable="columnEmp_id" msprop:Generator_ColumnPropNameInTable="Emp_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tag1" msprop:Generator_UserColumnName="tag1" msprop:Generator_ColumnPropNameInRow="tag1" msprop:Generator_ColumnVarNameInTable="columntag1" msprop:Generator_ColumnPropNameInTable="tag1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tag2" msprop:Generator_UserColumnName="tag2" msprop:Generator_ColumnPropNameInRow="tag2" msprop:Generator_ColumnVarNameInTable="columntag2" msprop:Generator_ColumnPropNameInTable="tag2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tag3" msprop:Generator_UserColumnName="tag3" msprop:Generator_ColumnPropNameInRow="tag3" msprop:Generator_ColumnVarNameInTable="columntag3" msprop:Generator_ColumnPropNameInTable="tag3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SysAdmin" msprop:Generator_UserTableName="SysAdmin" msprop:Generator_RowDeletedName="SysAdminRowDeleted" msprop:Generator_RowChangedName="SysAdminRowChanged" msprop:Generator_RowClassName="SysAdminRow" msprop:Generator_RowChangingName="SysAdminRowChanging" msprop:Generator_RowEvArgName="SysAdminRowChangeEvent" msprop:Generator_RowEvHandlerName="SysAdminRowChangeEventHandler" msprop:Generator_TableClassName="SysAdminDataTable" msprop:Generator_TableVarName="tableSysAdmin" msprop:Generator_RowDeletingName="SysAdminRowDeleting" msprop:Generator_TablePropName="SysAdmin">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="auto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="auto" msprop:Generator_ColumnVarNameInTable="columnauto" msprop:Generator_ColumnPropNameInRow="auto" msprop:Generator_ColumnPropNameInTable="autoColumn" type="xs:int" />
+              <xs:element name="Emp_id" msprop:Generator_UserColumnName="Emp_id" msprop:Generator_ColumnVarNameInTable="columnEmp_id" msprop:Generator_ColumnPropNameInRow="Emp_id" msprop:Generator_ColumnPropNameInTable="Emp_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wfHcode" msprop:Generator_UserTableName="wfHcode" msprop:Generator_RowDeletedName="wfHcodeRowDeleted" msprop:Generator_RowChangedName="wfHcodeRowChanged" msprop:Generator_RowClassName="wfHcodeRow" msprop:Generator_RowChangingName="wfHcodeRowChanging" msprop:Generator_RowEvArgName="wfHcodeRowChangeEvent" msprop:Generator_RowEvHandlerName="wfHcodeRowChangeEventHandler" msprop:Generator_TableClassName="wfHcodeDataTable" msprop:Generator_TableVarName="tablewfHcode" msprop:Generator_RowDeletingName="wfHcodeRowDeleting" msprop:Generator_TablePropName="wfHcode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iAutoKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="iAutoKey" msprop:Generator_ColumnPropNameInRow="iAutoKey" msprop:Generator_ColumnVarNameInTable="columniAutoKey" msprop:Generator_ColumnPropNameInTable="iAutoKeyColumn" type="xs:int" />
+              <xs:element name="sHcodeWF" msprop:Generator_UserColumnName="sHcodeWF" msprop:Generator_ColumnPropNameInRow="sHcodeWF" msprop:Generator_ColumnVarNameInTable="columnsHcodeWF" msprop:Generator_ColumnPropNameInTable="sHcodeWFColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sHnameWF" msprop:Generator_UserColumnName="sHnameWF" msprop:Generator_ColumnPropNameInRow="sHnameWF" msprop:Generator_ColumnVarNameInTable="columnsHnameWF" msprop:Generator_ColumnPropNameInTable="sHnameWFColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sHcodeHR" msprop:Generator_UserColumnName="sHcodeHR" msprop:Generator_ColumnPropNameInRow="sHcodeHR" msprop:Generator_ColumnVarNameInTable="columnsHcodeHR" msprop:Generator_ColumnPropNameInTable="sHcodeHRColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bDisplay" msprop:Generator_UserColumnName="bDisplay" msprop:Generator_ColumnPropNameInRow="bDisplay" msprop:Generator_ColumnVarNameInTable="columnbDisplay" msprop:Generator_ColumnPropNameInTable="bDisplayColumn" type="xs:boolean" />
+              <xs:element name="sKeyMan" msprop:Generator_UserColumnName="sKeyMan" msprop:Generator_ColumnPropNameInRow="sKeyMan" msprop:Generator_ColumnVarNameInTable="columnsKeyMan" msprop:Generator_ColumnPropNameInTable="sKeyManColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dKeyDate" msprop:Generator_UserColumnName="dKeyDate" msprop:Generator_ColumnPropNameInRow="dKeyDate" msprop:Generator_ColumnVarNameInTable="columndKeyDate" msprop:Generator_ColumnPropNameInTable="dKeyDateColumn" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wfRote" msprop:Generator_UserTableName="wfRote" msprop:Generator_RowDeletedName="wfRoteRowDeleted" msprop:Generator_RowChangedName="wfRoteRowChanged" msprop:Generator_RowClassName="wfRoteRow" msprop:Generator_RowChangingName="wfRoteRowChanging" msprop:Generator_RowEvArgName="wfRoteRowChangeEvent" msprop:Generator_RowEvHandlerName="wfRoteRowChangeEventHandler" msprop:Generator_TableClassName="wfRoteDataTable" msprop:Generator_TableVarName="tablewfRote" msprop:Generator_RowDeletingName="wfRoteRowDeleting" msprop:Generator_TablePropName="wfRote">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iAutoKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="iAutoKey" msprop:Generator_ColumnPropNameInRow="iAutoKey" msprop:Generator_ColumnVarNameInTable="columniAutoKey" msprop:Generator_ColumnPropNameInTable="iAutoKeyColumn" type="xs:int" />
+              <xs:element name="sRcodeWF" msprop:Generator_UserColumnName="sRcodeWF" msprop:Generator_ColumnPropNameInRow="sRcodeWF" msprop:Generator_ColumnVarNameInTable="columnsRcodeWF" msprop:Generator_ColumnPropNameInTable="sRcodeWFColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sRnameWF" msprop:Generator_UserColumnName="sRnameWF" msprop:Generator_ColumnPropNameInRow="sRnameWF" msprop:Generator_ColumnVarNameInTable="columnsRnameWF" msprop:Generator_ColumnPropNameInTable="sRnameWFColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sRcodeHR" msprop:Generator_UserColumnName="sRcodeHR" msprop:Generator_ColumnPropNameInRow="sRcodeHR" msprop:Generator_ColumnVarNameInTable="columnsRcodeHR" msprop:Generator_ColumnPropNameInTable="sRcodeHRColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sKeyMan" msprop:Generator_UserColumnName="sKeyMan" msprop:Generator_ColumnPropNameInRow="sKeyMan" msprop:Generator_ColumnVarNameInTable="columnsKeyMan" msprop:Generator_ColumnPropNameInTable="sKeyManColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dKeyDate" msprop:Generator_UserColumnName="dKeyDate" msprop:Generator_ColumnPropNameInRow="dKeyDate" msprop:Generator_ColumnVarNameInTable="columndKeyDate" msprop:Generator_ColumnPropNameInTable="dKeyDateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wfSign" msprop:Generator_UserTableName="wfSign" msprop:Generator_RowDeletedName="wfSignRowDeleted" msprop:Generator_RowChangedName="wfSignRowChanged" msprop:Generator_RowClassName="wfSignRow" msprop:Generator_RowChangingName="wfSignRowChanging" msprop:Generator_RowEvArgName="wfSignRowChangeEvent" msprop:Generator_RowEvHandlerName="wfSignRowChangeEventHandler" msprop:Generator_TableClassName="wfSignDataTable" msprop:Generator_TableVarName="tablewfSign" msprop:Generator_RowDeletingName="wfSignRowDeleting" msprop:Generator_TablePropName="wfSign">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iAutoKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="iAutoKey" msprop:Generator_ColumnVarNameInTable="columniAutoKey" msprop:Generator_ColumnPropNameInRow="iAutoKey" msprop:Generator_ColumnPropNameInTable="iAutoKeyColumn" type="xs:int" />
+              <xs:element name="sFromCode" msprop:Generator_UserColumnName="sFromCode" msprop:Generator_ColumnVarNameInTable="columnsFromCode" msprop:Generator_ColumnPropNameInRow="sFromCode" msprop:Generator_ColumnPropNameInTable="sFromCodeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sFromName" msprop:Generator_UserColumnName="sFromName" msprop:Generator_ColumnVarNameInTable="columnsFromName" msprop:Generator_ColumnPropNameInRow="sFromName" msprop:Generator_ColumnPropNameInTable="sFromNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sProcessID" msprop:Generator_UserColumnName="sProcessID" msprop:Generator_ColumnVarNameInTable="columnsProcessID" msprop:Generator_ColumnPropNameInRow="sProcessID" msprop:Generator_ColumnPropNameInTable="sProcessIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idProcess" msprop:Generator_UserColumnName="idProcess" msprop:Generator_ColumnVarNameInTable="columnidProcess" msprop:Generator_ColumnPropNameInRow="idProcess" msprop:Generator_ColumnPropNameInTable="idProcessColumn" type="xs:int" />
+              <xs:element name="sNobr" msprop:Generator_UserColumnName="sNobr" msprop:Generator_ColumnVarNameInTable="columnsNobr" msprop:Generator_ColumnPropNameInRow="sNobr" msprop:Generator_ColumnPropNameInTable="sNobrColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sName" msprop:Generator_UserColumnName="sName" msprop:Generator_ColumnVarNameInTable="columnsName" msprop:Generator_ColumnPropNameInRow="sName" msprop:Generator_ColumnPropNameInTable="sNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sDept" msprop:Generator_UserColumnName="sDept" msprop:Generator_ColumnVarNameInTable="columnsDept" msprop:Generator_ColumnPropNameInRow="sDept" msprop:Generator_ColumnPropNameInTable="sDeptColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sDeptName" msprop:Generator_UserColumnName="sDeptName" msprop:Generator_ColumnVarNameInTable="columnsDeptName" msprop:Generator_ColumnPropNameInRow="sDeptName" msprop:Generator_ColumnPropNameInTable="sDeptNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sNote" msprop:Generator_UserColumnName="sNote" msprop:Generator_ColumnVarNameInTable="columnsNote" msprop:Generator_ColumnPropNameInRow="sNote" msprop:Generator_ColumnPropNameInTable="sNoteColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bSign" msprop:Generator_UserColumnName="bSign" msprop:Generator_ColumnVarNameInTable="columnbSign" msprop:Generator_ColumnPropNameInRow="bSign" msprop:Generator_ColumnPropNameInTable="bSignColumn" type="xs:boolean" />
+              <xs:element name="sSign" msprop:Generator_UserColumnName="sSign" msprop:Generator_ColumnVarNameInTable="columnsSign" msprop:Generator_ColumnPropNameInRow="sSign" msprop:Generator_ColumnPropNameInTable="sSignColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dKeyDate" msprop:Generator_UserColumnName="dKeyDate" msprop:Generator_ColumnVarNameInTable="columndKeyDate" msprop:Generator_ColumnPropNameInRow="dKeyDate" msprop:Generator_ColumnPropNameInTable="dKeyDateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wfUpFile" msprop:Generator_UserTableName="wfUpFile" msprop:Generator_RowDeletedName="wfUpFileRowDeleted" msprop:Generator_RowChangedName="wfUpFileRowChanged" msprop:Generator_RowClassName="wfUpFileRow" msprop:Generator_RowChangingName="wfUpFileRowChanging" msprop:Generator_RowEvArgName="wfUpFileRowChangeEvent" msprop:Generator_RowEvHandlerName="wfUpFileRowChangeEventHandler" msprop:Generator_TableClassName="wfUpFileDataTable" msprop:Generator_TableVarName="tablewfUpFile" msprop:Generator_RowDeletingName="wfUpFileRowDeleting" msprop:Generator_TablePropName="wfUpFile">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iAutoKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="iAutoKey" msprop:Generator_ColumnVarNameInTable="columniAutoKey" msprop:Generator_ColumnPropNameInRow="iAutoKey" msprop:Generator_ColumnPropNameInTable="iAutoKeyColumn" type="xs:int" />
+              <xs:element name="sFromCode" msprop:Generator_UserColumnName="sFromCode" msprop:Generator_ColumnVarNameInTable="columnsFromCode" msprop:Generator_ColumnPropNameInRow="sFromCode" msprop:Generator_ColumnPropNameInTable="sFromCodeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sFromName" msprop:Generator_UserColumnName="sFromName" msprop:Generator_ColumnVarNameInTable="columnsFromName" msprop:Generator_ColumnPropNameInRow="sFromName" msprop:Generator_ColumnPropNameInTable="sFromNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sProcessID" msprop:Generator_UserColumnName="sProcessID" msprop:Generator_ColumnVarNameInTable="columnsProcessID" msprop:Generator_ColumnPropNameInRow="sProcessID" msprop:Generator_ColumnPropNameInTable="sProcessIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idProcess" msprop:Generator_UserColumnName="idProcess" msprop:Generator_ColumnVarNameInTable="columnidProcess" msprop:Generator_ColumnPropNameInRow="idProcess" msprop:Generator_ColumnPropNameInTable="idProcessColumn" type="xs:int" />
+              <xs:element name="sNobr" msprop:Generator_UserColumnName="sNobr" msprop:Generator_ColumnVarNameInTable="columnsNobr" msprop:Generator_ColumnPropNameInRow="sNobr" msprop:Generator_ColumnPropNameInTable="sNobrColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sUpName" msprop:Generator_UserColumnName="sUpName" msprop:Generator_ColumnVarNameInTable="columnsUpName" msprop:Generator_ColumnPropNameInRow="sUpName" msprop:Generator_ColumnPropNameInTable="sUpNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sServerName" msprop:Generator_UserColumnName="sServerName" msprop:Generator_ColumnVarNameInTable="columnsServerName" msprop:Generator_ColumnPropNameInRow="sServerName" msprop:Generator_ColumnPropNameInTable="sServerNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sDesc" msprop:Generator_UserColumnName="sDesc" msprop:Generator_ColumnVarNameInTable="columnsDesc" msprop:Generator_ColumnPropNameInRow="sDesc" msprop:Generator_ColumnPropNameInTable="sDescColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sType" msprop:Generator_UserColumnName="sType" msprop:Generator_ColumnVarNameInTable="columnsType" msprop:Generator_ColumnPropNameInRow="sType" msprop:Generator_ColumnPropNameInTable="sTypeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="iSize" msprop:Generator_UserColumnName="iSize" msprop:Generator_ColumnVarNameInTable="columniSize" msprop:Generator_ColumnPropNameInRow="iSize" msprop:Generator_ColumnPropNameInTable="iSizeColumn" type="xs:int" />
+              <xs:element name="dUpDate" msprop:Generator_UserColumnName="dUpDate" msprop:Generator_ColumnVarNameInTable="columndUpDate" msprop:Generator_ColumnPropNameInRow="dUpDate" msprop:Generator_ColumnPropNameInTable="dUpDateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Emp" msprop:Generator_UserTableName="Emp" msprop:Generator_RowDeletedName="EmpRowDeleted" msprop:Generator_RowChangedName="EmpRowChanged" msprop:Generator_RowClassName="EmpRow" msprop:Generator_RowChangingName="EmpRowChanging" msprop:Generator_RowEvArgName="EmpRowChangeEvent" msprop:Generator_RowEvHandlerName="EmpRowChangeEventHandler" msprop:Generator_TableClassName="EmpDataTable" msprop:Generator_TableVarName="tableEmp" msprop:Generator_RowDeletingName="EmpRowDeleting" msprop:Generator_TablePropName="Emp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pw" msprop:Generator_UserColumnName="pw" msprop:Generator_ColumnPropNameInRow="pw" msprop:Generator_ColumnVarNameInTable="columnpw" msprop:Generator_ColumnPropNameInTable="pwColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInTable="nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="isNeedAgent" msprop:Generator_UserColumnName="isNeedAgent" msprop:Generator_ColumnPropNameInRow="isNeedAgent" msprop:Generator_ColumnVarNameInTable="columnisNeedAgent" msprop:Generator_ColumnPropNameInTable="isNeedAgentColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="dateB" msprop:Generator_UserColumnName="dateB" msprop:Generator_ColumnPropNameInRow="dateB" msprop:Generator_ColumnVarNameInTable="columndateB" msprop:Generator_ColumnPropNameInTable="dateBColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dateE" msprop:Generator_UserColumnName="dateE" msprop:Generator_ColumnPropNameInRow="dateE" msprop:Generator_ColumnVarNameInTable="columndateE" msprop:Generator_ColumnPropNameInTable="dateEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="email" msprop:Generator_UserColumnName="email" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInTable="emailColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="login" msprop:Generator_UserColumnName="login" msprop:Generator_ColumnPropNameInRow="login" msprop:Generator_ColumnVarNameInTable="columnlogin" msprop:Generator_ColumnPropNameInTable="loginColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sex" msprop:Generator_UserColumnName="sex" msprop:Generator_ColumnPropNameInRow="sex" msprop:Generator_ColumnVarNameInTable="columnsex" msprop:Generator_ColumnPropNameInTable="sexColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WorkAgent" msprop:Generator_UserTableName="WorkAgent" msprop:Generator_RowDeletedName="WorkAgentRowDeleted" msprop:Generator_RowChangedName="WorkAgentRowChanged" msprop:Generator_RowClassName="WorkAgentRow" msprop:Generator_RowChangingName="WorkAgentRowChanging" msprop:Generator_RowEvArgName="WorkAgentRowChangeEvent" msprop:Generator_RowEvHandlerName="WorkAgentRowChangeEventHandler" msprop:Generator_TableClassName="WorkAgentDataTable" msprop:Generator_TableVarName="tableWorkAgent" msprop:Generator_RowDeletingName="WorkAgentRowDeleting" msprop:Generator_TablePropName="WorkAgent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Emp_idSource" msprop:Generator_UserColumnName="Emp_idSource" msprop:Generator_ColumnVarNameInTable="columnEmp_idSource" msprop:Generator_ColumnPropNameInRow="Emp_idSource" msprop:Generator_ColumnPropNameInTable="Emp_idSourceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_idTarget" msprop:Generator_UserColumnName="Emp_idTarget" msprop:Generator_ColumnVarNameInTable="columnEmp_idTarget" msprop:Generator_ColumnPropNameInRow="Emp_idTarget" msprop:Generator_ColumnPropNameInTable="Emp_idTargetColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_nameTarget" msprop:Generator_UserColumnName="Emp_nameTarget" msprop:Generator_ColumnVarNameInTable="columnEmp_nameTarget" msprop:Generator_ColumnPropNameInRow="Emp_nameTarget" msprop:Generator_ColumnPropNameInTable="Emp_nameTargetColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_emailTarget" msprop:Generator_UserColumnName="Emp_emailTarget" msprop:Generator_ColumnVarNameInTable="columnEmp_emailTarget" msprop:Generator_ColumnPropNameInRow="Emp_emailTarget" msprop:Generator_ColumnPropNameInTable="Emp_emailTargetColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wfEncode" msprop:Generator_UserTableName="wfEncode" msprop:Generator_RowDeletedName="wfEncodeRowDeleted" msprop:Generator_RowChangedName="wfEncodeRowChanged" msprop:Generator_RowClassName="wfEncodeRow" msprop:Generator_RowChangingName="wfEncodeRowChanging" msprop:Generator_RowEvArgName="wfEncodeRowChangeEvent" msprop:Generator_RowEvHandlerName="wfEncodeRowChangeEventHandler" msprop:Generator_TableClassName="wfEncodeDataTable" msprop:Generator_TableVarName="tablewfEncode" msprop:Generator_RowDeletingName="wfEncodeRowDeleting" msprop:Generator_TablePropName="wfEncode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iAutoKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="iAutoKey" msprop:Generator_ColumnVarNameInTable="columniAutoKey" msprop:Generator_ColumnPropNameInRow="iAutoKey" msprop:Generator_ColumnPropNameInTable="iAutoKeyColumn" type="xs:int" />
+              <xs:element name="sEncode" msprop:Generator_UserColumnName="sEncode" msprop:Generator_ColumnVarNameInTable="columnsEncode" msprop:Generator_ColumnPropNameInRow="sEncode" msprop:Generator_ColumnPropNameInTable="sEncodeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sDecode" msprop:Generator_UserColumnName="sDecode" msprop:Generator_ColumnVarNameInTable="columnsDecode" msprop:Generator_ColumnPropNameInRow="sDecode" msprop:Generator_ColumnPropNameInTable="sDecodeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wfJobSign" msprop:Generator_UserTableName="wfJobSign" msprop:Generator_RowDeletedName="wfJobSignRowDeleted" msprop:Generator_RowChangedName="wfJobSignRowChanged" msprop:Generator_RowClassName="wfJobSignRow" msprop:Generator_RowChangingName="wfJobSignRowChanging" msprop:Generator_RowEvArgName="wfJobSignRowChangeEvent" msprop:Generator_RowEvHandlerName="wfJobSignRowChangeEventHandler" msprop:Generator_TableClassName="wfJobSignDataTable" msprop:Generator_TableVarName="tablewfJobSign" msprop:Generator_RowDeletingName="wfJobSignRowDeleting" msprop:Generator_TablePropName="wfJobSign">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iAutoKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="iAutoKey" msprop:Generator_ColumnPropNameInRow="iAutoKey" msprop:Generator_ColumnVarNameInTable="columniAutoKey" msprop:Generator_ColumnPropNameInTable="iAutoKeyColumn" type="xs:int" />
+              <xs:element name="sJob" msprop:Generator_UserColumnName="sJob" msprop:Generator_ColumnPropNameInRow="sJob" msprop:Generator_ColumnVarNameInTable="columnsJob" msprop:Generator_ColumnPropNameInTable="sJobColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sJobE" msprop:Generator_UserColumnName="sJobE" msprop:Generator_ColumnPropNameInRow="sJobE" msprop:Generator_ColumnVarNameInTable="columnsJobE" msprop:Generator_ColumnPropNameInTable="sJobEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="iDay" msprop:Generator_UserColumnName="iDay" msprop:Generator_ColumnPropNameInRow="iDay" msprop:Generator_ColumnVarNameInTable="columniDay" msprop:Generator_ColumnPropNameInTable="iDayColumn" type="xs:int" />
+              <xs:element name="iDayE" msprop:Generator_UserColumnName="iDayE" msprop:Generator_ColumnPropNameInRow="iDayE" msprop:Generator_ColumnVarNameInTable="columniDayE" msprop:Generator_ColumnPropNameInTable="iDayEColumn" type="xs:int" />
+              <xs:element name="sSignCode" msprop:Generator_UserColumnName="sSignCode" msprop:Generator_ColumnPropNameInRow="sSignCode" msprop:Generator_ColumnVarNameInTable="columnsSignCode" msprop:Generator_ColumnPropNameInTable="sSignCodeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sForm" msprop:Generator_UserColumnName="sForm" msprop:Generator_ColumnPropNameInRow="sForm" msprop:Generator_ColumnVarNameInTable="columnsForm" msprop:Generator_ColumnPropNameInTable="sFormColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sR1" msprop:Generator_UserColumnName="sR1" msprop:Generator_ColumnPropNameInRow="sR1" msprop:Generator_ColumnVarNameInTable="columnsR1" msprop:Generator_ColumnPropNameInTable="sR1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sR2" msprop:Generator_UserColumnName="sR2" msprop:Generator_ColumnPropNameInRow="sR2" msprop:Generator_ColumnVarNameInTable="columnsR2" msprop:Generator_ColumnPropNameInTable="sR2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sR3" msprop:Generator_UserColumnName="sR3" msprop:Generator_ColumnPropNameInRow="sR3" msprop:Generator_ColumnVarNameInTable="columnsR3" msprop:Generator_ColumnPropNameInTable="sR3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProcessCheck" msprop:Generator_UserTableName="ProcessCheck" msprop:Generator_RowDeletedName="ProcessCheckRowDeleted" msprop:Generator_TableClassName="ProcessCheckDataTable" msprop:Generator_RowChangedName="ProcessCheckRowChanged" msprop:Generator_RowClassName="ProcessCheckRow" msprop:Generator_RowChangingName="ProcessCheckRowChanging" msprop:Generator_RowEvArgName="ProcessCheckRowChangeEvent" msprop:Generator_RowEvHandlerName="ProcessCheckRowChangeEventHandler" msprop:Generator_TablePropName="ProcessCheck" msprop:Generator_TableVarName="tableProcessCheck" msprop:Generator_RowDeletingName="ProcessCheckRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProcessFlow_id" msprop:Generator_UserColumnName="ProcessFlow_id" msprop:Generator_ColumnPropNameInRow="ProcessFlow_id" msprop:Generator_ColumnVarNameInTable="columnProcessFlow_id" msprop:Generator_ColumnPropNameInTable="ProcessFlow_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Emp_idDefault" msprop:Generator_UserColumnName="Emp_idDefault" msprop:Generator_ColumnPropNameInRow="Emp_idDefault" msprop:Generator_ColumnVarNameInTable="columnEmp_idDefault" msprop:Generator_ColumnPropNameInTable="Emp_idDefaultColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Role_idDefault" msprop:Generator_UserColumnName="Role_idDefault" msprop:Generator_ColumnPropNameInRow="Role_idDefault" msprop:Generator_ColumnVarNameInTable="columnRole_idDefault" msprop:Generator_ColumnPropNameInTable="Role_idDefaultColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dept_id" msprop:Generator_UserColumnName="Dept_id" msprop:Generator_ColumnPropNameInRow="Dept_id" msprop:Generator_ColumnVarNameInTable="columnDept_id" msprop:Generator_ColumnPropNameInTable="Dept_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProcessFlowShare" />
+      <xs:field xpath="mstns:auto" />
+    </xs:unique>
+    <xs:unique name="ProcessApParm_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProcessApParm" />
+      <xs:field xpath="mstns:auto" />
+    </xs:unique>
+    <xs:unique name="ProcessApView_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProcessApView" />
+      <xs:field xpath="mstns:auto" />
+    </xs:unique>
+    <xs:unique name="SysAdmin_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SysAdmin" />
+      <xs:field xpath="mstns:auto" />
+    </xs:unique>
+    <xs:unique name="wfHcode_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:wfHcode" />
+      <xs:field xpath="mstns:iAutoKey" />
+    </xs:unique>
+    <xs:unique name="wfRote_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:wfRote" />
+      <xs:field xpath="mstns:iAutoKey" />
+    </xs:unique>
+    <xs:unique name="wfSign_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:wfSign" />
+      <xs:field xpath="mstns:iAutoKey" />
+    </xs:unique>
+    <xs:unique name="wfUpFile_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:wfUpFile" />
+      <xs:field xpath="mstns:iAutoKey" />
+    </xs:unique>
+    <xs:unique name="Emp_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Emp" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="wfEncode_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:wfEncode" />
+      <xs:field xpath="mstns:iAutoKey" />
+    </xs:unique>
+    <xs:unique name="wfJobSign_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:wfJobSign" />
+      <xs:field xpath="mstns:iAutoKey" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

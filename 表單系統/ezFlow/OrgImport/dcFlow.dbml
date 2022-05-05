@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ezFlow_WAFER" Class="dcFlowDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.24;Initial Catalog=ezFlow_WAFER;Persist Security Info=True;User ID=jb" SettingsObjectName="OrgImport.Properties.Settings" SettingsPropertyName="FlowConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Dept" Member="Dept">
+    <Type Name="Dept">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idParent" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="path" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="DeptLevel_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeptLevel" Member="DeptLevel">
+    <Type Name="DeptLevel">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sorting" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Emp" Member="Emp">
+    <Type Name="Emp">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pw" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="isNeedAgent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="dateB" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dateE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="login" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmpBak" Member="EmpBak">
+    <Type Name="EmpBak">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="pw" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="isNeedAgent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="dateB" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dateE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="login" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pos" Member="Pos">
+    <Type Name="Pos">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PosLevel_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PosLevel" Member="PosLevel">
+    <Type Name="PosLevel">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sorting" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role" Member="Role">
+    <Type Name="Role">
+      <Column Name="auto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="idParent" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Dept_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pos_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="dateB" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dateE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Emp_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mgDefault" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="deptMg" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrgImport" Member="OrgImport">
+    <Type Name="OrgImport">
+      <Column Name="iAutoKey" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="bSyncLoginID" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="sFrontLoginID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bFullImport" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="sDeptTopCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bRoleTopEmpty" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bSyncLoginPW" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bLevel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bTest" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="sTestMail" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="bFixBug" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysVar" Member="SysVar">
+    <Type Name="SysVar">
+      <Column Name="urlRoot" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mailServer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mailID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mailPW" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="senderMail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="senderName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maxKey" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="webSrvURL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

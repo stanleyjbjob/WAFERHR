@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://jbjob.com.tw/Flow" elementFormDefault="qualified" targetNamespace="http://jbjob.com.tw/Flow" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" />
+  <xs:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Bll.Att.Vdb" />
+  <xs:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/JBModule.Data.Repo" />
+  <xs:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" />
+  <xs:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/JBModule.Data.Dto" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFormTreeToList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFormTreeToListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetFormTreeToListResult" nillable="true" type="q3:ArrayOfFormTreeTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowProgressFlow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowProgressFlowResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetFlowProgressFlowResult" nillable="true" type="q4:ArrayOfFlowSignTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowProgressFlowCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowProgressFlowCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFlowProgressFlowCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowProgressFlowAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sAppNobr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowProgressFlowAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetFlowProgressFlowAllResult" nillable="true" type="q5:ArrayOfFlowSignTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowProgressFlowComplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowProgressFlowCompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetFlowProgressFlowCompleteResult" nillable="true" type="q6:ArrayOfFlowSignCompleteTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetProcessApParm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iApParmID" type="xs:int" />
+        <xs:element minOccurs="0" name="iProcessCheckAuto" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetProcessApParmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetProcessApParmResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowSearchIng">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowSearchIngResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetFlowSearchIngResult" nillable="true" type="q7:ArrayOfFlowSearchIngTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowSearchComplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dAppB" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dAppE" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowSearchCompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetFlowSearchCompleteResult" nillable="true" type="q8:ArrayOfFlowSearchCompleteTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetRolesResult" nillable="true" type="q9:ArrayOfRolesTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sRole" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetAgentResult" nillable="true" type="q10:ArrayOfCheckAgentDefaultTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAgent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sRole" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sAgentNobr1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sAgentNobr2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sAgentNobr3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dDateB" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dDateE" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAgentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetAgentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowAbs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dDateB" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dDateE" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="sCat" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsDept" nillable="true" type="q11:ArrayOfstring" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsNobr" nillable="true" type="q12:ArrayOfstring" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsState" nillable="true" type="q13:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowAbsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetFlowAbsResult" nillable="true" type="q14:ArrayOfFlowAbsTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowAbs1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dDateB" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dDateE" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="sHcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sCat" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsDept" nillable="true" type="q15:ArrayOfstring" />
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsNobr" nillable="true" type="q16:ArrayOfstring" />
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsState" nillable="true" type="q17:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowAbs1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetFlowAbs1Result" nillable="true" type="q18:ArrayOfFlowAbsTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowOt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dDateB" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dDateE" type="xs:dateTime" />
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsDept" nillable="true" type="q19:ArrayOfstring" />
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsNobr" nillable="true" type="q20:ArrayOfstring" />
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsState" nillable="true" type="q21:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowOtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetFlowOtResult" nillable="true" type="q22:ArrayOfFlowOtTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowOt1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dDateB" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dDateE" type="xs:dateTime" />
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsDept" nillable="true" type="q23:ArrayOfstring" />
+        <xs:element xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsNobr" nillable="true" type="q24:ArrayOfstring" />
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsState" nillable="true" type="q25:ArrayOfstring" />
+        <xs:element minOccurs="0" name="sOtType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowOt1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="GetFlowOt1Result" nillable="true" type="q26:ArrayOfFlowOtTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkFinish">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsApParm" nillable="true" type="q27:ArrayOfint" />
+        <xs:element minOccurs="0" name="sSignNobr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sNote" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bSign" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkFinishResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="WorkFinishResult" nillable="true" type="q28:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCancelForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="FormName" type="q29:FormCategroy" />
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsProcessID" nillable="true" type="q30:ArrayOfint" />
+        <xs:element minOccurs="0" name="bCancel" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCancelFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SetCancelFormResult" nillable="true" type="q31:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetResetForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="FormName" type="q32:FormCategroy" />
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsProcessID" nillable="true" type="q33:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetResetFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SetResetFormResult" nillable="true" type="q34:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCancelFormByHr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" minOccurs="0" name="FormName" type="q35:FormCategroy" />
+        <xs:element minOccurs="0" name="sNobr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dDateB" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="sTimeB" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bCancel" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCancelFormByHrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SetCancelFormByHrResult" nillable="true" type="q36:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCancelProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lsProcessID" nillable="true" type="q37:ArrayOfint" />
+        <xs:element minOccurs="0" name="bCancel" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCancelProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SetCancelProcessResult" nillable="true" type="q38:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHocde">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHocdeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Bll.Att.Vdb" minOccurs="0" name="GetHocdeResult" nillable="true" type="q39:ArrayOfHcodeTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearAbsenceDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EmployeeList" nillable="true" type="q40:ArrayOfstring" />
+        <xs:element minOccurs="0" name="DateBegin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateEnd" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearAbsenceDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/JBModule.Data.Repo" minOccurs="0" name="GetYearAbsenceDetailResult" nillable="true" type="q41:ArrayOfSpecialLeaveOfYear" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBasettsByDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Nobr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBasettsByDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" minOccurs="0" name="GetBasettsByDateResult" nillable="true" type="q42:BASETTS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBasetts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" minOccurs="0" name="basettsSet" nillable="true" type="q43:BASETTS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBasettsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddBasettsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAbsEntitleByTakenGuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TakenGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAbsEntitleByTakenGuidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/JBModule.Data.Dto" minOccurs="0" name="GetAbsEntitleByTakenGuidResult" nillable="true" type="q44:ArrayOfAbsenceDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAbsTakenByEntitleGuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntitleGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAbsTakenByEntitleGuidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/JBModule.Data.Dto" minOccurs="0" name="GetAbsTakenByEntitleGuidResult" nillable="true" type="q45:ArrayOfAbsenceDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAbsTakenByByEmployeeIdList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DateBegin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateEnd" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="WithFlowData" type="xs:boolean" />
+        <xs:element xmlns:q46="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EmployeeIdList" nillable="true" type="q46:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAbsTakenByByEmployeeIdListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/JBModule.Data.Dto" minOccurs="0" name="GetAbsTakenByByEmployeeIdListResult" nillable="true" type="q47:ArrayOfAbsenceDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAbsEntitleByEmployeeIdList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DateBegin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateEnd" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="WithFlowData" type="xs:boolean" />
+        <xs:element xmlns:q48="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EmployeeIdList" nillable="true" type="q48:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAbsEntitleByEmployeeIdListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/JBModule.Data.Dto" minOccurs="0" name="GetAbsEntitleByEmployeeIdListResult" nillable="true" type="q49:ArrayOfAbsenceDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

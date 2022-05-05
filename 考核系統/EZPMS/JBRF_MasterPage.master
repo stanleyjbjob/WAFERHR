@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="JBRF_MasterPage.master.cs" Inherits="JBRF_MasterPage" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>合晶科技績效考核系統（Web版）v1.0</title>
+</head>
+<body>
+       <div align="center">
+        <form id="form1" runat="server">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0" id="table1">
+                <tr>
+                    <td class="title">
+                        <asp:Image SkinID="title" ID="Image1" runat="server" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div align="center">
+                            <table border="0" width="100%" cellspacing="0" cellpadding="0" id="table2">
+                                <tr>
+                                    <td class="content">
+                                    <div id="breadcrumbfull">
+                                        <div id=breadcrumb>
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                        </div>
+                                        <div id="projectadministration">
+                                               
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            
+                                             
+                                            </asp:ContentPlaceHolder>
+                                            </div>
+                                            </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1">
+      <s:element name="AbsSave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sNobr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dDateB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dDateE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTimeB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTimeE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDeptCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNote" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKeyMan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iException" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSerno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsSaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AbsSaveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsFlowStart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sNobr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dDateB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dDateE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTimeB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTimeE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDeptCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNote" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKeyMan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iException" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSerno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsFlowStartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AbsFlowStartResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sNobr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRolesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRolesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sNobr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRole" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentNobr1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentNobr2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAgentNobr3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dDateB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dDateE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAgentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sNobr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dDateB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dDateE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTimeB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKeyMan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSerno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AbsCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsFlow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dDateB" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dDateE" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrDept" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrNobr" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrState" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AbsFlowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AbsFlowResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsGoIng">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="arrDept" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrNobr" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsGoIngResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AbsGoIngResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dDateB" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dDateE" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrDept" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrNobr" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AbsDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsInfoWithHrHide">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hide" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrNobr" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsInfoWithHrHideResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AbsInfoWithHrHideResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsInfoWithHR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrNobr" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AbsInfoWithHRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AbsInfoWithHRResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYearAbsenceDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmployeeList" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateBegin" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateEnd" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYearAbsenceDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetYearAbsenceDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AbsSaveSoapIn">
+    <wsdl:part name="parameters" element="tns:AbsSave" />
+  </wsdl:message>
+  <wsdl:message name="AbsSaveSoapOut">
+    <wsdl:part name="parameters" element="tns:AbsSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbsFlowStartSoapIn">
+    <wsdl:part name="parameters" element="tns:AbsFlowStart" />
+  </wsdl:message>
+  <wsdl:message name="AbsFlowStartSoapOut">
+    <wsdl:part name="parameters" element="tns:AbsFlowStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoles" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAgent" />
+  </wsdl:message>
+  <wsdl:message name="SetAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbsCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:AbsCancel" />
+  </wsdl:message>
+  <wsdl:message name="AbsCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:AbsCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbsFlowSoapIn">
+    <wsdl:part name="parameters" element="tns:AbsFlow" />
+  </wsdl:message>
+  <wsdl:message name="AbsFlowSoapOut">
+    <wsdl:part name="parameters" element="tns:AbsFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbsGoIngSoapIn">
+    <wsdl:part name="parameters" element="tns:AbsGoIng" />
+  </wsdl:message>
+  <wsdl:message name="AbsGoIngSoapOut">
+    <wsdl:part name="parameters" element="tns:AbsGoIngResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbsDataSoapIn">
+    <wsdl:part name="parameters" element="tns:AbsData" />
+  </wsdl:message>
+  <wsdl:message name="AbsDataSoapOut">
+    <wsdl:part name="parameters" element="tns:AbsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbsInfoWithHrHideSoapIn">
+    <wsdl:part name="parameters" element="tns:AbsInfoWithHrHide" />
+  </wsdl:message>
+  <wsdl:message name="AbsInfoWithHrHideSoapOut">
+    <wsdl:part name="parameters" element="tns:AbsInfoWithHrHideResponse" />
+  </wsdl:message>
+  <wsdl:message name="AbsInfoWithHRSoapIn">
+    <wsdl:part name="parameters" element="tns:AbsInfoWithHR" />
+  </wsdl:message>
+  <wsdl:message name="AbsInfoWithHRSoapOut">
+    <wsdl:part name="parameters" element="tns:AbsInfoWithHRResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetYearAbsenceDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetYearAbsenceDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetYearAbsenceDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetYearAbsenceDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="AbsSave">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">將請假資料存入HR.ABS1實體資料表 有字串時代表不正確 sNobr&gt;工號,sHcode&gt;假別代碼,dDateB&gt;開始日期,dDateE&gt;結束日期,sTimeB&gt;開始時間,sTimeE&gt;結束時間,sDeptCode&gt;部門,sNote&gt;原因,sKeyMan&gt;登錄者,sName&gt;對沖對象(通常婚假、喪假、產假可用),iException&gt;例外時數</wsdl:documentation>
+      <wsdl:input message="tns:AbsSaveSoapIn" />
+      <wsdl:output message="tns:AbsSaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbsFlowStart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">啟動流程 True = 成功 sNobr&gt;工號,sHcode&gt;假別代碼,dDateB&gt;開始日期,dDateE&gt;結束日期,sTimeB&gt;開始時間,sTimeE&gt;結束時間,sDeptCode&gt;部門,sNote&gt;原因,sKeyMan&gt;登錄者,sName&gt;對沖對象(通常婚假、喪假、產假可用),iException&gt;例外時數</wsdl:documentation>
+      <wsdl:input message="tns:AbsFlowStartSoapIn" />
+      <wsdl:output message="tns:AbsFlowStartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取得角色 sNobr&gt;工號</wsdl:documentation>
+      <wsdl:input message="tns:GetRolesSoapIn" />
+      <wsdl:output message="tns:GetRolesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAgent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">代理人設定 True = 成功 sNobr&gt;工號,sRole&gt;角色(空白時等於所有),sAgentNobr1&gt;代理人1,sAgentNobr2&gt;代理人2,sAgentNobr3&gt;代理人3,dDateB&gt;開始代理日期,dDateE&gt;結束代理日期</wsdl:documentation>
+      <wsdl:input message="tns:SetAgentSoapIn" />
+      <wsdl:output message="tns:SetAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbsCancel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">刪除請假資料 回傳已刪除資料 sNobr&gt;工號,dDateB&gt;開始日期,dDateE&gt;結束日期,sTimeB&gt;開始時間(允許空白),sHcode&gt;假別代碼(允許空白),sKeyMan&gt;登錄者,sSerno&gt;編號</wsdl:documentation>
+      <wsdl:input message="tns:AbsCancelSoapIn" />
+      <wsdl:output message="tns:AbsCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbsFlow">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">傳回進行中流程 dDateB&gt;開始日期, dDateE&gt;結束日期, sCat&gt;請假類別0 = 不分,1 = 請假,2 = 公出, arrDept&gt;部門List 忽略此條件需傳入null或是0筆資料的物件, arrNobr&gt;工號List 忽略此條件需傳入null或是0筆資料的物件, arrState&gt;狀態List 忽略此條件需傳入null或是0筆資料的物件</wsdl:documentation>
+      <wsdl:input message="tns:AbsFlowSoapIn" />
+      <wsdl:output message="tns:AbsFlowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbsGoIng">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">傳回進行中流程 arrDept&gt;部門List 忽略此條件需傳入null或是0筆資料的物件, arrNobr&gt;工號List 忽略此條件需傳入null或是0筆資料的物件</wsdl:documentation>
+      <wsdl:input message="tns:AbsGoIngSoapIn" />
+      <wsdl:output message="tns:AbsGoIngSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbsData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">傳回已存在HR的資料 dDateB&gt;日期區間 開始, dDateE&gt;日期區間 結束, arrDept&gt;部門List 忽略此條件需傳入null或是0筆資料的物件, arrNobr&gt;工號List 忽略此條件需傳入null或是0筆資料的物件</wsdl:documentation>
+      <wsdl:input message="tns:AbsDataSoapIn" />
+      <wsdl:output message="tns:AbsDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbsInfoWithHrHide">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">傳回已存在HR的資料 dDate&gt;查詢日期,Hide&gt;隱藏不顯示資料 , arrDept&gt;部門List 忽略此條件需傳入null或是0筆資料的物件, arrNobr&gt;工號List 忽略此條件需傳入null或是0筆資料的物件</wsdl:documentation>
+      <wsdl:input message="tns:AbsInfoWithHrHideSoapIn" />
+      <wsdl:output message="tns:AbsInfoWithHrHideSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AbsInfoWithHR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">傳回請假資訊(含簽核中) dDate&gt;查詢日期,  arrDept&gt;部門List 忽略此條件需傳入null或是0筆資料的物件, arrNobr&gt;工號List 忽略此條件需傳入null或是0筆資料的物件</wsdl:documentation>
+      <wsdl:input message="tns:AbsInfoWithHRSoapIn" />
+      <wsdl:output message="tns:AbsInfoWithHRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearAbsenceDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">傳回年度請假資訊 EmployeeList=&gt;DDate,DateBegin=&gt;請假開始日期,DateEnd=&gt;請假結束日期,DDate=&gt;異動截止日</wsdl:documentation>
+      <wsdl:input message="tns:GetYearAbsenceDetailSoapIn" />
+      <wsdl:output message="tns:GetYearAbsenceDetailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AbsSave">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsFlowStart">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsFlowStart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/GetRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAgent">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/SetAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsCancel">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsFlow">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsFlow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsGoIng">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsGoIng" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsData">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsInfoWithHrHide">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsInfoWithHrHide" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsInfoWithHR">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsInfoWithHR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYearAbsenceDetail">
+      <soap:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/GetYearAbsenceDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AbsSave">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsSave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsFlowStart">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsFlowStart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoles">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/GetRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAgent">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/SetAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsCancel">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsFlow">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsFlow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsGoIng">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsGoIng" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsData">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsInfoWithHrHide">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsInfoWithHrHide" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbsInfoWithHR">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/AbsInfoWithHR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYearAbsenceDetail">
+      <soap12:operation soapAction="http://jbjob.com.tw/ezFlow/Forms/FlowForm/Abs1/GetYearAbsenceDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://61.222.40.10/ezFlow/Forms/FlowForm/ws/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://61.222.40.10/ezFlow/Forms/FlowForm/ws/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

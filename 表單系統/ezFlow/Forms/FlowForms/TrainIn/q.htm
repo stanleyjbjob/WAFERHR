@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8">-->
+<title>內訓課程通知</title>
+<style>
+td{font-size:10pt;color:#666666;}
+a{width:90%;font-weight:bold;height:30px;border:solid 1px #333333;padding:8px 0 0 0;}
+a:link{color:#FFFFFF;background:#0A7BC6;text-decoration:none;}
+a:visited{color:#FFFFFF;background:#0A7BC6;text-decoration:none;}
+a:hover{color:#FFFFFF;background:#CC0000;text-decoration:none;}
+</style>
+</head>
+<body bgcolor="#EBEBEB">
+
+<div align="center">
+	<table border="0" width="720px" cellspacing="0" cellpadding="0" id="table1">
+		<tr>
+			<td><img border="0" src="http://{System.Url.Host}{System.Url.Segments}{ImagePath}/q_01.gif" width="720" height="120"></td>
+		</tr>
+		<tr>
+			<td background="http://{System.Url.Host}{System.Url.Segments}{ImagePath}/q_02.gif" align="center">
+			<h4>
+                {DESCR}</h4>
+			<table border="0" width="640px" cellspacing="0" cellpadding="4" id="table2">
+				<tr>
+					<td align="right">
+                        學員姓名：</td>
+					<td align="left" colspan="3">
+                        {Name}</td>
+				</tr>
+                <tr>
+                    <td align="right">
+                        部門名稱：</td>
+                    <td align="left" colspan="3">{Dept}
+                    </td>
+                </tr>
+				<tr>
+					<td align="right">
+                        課程時間：</td>
+					<td align="left" colspan="3">從{sDateTimeB}到{sDateTimeE}止</td>
+				</tr>
+                <tr>
+                    <td align="right">
+                        課程地點：</td>
+                    <td align="left" colspan="3">
+                        {TRADDR}</td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        講師姓名：</td>
+                    <td align="left" colspan="3">
+                        {sTcrName}</td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        課程大綱：</td>
+                    <td align="left" colspan="3">
+                        {COSINTRO}</td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        建議訓練對象：</td>
+                    <td align="left" colspan="3">
+                        {TR_PERSON}</td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        備註說明：</td>
+                    <td align="left" colspan="3">
+                        {MENO}</td>
+                </tr>
+                <tr>
+                    <td align="right" colspan="4">
+                        <a href="http://{System.Url.Host}/ezFlow/ezClient/">連結訓練平台</a></td>
+                </tr>
+			</table><br>
+			
+			</td>
+		</tr>
+		<tr>
+			<td><img border="0" src="http://{System.Url.Host}{System.Url.Segments}{ImagePath}/q_03.gif" width="720" height="30"></td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

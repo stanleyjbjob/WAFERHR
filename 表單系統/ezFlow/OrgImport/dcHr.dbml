@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WAFERHR" Class="dcHrDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.24;Initial Catalog=WAFERHR;Persist Security Info=True;User ID=jb" SettingsObjectName="OrgImport.Properties.Settings" SettingsPropertyName="HRConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BASE" Member="BASE">
+    <Type Name="BASE">
+      <Column Name="NOBR" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NAME_C" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="NAME_E" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="NAME_P" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="SEX" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="BIRDT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ADDR1" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ADDR2" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="TEL1" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="TEL2" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="BBCALL" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="GSM" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="IDNO" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CONT_MAN" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CONT_TEL" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="CONT_GSM" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="CONT_MAN2" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="CONT_TEL2" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="CONT_GSM2" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="BLOOD" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="PASSWORD" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="POSTCODE1" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="POSTCODE2" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="BANK_CODE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="BANKNO" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="ACCOUNT_NO" Type="System.String" DbType="Char(14)" CanBeNull="true" />
+      <Column Name="ACCOUNT_NA" Type="System.String" DbType="Char(14)" CanBeNull="true" />
+      <Column Name="MARRY" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="COUNTRY" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="COUNT_MA" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ARMY" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="PRO_MAN1" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PRO_ADDR1" Type="System.String" DbType="Char(60)" CanBeNull="true" />
+      <Column Name="PRO_ID1" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PRO_TEL1" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="PRO_MAN2" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PRO_ADDR2" Type="System.String" DbType="Char(60)" CanBeNull="true" />
+      <Column Name="PRO_ID2" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PRO_TEL2" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="ARMY_TYPE" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="N_NOBR" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="NOBR_B" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PROVINCE" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="BORN_ADDR" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="TAXCNT" Type="System.Decimal" DbType="Decimal(1,0)" CanBeNull="true" />
+      <Column Name="KEY_MAN" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="KEY_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_TYPE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="TAXNO" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PRETAX" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="PHOTO" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CONT_REL1" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CONT_REL2" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ACCOUNT_MA" Type="System.String" DbType="Char(14)" CanBeNull="true" />
+      <Column Name="MATNO" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="SUBTEL" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="LA_NO" Type="System.String" DbType="Char(40)" CanBeNull="true" />
+      <Column Name="LA_ADATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LA_RECRUIT" Type="System.String" DbType="Char(40)" CanBeNull="true" />
+      <Column Name="LA_RECURRE" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="LA_TYPE" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="LA_LDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LA_EDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LA_CYCLE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LA_NOTE" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="LA_AMT" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="LA_OUTDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FiveYears" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="FiveRecipient" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="TenYears" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="TenRecipient" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="FifteenYears" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="FiteenRecipient" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BASETTS" Member="BASETTS">
+    <Type Name="BASETTS">
+      <Column Name="NOBR" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="TTSCODE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ADATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="INDT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CINDT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OUDT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="STDT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="STINDT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="STOUDT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COMP" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="DEPT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="DEPTS" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="JOB" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="JOBL" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="CARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ROTET" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="DI" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="KEY_MAN" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="KEY_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MANG" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="YR_DAYS" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="WK_YRS" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="SALTP" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="JOBS" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="WORKCD" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="CARCD" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="EMPCD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="OUTCD" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="OUTCD1" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="CALABS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CALOT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="FULATT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NOTER" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NOWEL" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NORET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NOTLATE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HOLI_CODE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="NOOT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NOSPEC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NOCARD" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NOEAT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="APGRPCD" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="DEPTM" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="TTSCD" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="MENO" Type="System.String" DbType="Char(180)" CanBeNull="true" />
+      <Column Name="SALADR" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="NOWAGE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MANGE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RETRATE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RETDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RETCHOO" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="RETDATE1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ONLYONTIME" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JOBO" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="COUNT_PASS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PASS_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MANG1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AP_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GRP_AMT" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" />
+      <Column Name="TAX_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOSPAMT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FIXRATE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TAX_EDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SUP_NOBR" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="AGE_NOBR" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="NODormitory" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DEPTA" Member="DEPTA">
+    <Type Name="DEPTA">
+      <Column Name="D_NO" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="D_NAME" Type="System.String" DbType="Char(24)" CanBeNull="true" />
+      <Column Name="KEY_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="KEY_MAN" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="OLD_DEPT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="DEPT_GROUP" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="DEPT_TREE" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="DEPT_CATE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ADATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ABSEMAIL" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="MENO" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DEPT" Member="DEPT">
+    <Type Name="DEPT">
+      <Column Name="D_NO" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="D_NAME" Type="System.String" DbType="Char(40)" CanBeNull="true" />
+      <Column Name="PNS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DEPT_TREE" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="KEY_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="KEY_MAN" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="OLD_DEPT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="NEW_DEPT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="ADATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DEPT_GROUP" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="DEPT_CATE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DeptBudgetGroup" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="BudgetEMAIL" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="MENO" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JOB" Member="JOB">
+    <Type Name="JOB">
+      <Column Name="JOB" Member="JOB1" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="JOB_NAME" Type="System.String" DbType="Char(16)" CanBeNull="true" />
+      <Column Name="KEY_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="KEY_MAN" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="JOB_TREE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="JOBL" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="JOBLB" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="JOBLE" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="OLD_JOB" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="WORKAMT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

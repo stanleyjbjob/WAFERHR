@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="deb49b6f-1e0d-43d8-a83c-e4fb876b7692" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://61.222.40.10/ezPortal/Service/JbhrService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JbhrService.disco" MetadataType="Disco" ID="5db6d59e-5d19-4913-901d-7a24375cc221" SourceId="1" SourceUrl="http://61.222.40.10/ezPortal/Service/JbhrService.svc?disco" />
+    <MetadataFile FileName="JbhrService.wsdl" MetadataType="Wsdl" ID="4377834c-3385-42b8-80c5-fd7e5394ba22" SourceId="1" SourceUrl="http://61.222.40.10/ezPortal/Service/JbhrService.svc?wsdl" />
+    <MetadataFile FileName="JbhrService.xsd" MetadataType="Schema" ID="b0aa5349-fa22-417f-b0f4-edd8c313f6cb" SourceId="1" SourceUrl="http://61.222.40.10/ezPortal/Service/JbhrService.svc?xsd=xsd1" />
+    <MetadataFile FileName="JbhrService1.xsd" MetadataType="Schema" ID="a40827db-cb8c-4fb9-8e9d-7517f5cccdf1" SourceId="1" SourceUrl="http://61.222.40.10/ezPortal/Service/JbhrService.svc?xsd=xsd0" />
+    <MetadataFile FileName="JbhrService3.xsd" MetadataType="Schema" ID="da2871bb-652e-448f-8cde-716435514128" SourceId="1" SourceUrl="http://61.222.40.10/ezPortal/Service/JbhrService.svc?xsd=xsd3" />
+    <MetadataFile FileName="JbhrService2.xsd" MetadataType="Schema" ID="ad087783-e3b2-4fff-a13a-254053683bf2" SourceId="1" SourceUrl="http://61.222.40.10/ezPortal/Service/JbhrService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

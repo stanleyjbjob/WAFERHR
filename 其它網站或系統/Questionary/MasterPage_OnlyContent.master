@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_OnlyContent.master.cs" Inherits="MasterPage_OnlyContent" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>個人問卷管理</title>
+        <link href="./css/general.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="sm" runat="server">
+        </asp:ScriptManager>
+        <asp:UpdateProgress ID="up" runat="server">
+            <ProgressTemplate>
+                <table id="loaderContainer" border="0" cellpadding="0" cellspacing="0" height="600"
+                    onclick="return false;" width="800">
+                    <tr>
+                        <td id="loaderContainerWH">
+                            <div id="loader">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                <img id="IMG1" alt="" height="32" src="./images/loading.gif" width="32" /><strong>請稍後～<br />
+                                                    資料連接中............</strong></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+    <div class="frame">
+<div class="header">
+<div class="headerMenu">
+<ul>
+
+<li><a href="Default.aspx?action=logout"><asp:Image ID="Image2" runat="server" SkinID="logoutImg" />&nbsp;登出</a></li>
+<li><a href="Default.aspx?action=logout" target="_self"><asp:Image ID="Image1" runat="server" SkinID="logoutImg" />&nbsp;說明</a></li>
+</ul>
+</div>
+<div class="mainMenu">
+<ul>
+<li><a href="#">個人問卷</a></li>
+</ul>
+</div>
+</div>
+<asp:SiteMapPath ID="SiteMapPath1" runat="server">
+    </asp:SiteMapPath>
+<div class="content">
+    
+<asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+    </asp:contentplaceholder>
+</div>
+<div class="footer">
+<span><a href="http://www.jbjob.com.tw/">版權所有©2006 傑報資訊</a></span>
+提醒您，如果您無法正常彈出試窗，請檢查瀏覽器相關設定，如快顯封鎖之類的設定。
+</div>
+</div>
+    </form>
+</body>
+</html>

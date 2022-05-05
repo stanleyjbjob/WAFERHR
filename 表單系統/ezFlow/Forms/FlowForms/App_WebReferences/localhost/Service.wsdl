@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetProcessID">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetProcessIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetProcessIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FlowStart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idProcess" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="idFlowTree" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idRole_Start" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idEmp_Start" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idRole_Agent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idEmp_Agent" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FlowStartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FlowStartResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FlowShare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idProcess" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="idRole_Share" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idEmp_Share" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FlowShareResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetApParm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idApParm" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApParmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApParmResult" type="tns:CApParm" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CApParm">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessFlow_id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessNode_auto" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessCheck_auto" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Role_id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Emp_id" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetApView">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idApView" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApViewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApViewResult" type="tns:CApView" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CApView">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessFlow_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Role_id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Emp_id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tag1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tag2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tag3" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetApView">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idProcess" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tag1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tag2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tag3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetApViewResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WorkFinish">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idApParm" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WorkFinishResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WorkFinishResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetProcessIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProcessID" />
+  </wsdl:message>
+  <wsdl:message name="GetProcessIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProcessIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="FlowStartSoapIn">
+    <wsdl:part name="parameters" element="tns:FlowStart" />
+  </wsdl:message>
+  <wsdl:message name="FlowStartSoapOut">
+    <wsdl:part name="parameters" element="tns:FlowStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="FlowShareSoapIn">
+    <wsdl:part name="parameters" element="tns:FlowShare" />
+  </wsdl:message>
+  <wsdl:message name="FlowShareSoapOut">
+    <wsdl:part name="parameters" element="tns:FlowShareResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApParmSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApParm" />
+  </wsdl:message>
+  <wsdl:message name="GetApParmSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApParmResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApViewSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApView" />
+  </wsdl:message>
+  <wsdl:message name="GetApViewSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetApViewSoapIn">
+    <wsdl:part name="parameters" element="tns:SetApView" />
+  </wsdl:message>
+  <wsdl:message name="SetApViewSoapOut">
+    <wsdl:part name="parameters" element="tns:SetApViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorkFinishSoapIn">
+    <wsdl:part name="parameters" element="tns:WorkFinish" />
+  </wsdl:message>
+  <wsdl:message name="WorkFinishSoapOut">
+    <wsdl:part name="parameters" element="tns:WorkFinishResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetProcessID">
+      <wsdl:input message="tns:GetProcessIDSoapIn" />
+      <wsdl:output message="tns:GetProcessIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FlowStart">
+      <wsdl:input message="tns:FlowStartSoapIn" />
+      <wsdl:output message="tns:FlowStartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FlowShare">
+      <wsdl:input message="tns:FlowShareSoapIn" />
+      <wsdl:output message="tns:FlowShareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApParm">
+      <wsdl:input message="tns:GetApParmSoapIn" />
+      <wsdl:output message="tns:GetApParmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApView">
+      <wsdl:input message="tns:GetApViewSoapIn" />
+      <wsdl:output message="tns:GetApViewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetApView">
+      <wsdl:input message="tns:SetApViewSoapIn" />
+      <wsdl:output message="tns:SetApViewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WorkFinish">
+      <wsdl:input message="tns:WorkFinishSoapIn" />
+      <wsdl:output message="tns:WorkFinishSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProcessID">
+      <soap:operation soapAction="http://tempuri.org/GetProcessID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowStart">
+      <soap:operation soapAction="http://tempuri.org/FlowStart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowShare">
+      <soap:operation soapAction="http://tempuri.org/FlowShare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApParm">
+      <soap:operation soapAction="http://tempuri.org/GetApParm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApView">
+      <soap:operation soapAction="http://tempuri.org/GetApView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetApView">
+      <soap:operation soapAction="http://tempuri.org/SetApView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WorkFinish">
+      <soap:operation soapAction="http://tempuri.org/WorkFinish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProcessID">
+      <soap12:operation soapAction="http://tempuri.org/GetProcessID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowStart">
+      <soap12:operation soapAction="http://tempuri.org/FlowStart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlowShare">
+      <soap12:operation soapAction="http://tempuri.org/FlowShare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApParm">
+      <soap12:operation soapAction="http://tempuri.org/GetApParm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApView">
+      <soap12:operation soapAction="http://tempuri.org/GetApView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetApView">
+      <soap12:operation soapAction="http://tempuri.org/SetApView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WorkFinish">
+      <soap12:operation soapAction="http://tempuri.org/WorkFinish" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost/ezFlow_TMT/ezEngine/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost/ezFlow_TMT/ezEngine/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

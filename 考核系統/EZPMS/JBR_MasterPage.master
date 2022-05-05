@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="JBR_MasterPage.master.cs"
+    Inherits="JBR_MasterPage" %>
+<%@ Register Src="UC/EmpInfoLeft.ascx" TagName="EmpInfoLeft" TagPrefix="uc1" %>
+<html>
+<head runat="server">
+    <title>合晶科技績效考核系統（Web版）v1.0</title>
+</head>
+<body>
+    <div align="center">
+        <form id="form1" runat="server">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0" id="table1">
+                <tr>
+                    <td class="title">
+                        <asp:Image SkinID="title" ID="Image1" runat="server" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div align="center">
+                            <table border="0" width="100%" cellspacing="0" cellpadding="0" id="table2">
+                                <tr>
+                                    <td class="menu">
+                                        <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td>
+                                                    <uc1:EmpInfoLeft ID="EmpInfoLeft1" runat="server" />
+                                                </td>
+                                            </tr>
+                                            
+                                        </table>
+                                        <fieldset runat="server" id="fieldset_adminMenu">
+                                            <legend>
+                                                <asp:Label ID="Label1" runat="server" Text="管理主功能" ForeColor="Blue"></asp:Label></legend>
+                                            <asp:Menu ID="adminMenu" runat="server">
+                                                <Items>
+                                                    <asp:MenuItem Text="HR功能" Value="HR功能" NavigateUrl="~/menu1.aspx" >
+                                                     
+                                                    </asp:MenuItem>
+                                                </Items>
+                                            </asp:Menu>
+                                        </fieldset>
+                                         <br/>
+                                        <fieldset runat="server" id="fieldset_empMenu">
+                                            <legend>
+                                                <asp:Label ID="Label2" runat="server" Text="員工考核功能選項" ForeColor="Blue"></asp:Label></legend>
+                                            <asp:Menu ID="empMenu" runat="server">
+                                                <Items>
+                                                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="首頁"></asp:MenuItem>
+                                                    
+                                                       <asp:MenuItem NavigateUrl="~/EMP/EFF004.aspx" Text="工作目標"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/EMP/EFF001.aspx" Text="自評績效考核"></asp:MenuItem>
+                                                    
+                                                 
+                                                </Items>
+                                            </asp:Menu>
+                                        </fieldset>
+                                        <br/>
+                                        <br/>
+                                        <fieldset runat="server" id="fieldset_mang">
+                                            <legend>
+                                                <asp:Label ID="Label3" runat="server" Text="主管評核功能選項" ForeColor="Blue"></asp:Label></legend>
+                                            <asp:Menu ID="mang" runat="server">
+                                                <Items>
+                                                    
+                                                    <asp:MenuItem NavigateUrl="~/MANG/EFF002.aspx" Text="評核員工工作目標"></asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/MANG/EFF003.aspx" Text="評核員工績效考核"></asp:MenuItem>
+                                                    
+                                                   
+                                                         
+                                                    
+                                                        
+                                                </Items>
+                                            </asp:Menu>
+                                        </fieldset>
+                                        <fieldset>
+                                            <asp:Menu ID="Menu1" runat="server">
+                                                <Items>
+                                                    <asp:MenuItem NavigateUrl="http://172.20.1.151/ez-portal/Default.aspx" Text="登出"></asp:MenuItem>
+                                                </Items>
+                                            </asp:Menu>
+                                        </fieldset>
+                                    </td>
+                                    <td class="content">
+                                        <div id="breadcrumb">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                        <div id="projectadministration">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

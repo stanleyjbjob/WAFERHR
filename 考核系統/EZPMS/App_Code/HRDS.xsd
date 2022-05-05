@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HRDS" targetNamespace="http://tempuri.org/HRDS.xsd" xmlns:mstns="http://tempuri.org/HRDS.xsd" xmlns="http://tempuri.org/HRDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="syanghrConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="syanghrConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.syanghrConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DeptMangTableAdapter" GeneratorDataComponentClassName="DeptMangTableAdapter" Name="DeptMangDataTable" UserDataComponentName="DeptMangTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         DEPT.D_NO, DEPT.D_NAME, DEPT.DEPT_GROUP, deptmang.Nobr, 
+                          deptmang.name_c, deptmang.dept, deptmang.job_name, deptmang.jobl
+FROM             DEPT LEFT OUTER JOIN
+                              (SELECT         base.Nobr, base.name_c, basetts.dept, job.job_name, 
+                                                           basetts.jobl
+                                FROM              basetts INNER JOIN
+                                                           base ON basetts.Nobr = base.Nobr INNER JOIN
+                                                           job ON basetts.job = job.job
+                                WHERE          (CONVERT(char(10), GETDATE(), 111) BETWEEN 
+                                                           CONVERT(char(10), basetts.adate, 111) AND CONVERT(char(10), 
+                                                           basetts.ddate, 111)) AND (basetts.ttscode IN ('1', '4', '6')) AND 
+                                                           (basetts.mang = 1)) deptmang ON 
+                          DEPT.D_NO = deptmang.dept
+WHERE         (GETDATE() BETWEEN DEPT.ADATE AND DEPT.DDATE)
+ORDER BY  DEPT.D_NO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="D_NO" DataSetColumn="D_NO" />
+              <Mapping SourceColumn="D_NAME" DataSetColumn="D_NAME" />
+              <Mapping SourceColumn="DEPT_GROUP" DataSetColumn="DEPT_GROUP" />
+              <Mapping SourceColumn="Nobr" DataSetColumn="Nobr" />
+              <Mapping SourceColumn="name_c" DataSetColumn="name_c" />
+              <Mapping SourceColumn="dept" DataSetColumn="dept" />
+              <Mapping SourceColumn="job_name" DataSetColumn="job_name" />
+              <Mapping SourceColumn="jobl" DataSetColumn="jobl" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DEPTTableAdapter" GeneratorDataComponentClassName="DEPTTableAdapter" Name="DEPT" UserDataComponentName="DEPTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectName="syanghr.dbo.DEPT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [DEPT] ([D_NO], [D_NAME], [DEPT_GROUP], [DEPT_CATE]) VALUES (@D_NO, @D_NAME, @DEPT_GROUP, @DEPT_CATE)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@D_NO" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="D_NO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@D_NAME" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="D_NAME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@DEPT_GROUP" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DEPT_GROUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DEPT_CATE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DEPT_CATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         D_NO, D_NAME, DEPT_GROUP, DEPT_CATE
+FROM             DEPT
+WHERE         (CONVERT(char(10), GETDATE(), 111) BETWEEN CONVERT(char(10), ADATE, 
+                          111) AND CONVERT(char(10), DDATE, 111))
+ORDER BY  D_NO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="D_NO" DataSetColumn="D_NO" />
+              <Mapping SourceColumn="D_NAME" DataSetColumn="D_NAME" />
+              <Mapping SourceColumn="DEPT_GROUP" DataSetColumn="DEPT_GROUP" />
+              <Mapping SourceColumn="DEPT_CATE" DataSetColumn="DEPT_CATE" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectName="syanghr.dbo.DEPT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByGroupDept" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByGroupDept" GeneratorSourceName="FillByGroupDept" GetMethodModifier="Public" GetMethodName="GetDataByGroupDept" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByGroupDept" UserSourceName="FillByGroupDept">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         DEPT_CATE, DEPT_GROUP, D_NAME, D_NO
+FROM             DEPT
+WHERE         (CONVERT(char(10), GETDATE(), 111) BETWEEN CONVERT(char(10), ADATE, 
+                          111) AND CONVERT(char(10), DDATE, 111)) AND (DEPT_GROUP = @DEPT)
+ORDER BY  D_NO</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="DEPT" ColumnName="DEPT_GROUP" DataSourceName="syanghr.dbo.DEPT" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@DEPT" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="DEPT_GROUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DEPTGroupTableAdapter" GeneratorDataComponentClassName="DEPTGroupTableAdapter" Name="DEPTGroup" UserDataComponentName="DEPTGroupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectName="syanghr.dbo.DEPT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         DEPT_GROUP
+FROM             DEPT
+WHERE         (CONVERT(char(10), GETDATE(), 111) BETWEEN CONVERT(char(10), ADATE, 
+                          111) AND CONVERT(char(10), DDATE, 111))
+GROUP BY  DEPT_GROUP</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DEPT_GROUP" DataSetColumn="DEPT_GROUP" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DEPTATableAdapter" GeneratorDataComponentClassName="DEPTATableAdapter" Name="DEPTA" UserDataComponentName="DEPTATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectName="syanghr.dbo.DEPTA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         D_NO, D_NAME, DEPT_GROUP, DEPT_CATE
+FROM             DEPTA
+WHERE         (CONVERT(char(10), GETDATE(), 111) BETWEEN CONVERT(char(10), ADATE, 
+                          111) AND CONVERT(char(10), DDATE, 111))
+ORDER BY  D_NO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="D_NO" DataSetColumn="D_NO" />
+              <Mapping SourceColumn="D_NAME" DataSetColumn="D_NAME" />
+              <Mapping SourceColumn="DEPT_GROUP" DataSetColumn="DEPT_GROUP" />
+              <Mapping SourceColumn="DEPT_CATE" DataSetColumn="DEPT_CATE" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectName="syanghr.dbo.DEPTA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDept" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDept" GeneratorSourceName="FillByDept" GetMethodModifier="Public" GetMethodName="GetDataByDept" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDept" UserSourceName="FillByDept">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         D_NO, D_NAME, DEPT_GROUP, DEPT_CATE
+FROM             DEPTA
+WHERE         (CONVERT(char(10), GETDATE(), 111) BETWEEN CONVERT(char(10), ADATE, 
+                          111) AND CONVERT(char(10), DDATE, 111))
+and d_no =@dept
+ORDER BY  D_NO</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="dept" ColumnName="D_NO" DataSourceName="syanghr.dbo.DEPTA" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@dept" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="D_NO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectName="syanghr.dbo.DEPT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByGroupDept" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByGroupDept" GeneratorSourceName="FillByGroupDept" GetMethodModifier="Public" GetMethodName="GetDataByGroupDept" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByGroupDept" UserSourceName="FillByGroupDept">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT          DEPT_CATE, DEPT_GROUP, D_NAME, D_NO
+FROM              DEPTA
+WHERE          (CONVERT(char(10), GETDATE(), 111) BETWEEN CONVERT(char(10), ADATE, 111) AND CONVERT(char(10), DDATE, 
+                            111)) AND (DEPT_GROUP = @DEPT)
+ORDER BY   D_NO</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="DEPT" ColumnName="DEPT_GROUP" DataSourceName="TMTHR.dbo.DEPTA" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@DEPT" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="DEPT_GROUP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DeptAMangTableAdapter" GeneratorDataComponentClassName="DeptAMangTableAdapter" Name="DeptAMangDataTable" UserDataComponentName="DeptAMangTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DEPTA.D_NO, DEPTA.D_NAME, DEPTA.dept_group, deptmang.NOBR, deptmang.NAME_C, deptmang.DEPTM, deptmang.JOB_NAME, deptmang.JOBL, dept_cate.cate_order FROM DEPTA LEFT OUTER JOIN dept_cate ON DEPTA.dept_cate = dept_cate.dept_cate_id LEFT OUTER JOIN (SELECT BASE.NOBR, BASE.NAME_C, BASETTS.DEPTM, JOB.JOB_NAME, BASETTS.JOBL FROM BASETTS INNER JOIN BASE ON BASETTS.NOBR = BASE.NOBR INNER JOIN JOB ON BASETTS.JOB = JOB.JOB WHERE (CONVERT (char(10), @adate, 111) BETWEEN CONVERT (char(10), BASETTS.ADATE, 111) AND CONVERT (char(10), BASETTS.DDATE, 111)) AND (BASETTS.TTSCODE IN ('1', '4', '6')) AND (BASETTS.MANG = 1)) AS deptmang ON DEPTA.D_NO = deptmang.DEPTM WHERE (@adate BETWEEN DEPTA.adate AND DEPTA.ddate) ORDER BY DEPTA.D_NO</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="adate" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="DateTime" Direction="Input" ParameterName="@adate" Precision="0" ProviderType="DateTime" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="D_NO" DataSetColumn="D_NO" />
+              <Mapping SourceColumn="D_NAME" DataSetColumn="D_NAME" />
+              <Mapping SourceColumn="NOBR" DataSetColumn="NOBR" />
+              <Mapping SourceColumn="NAME_C" DataSetColumn="NAME_C" />
+              <Mapping SourceColumn="DEPTM" DataSetColumn="DEPTM" />
+              <Mapping SourceColumn="JOB_NAME" DataSetColumn="JOB_NAME" />
+              <Mapping SourceColumn="JOBL" DataSetColumn="JOBL" />
+              <Mapping SourceColumn="dept_group" DataSetColumn="dept_group" />
+              <Mapping SourceColumn="cate_order" DataSetColumn="cate_order" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByDept" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDept" GeneratorSourceName="FillByDept" GetMethodModifier="Public" GetMethodName="GetDataByDept" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDept" UserSourceName="FillByDept">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DEPTA.D_NO, DEPTA.D_NAME, DEPTA.dept_group, deptmang.NOBR, deptmang.NAME_C, deptmang.DEPTM, deptmang.JOB_NAME, deptmang.JOBL, dept_cate.cate_order FROM DEPTA LEFT OUTER JOIN dept_cate ON DEPTA.dept_cate = dept_cate.dept_cate_id LEFT OUTER JOIN (SELECT BASE.NOBR, BASE.NAME_C, BASETTS.DEPTM, JOB.JOB_NAME, BASETTS.JOBL FROM BASETTS INNER JOIN BASE ON BASETTS.NOBR = BASE.NOBR INNER JOIN JOB ON BASETTS.JOB = JOB.JOB WHERE (CONVERT (char(10), @adate, 111) BETWEEN CONVERT (char(10), BASETTS.ADATE, 111) AND CONVERT (char(10), BASETTS.DDATE, 111)) AND (BASETTS.TTSCODE IN ('1', '4', '6')) AND (BASETTS.MANG = 1)) AS deptmang ON DEPTA.D_NO = deptmang.DEPTM WHERE (@adate BETWEEN DEPTA.adate AND DEPTA.ddate) AND (DEPTA.D_NO = @dept) ORDER BY DEPTA.D_NO</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="adate" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="DateTime" Direction="Input" ParameterName="@adate" Precision="0" ProviderType="DateTime" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="dept" ColumnName="D_NO" DataSourceName="syanghr.dbo.DEPTA" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@dept" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="D_NO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EFFEMPLOYTableAdapter" GeneratorDataComponentClassName="EFFEMPLOYTableAdapter" Name="EFFEMPLOY" UserDataComponentName="EFFEMPLOYTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectName="syanghr.dbo.EFFEMPLOY" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByNobr" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNobr" GeneratorSourceName="FillByNobr" GetMethodModifier="Public" GetMethodName="GetDataByNobr" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataByNobr" UserSourceName="FillByNobr">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [EFFEMPLOY] ([YYMM], [NOBR], [EFFTYPE], [EFFBA], [EFFBB], [EFFVAR], [EFFLVL], [IMPORT], [KEY_DATE], [KEY_MAN]) VALUES (@YYMM, @NOBR, @EFFTYPE, @EFFBA, @EFFBB, @EFFVAR, @EFFLVL, @IMPORT, @KEY_DATE, @KEY_MAN)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YYMM" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YYMM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@NOBR" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@EFFTYPE" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="EFFTYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@EFFBA" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="EFFBA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@EFFBB" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="EFFBB" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@EFFVAR" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="EFFVAR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@EFFLVL" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="EFFLVL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IMPORT" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IMPORT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@KEY_DATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="KEY_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@KEY_MAN" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="KEY_MAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         YYMM, NOBR, EFFTYPE, EFFBA, EFFBB, EFFVAR, EFFLVL, IMPORT, 
+                          KEY_DATE, KEY_MAN
+FROM             EFFEMPLOY
+WHERE         (NOBR = @nobr)
+ORDER BY  YYMM, EFFTYPE</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="nobr" ColumnName="NOBR" DataSourceName="syanghr.dbo.EFFEMPLOY" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@nobr" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="YYMM" DataSetColumn="YYMM" />
+              <Mapping SourceColumn="NOBR" DataSetColumn="NOBR" />
+              <Mapping SourceColumn="EFFTYPE" DataSetColumn="EFFTYPE" />
+              <Mapping SourceColumn="EFFBA" DataSetColumn="EFFBA" />
+              <Mapping SourceColumn="EFFBB" DataSetColumn="EFFBB" />
+              <Mapping SourceColumn="EFFVAR" DataSetColumn="EFFVAR" />
+              <Mapping SourceColumn="EFFLVL" DataSetColumn="EFFLVL" />
+              <Mapping SourceColumn="IMPORT" DataSetColumn="IMPORT" />
+              <Mapping SourceColumn="KEY_DATE" DataSetColumn="KEY_DATE" />
+              <Mapping SourceColumn="KEY_MAN" DataSetColumn="KEY_MAN" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EffsTableAdapter" GeneratorDataComponentClassName="EffsTableAdapter" Name="EffsDataTable" UserDataComponentName="EffsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          CAST(EFFEMPLOY.YYMM AS int) + 1911 AS YYMM, EFFEMPLOY.NOBR, BASE.NAME_C, EFFEMPLOY.EFFTYPE, 
+                            EFFEMPLOY.EFFBA, EFFEMPLOY.EFFBB, EFFEMPLOY.EFFVAR, EFFEMPLOY.EFFLVL
+FROM              EFFEMPLOY INNER JOIN
+                            BASE ON EFFEMPLOY.NOBR = BASE.NOBR
+WHERE          (BASE.NOBR = @nobr) AND (CAST(EFFEMPLOY.YYMM AS int) &gt;= YEAR(GETDATE()) - 1911 - 3)
+ORDER BY   YYMM, EFFEMPLOY.EFFTYPE, EFFEMPLOY.NOBR</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="nobr" ColumnName="NOBR" DataSourceName="syanghr.dbo.BASE" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@nobr" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="YYMM" DataSetColumn="YYMM" />
+              <Mapping SourceColumn="NOBR" DataSetColumn="NOBR" />
+              <Mapping SourceColumn="NAME_C" DataSetColumn="NAME_C" />
+              <Mapping SourceColumn="EFFTYPE" DataSetColumn="EFFTYPE" />
+              <Mapping SourceColumn="EFFBA" DataSetColumn="EFFBA" />
+              <Mapping SourceColumn="EFFBB" DataSetColumn="EFFBB" />
+              <Mapping SourceColumn="EFFVAR" DataSetColumn="EFFVAR" />
+              <Mapping SourceColumn="EFFLVL" DataSetColumn="EFFLVL" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="syanghrConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT      BASETTS.NOBR, BASETTS.ADATE, BASETTS.JOBL, JOB.JOB_NAME, 
+                        JOBL.JOB_NAME AS Expr1
+FROM          BASETTS INNER JOIN
+                        JOB ON BASETTS.JOB = JOB.JOB INNER JOIN
+                        JOBL ON BASETTS.JOBL = JOBL.JOBL
+WHERE      (BASETTS.TTSCD = '08') AND (BASETTS.NOBR = @nobr)
+ORDER BY BASETTS.ADATE DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="nobr" ColumnName="NOBR" DataSourceName="syanghr.dbo.BASETTS" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@nobr" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOBR" DataSetColumn="NOBR" />
+              <Mapping SourceColumn="ADATE" DataSetColumn="ADATE" />
+              <Mapping SourceColumn="JOBL" DataSetColumn="JOBL" />
+              <Mapping SourceColumn="JOB_NAME" DataSetColumn="JOB_NAME" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HRDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="HRDS" msprop:Generator_UserDSName="HRDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DeptMangDataTable" msprop:Generator_UserTableName="DeptMangDataTable" msprop:Generator_RowEvArgName="DeptMangDataTableRowChangeEvent" msprop:Generator_TableVarName="tableDeptMangDataTable" msprop:Generator_TablePropName="DeptMangDataTable" msprop:Generator_RowDeletingName="DeptMangDataTableRowDeleting" msprop:Generator_RowChangingName="DeptMangDataTableRowChanging" msprop:Generator_RowDeletedName="DeptMangDataTableRowDeleted" msprop:Generator_RowEvHandlerName="DeptMangDataTableRowChangeEventHandler" msprop:Generator_TableClassName="DeptMangDataTableDataTable" msprop:Generator_RowChangedName="DeptMangDataTableRowChanged" msprop:Generator_RowClassName="DeptMangDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="D_NO" msprop:Generator_ColumnVarNameInTable="columnD_NO" msprop:Generator_ColumnPropNameInRow="D_NO" msprop:Generator_ColumnPropNameInTable="D_NOColumn" msprop:Generator_UserColumnName="D_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="D_NAME" msprop:Generator_ColumnVarNameInTable="columnD_NAME" msprop:Generator_ColumnPropNameInRow="D_NAME" msprop:Generator_ColumnPropNameInTable="D_NAMEColumn" msprop:Generator_UserColumnName="D_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEPT_GROUP" msprop:Generator_ColumnVarNameInTable="columnDEPT_GROUP" msprop:Generator_ColumnPropNameInRow="DEPT_GROUP" msprop:Generator_ColumnPropNameInTable="DEPT_GROUPColumn" msprop:Generator_UserColumnName="DEPT_GROUP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nobr" msprop:Generator_ColumnVarNameInTable="columnNobr" msprop:Generator_ColumnPropNameInRow="Nobr" msprop:Generator_ColumnPropNameInTable="NobrColumn" msprop:Generator_UserColumnName="Nobr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_c" msprop:Generator_ColumnVarNameInTable="columnname_c" msprop:Generator_ColumnPropNameInRow="name_c" msprop:Generator_ColumnPropNameInTable="name_cColumn" msprop:Generator_UserColumnName="name_c" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dept" msprop:Generator_ColumnVarNameInTable="columndept" msprop:Generator_ColumnPropNameInRow="dept" msprop:Generator_ColumnPropNameInTable="deptColumn" msprop:Generator_UserColumnName="dept" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="job_name" msprop:Generator_ColumnVarNameInTable="columnjob_name" msprop:Generator_ColumnPropNameInRow="job_name" msprop:Generator_ColumnPropNameInTable="job_nameColumn" msprop:Generator_UserColumnName="job_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jobl" msprop:Generator_ColumnVarNameInTable="columnjobl" msprop:Generator_ColumnPropNameInRow="jobl" msprop:Generator_ColumnPropNameInTable="joblColumn" msprop:Generator_UserColumnName="jobl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DEPT" msprop:Generator_UserTableName="DEPT" msprop:Generator_RowEvArgName="DEPTRowChangeEvent" msprop:Generator_TableVarName="tableDEPT" msprop:Generator_TablePropName="DEPT" msprop:Generator_RowDeletingName="DEPTRowDeleting" msprop:Generator_RowChangingName="DEPTRowChanging" msprop:Generator_RowDeletedName="DEPTRowDeleted" msprop:Generator_RowEvHandlerName="DEPTRowChangeEventHandler" msprop:Generator_TableClassName="DEPTDataTable" msprop:Generator_RowChangedName="DEPTRowChanged" msprop:Generator_RowClassName="DEPTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="D_NO" msprop:Generator_ColumnVarNameInTable="columnD_NO" msprop:Generator_ColumnPropNameInRow="D_NO" msprop:Generator_ColumnPropNameInTable="D_NOColumn" msprop:Generator_UserColumnName="D_NO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="D_NAME" msprop:Generator_ColumnVarNameInTable="columnD_NAME" msprop:Generator_ColumnPropNameInRow="D_NAME" msprop:Generator_ColumnPropNameInTable="D_NAMEColumn" msprop:Generator_UserColumnName="D_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEPT_GROUP" msprop:Generator_ColumnVarNameInTable="columnDEPT_GROUP" msprop:Generator_ColumnPropNameInRow="DEPT_GROUP" msprop:Generator_ColumnPropNameInTable="DEPT_GROUPColumn" msprop:Generator_UserColumnName="DEPT_GROUP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEPT_CATE" msprop:Generator_ColumnVarNameInTable="columnDEPT_CATE" msprop:Generator_ColumnPropNameInRow="DEPT_CATE" msprop:Generator_ColumnPropNameInTable="DEPT_CATEColumn" msprop:Generator_UserColumnName="DEPT_CATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DEPTGroup" msprop:Generator_UserTableName="DEPTGroup" msprop:Generator_RowEvArgName="DEPTGroupRowChangeEvent" msprop:Generator_TableVarName="tableDEPTGroup" msprop:Generator_TablePropName="DEPTGroup" msprop:Generator_RowDeletingName="DEPTGroupRowDeleting" msprop:Generator_RowChangingName="DEPTGroupRowChanging" msprop:Generator_RowDeletedName="DEPTGroupRowDeleted" msprop:Generator_RowEvHandlerName="DEPTGroupRowChangeEventHandler" msprop:Generator_TableClassName="DEPTGroupDataTable" msprop:Generator_RowChangedName="DEPTGroupRowChanged" msprop:Generator_RowClassName="DEPTGroupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DEPT_GROUP" msprop:Generator_ColumnVarNameInTable="columnDEPT_GROUP" msprop:Generator_ColumnPropNameInRow="DEPT_GROUP" msprop:Generator_ColumnPropNameInTable="DEPT_GROUPColumn" msprop:Generator_UserColumnName="DEPT_GROUP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DEPTA" msprop:Generator_UserTableName="DEPTA" msprop:Generator_RowEvArgName="DEPTARowChangeEvent" msprop:Generator_TableVarName="tableDEPTA" msprop:Generator_TablePropName="DEPTA" msprop:Generator_RowDeletingName="DEPTARowDeleting" msprop:Generator_RowChangingName="DEPTARowChanging" msprop:Generator_RowDeletedName="DEPTARowDeleted" msprop:Generator_RowEvHandlerName="DEPTARowChangeEventHandler" msprop:Generator_TableClassName="DEPTADataTable" msprop:Generator_RowChangedName="DEPTARowChanged" msprop:Generator_RowClassName="DEPTARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="D_NO" msprop:Generator_ColumnVarNameInTable="columnD_NO" msprop:Generator_ColumnPropNameInRow="D_NO" msprop:Generator_ColumnPropNameInTable="D_NOColumn" msprop:Generator_UserColumnName="D_NO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="D_NAME" msprop:Generator_ColumnVarNameInTable="columnD_NAME" msprop:Generator_ColumnPropNameInRow="D_NAME" msprop:Generator_ColumnPropNameInTable="D_NAMEColumn" msprop:Generator_UserColumnName="D_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEPT_GROUP" msprop:Generator_ColumnVarNameInTable="columnDEPT_GROUP" msprop:Generator_ColumnPropNameInRow="DEPT_GROUP" msprop:Generator_ColumnPropNameInTable="DEPT_GROUPColumn" msprop:Generator_UserColumnName="DEPT_GROUP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEPT_CATE" msprop:Generator_ColumnVarNameInTable="columnDEPT_CATE" msprop:Generator_ColumnPropNameInRow="DEPT_CATE" msprop:Generator_ColumnPropNameInTable="DEPT_CATEColumn" msprop:Generator_UserColumnName="DEPT_CATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeptAMangDataTable" msprop:Generator_UserTableName="DeptAMangDataTable" msprop:Generator_RowEvArgName="DeptAMangDataTableRowChangeEvent" msprop:Generator_TableVarName="tableDeptAMangDataTable" msprop:Generator_TablePropName="DeptAMangDataTable" msprop:Generator_RowDeletingName="DeptAMangDataTableRowDeleting" msprop:Generator_RowChangingName="DeptAMangDataTableRowChanging" msprop:Generator_RowDeletedName="DeptAMangDataTableRowDeleted" msprop:Generator_RowEvHandlerName="DeptAMangDataTableRowChangeEventHandler" msprop:Generator_TableClassName="DeptAMangDataTableDataTable" msprop:Generator_RowChangedName="DeptAMangDataTableRowChanged" msprop:Generator_RowClassName="DeptAMangDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="D_NO" msprop:Generator_ColumnVarNameInTable="columnD_NO" msprop:Generator_ColumnPropNameInRow="D_NO" msprop:Generator_ColumnPropNameInTable="D_NOColumn" msprop:Generator_UserColumnName="D_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="D_NAME" msprop:Generator_ColumnVarNameInTable="columnD_NAME" msprop:Generator_ColumnPropNameInRow="D_NAME" msprop:Generator_ColumnPropNameInTable="D_NAMEColumn" msprop:Generator_UserColumnName="D_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOBR" msprop:Generator_ColumnVarNameInTable="columnNOBR" msprop:Generator_ColumnPropNameInRow="NOBR" msprop:Generator_ColumnPropNameInTable="NOBRColumn" msprop:Generator_UserColumnName="NOBR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NAME_C" msprop:Generator_ColumnVarNameInTable="columnNAME_C" msprop:Generator_ColumnPropNameInRow="NAME_C" msprop:Generator_ColumnPropNameInTable="NAME_CColumn" msprop:Generator_UserColumnName="NAME_C" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEPTM" msprop:Generator_ColumnVarNameInTable="columnDEPTM" msprop:Generator_ColumnPropNameInRow="DEPTM" msprop:Generator_ColumnPropNameInTable="DEPTMColumn" msprop:Generator_UserColumnName="DEPTM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JOB_NAME" msprop:Generator_ColumnVarNameInTable="columnJOB_NAME" msprop:Generator_ColumnPropNameInRow="JOB_NAME" msprop:Generator_ColumnPropNameInTable="JOB_NAMEColumn" msprop:Generator_UserColumnName="JOB_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JOBL" msprop:Generator_ColumnVarNameInTable="columnJOBL" msprop:Generator_ColumnPropNameInRow="JOBL" msprop:Generator_ColumnPropNameInTable="JOBLColumn" msprop:Generator_UserColumnName="JOBL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dept_group" msprop:Generator_ColumnVarNameInTable="columndept_group" msprop:Generator_ColumnPropNameInRow="dept_group" msprop:Generator_ColumnPropNameInTable="dept_groupColumn" msprop:Generator_UserColumnName="dept_group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cate_order" msprop:Generator_ColumnVarNameInTable="columncate_order" msprop:Generator_ColumnPropNameInRow="cate_order" msprop:Generator_ColumnPropNameInTable="cate_orderColumn" msprop:Generator_UserColumnName="cate_order" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EFFEMPLOY" msprop:Generator_UserTableName="EFFEMPLOY" msprop:Generator_RowEvArgName="EFFEMPLOYRowChangeEvent" msprop:Generator_TableVarName="tableEFFEMPLOY" msprop:Generator_TablePropName="EFFEMPLOY" msprop:Generator_RowDeletingName="EFFEMPLOYRowDeleting" msprop:Generator_RowChangingName="EFFEMPLOYRowChanging" msprop:Generator_RowDeletedName="EFFEMPLOYRowDeleted" msprop:Generator_RowEvHandlerName="EFFEMPLOYRowChangeEventHandler" msprop:Generator_TableClassName="EFFEMPLOYDataTable" msprop:Generator_RowChangedName="EFFEMPLOYRowChanged" msprop:Generator_RowClassName="EFFEMPLOYRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="YYMM" msprop:Generator_ColumnVarNameInTable="columnYYMM" msprop:Generator_ColumnPropNameInRow="YYMM" msprop:Generator_ColumnPropNameInTable="YYMMColumn" msprop:Generator_UserColumnName="YYMM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOBR" msprop:Generator_ColumnVarNameInTable="columnNOBR" msprop:Generator_ColumnPropNameInRow="NOBR" msprop:Generator_ColumnPropNameInTable="NOBRColumn" msprop:Generator_UserColumnName="NOBR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EFFTYPE" msprop:Generator_ColumnVarNameInTable="columnEFFTYPE" msprop:Generator_ColumnPropNameInRow="EFFTYPE" msprop:Generator_ColumnPropNameInTable="EFFTYPEColumn" msprop:Generator_UserColumnName="EFFTYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EFFBA" msprop:Generator_ColumnVarNameInTable="columnEFFBA" msprop:Generator_ColumnPropNameInRow="EFFBA" msprop:Generator_ColumnPropNameInTable="EFFBAColumn" msprop:Generator_UserColumnName="EFFBA" type="xs:double" />
+              <xs:element name="EFFBB" msprop:Generator_ColumnVarNameInTable="columnEFFBB" msprop:Generator_ColumnPropNameInRow="EFFBB" msprop:Generator_ColumnPropNameInTable="EFFBBColumn" msprop:Generator_UserColumnName="EFFBB" type="xs:double" />
+              <xs:element name="EFFVAR" msprop:Generator_ColumnVarNameInTable="columnEFFVAR" msprop:Generator_ColumnPropNameInRow="EFFVAR" msprop:Generator_ColumnPropNameInTable="EFFVARColumn" msprop:Generator_UserColumnName="EFFVAR" type="xs:double" />
+              <xs:element name="EFFLVL" msprop:Generator_ColumnVarNameInTable="columnEFFLVL" msprop:Generator_ColumnPropNameInRow="EFFLVL" msprop:Generator_ColumnPropNameInTable="EFFLVLColumn" msprop:Generator_UserColumnName="EFFLVL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IMPORT" msprop:Generator_ColumnVarNameInTable="columnIMPORT" msprop:Generator_ColumnPropNameInRow="IMPORT" msprop:Generator_ColumnPropNameInTable="IMPORTColumn" msprop:Generator_UserColumnName="IMPORT" type="xs:boolean" />
+              <xs:element name="KEY_DATE" msprop:Generator_ColumnVarNameInTable="columnKEY_DATE" msprop:Generator_ColumnPropNameInRow="KEY_DATE" msprop:Generator_ColumnPropNameInTable="KEY_DATEColumn" msprop:Generator_UserColumnName="KEY_DATE" type="xs:dateTime" />
+              <xs:element name="KEY_MAN" msprop:Generator_ColumnVarNameInTable="columnKEY_MAN" msprop:Generator_ColumnPropNameInRow="KEY_MAN" msprop:Generator_ColumnPropNameInTable="KEY_MANColumn" msprop:Generator_UserColumnName="KEY_MAN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EffsDataTable" msprop:Generator_UserTableName="EffsDataTable" msprop:Generator_RowEvArgName="EffsDataTableRowChangeEvent" msprop:Generator_TableVarName="tableEffsDataTable" msprop:Generator_TablePropName="EffsDataTable" msprop:Generator_RowDeletingName="EffsDataTableRowDeleting" msprop:Generator_RowChangingName="EffsDataTableRowChanging" msprop:Generator_RowDeletedName="EffsDataTableRowDeleted" msprop:Generator_RowEvHandlerName="EffsDataTableRowChangeEventHandler" msprop:Generator_TableClassName="EffsDataTableDataTable" msprop:Generator_RowChangedName="EffsDataTableRowChanged" msprop:Generator_RowClassName="EffsDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="YYMM" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYYMM" msprop:Generator_ColumnPropNameInRow="YYMM" msprop:Generator_ColumnPropNameInTable="YYMMColumn" msprop:Generator_UserColumnName="YYMM" type="xs:int" minOccurs="0" />
+              <xs:element name="NOBR" msprop:Generator_ColumnVarNameInTable="columnNOBR" msprop:Generator_ColumnPropNameInRow="NOBR" msprop:Generator_ColumnPropNameInTable="NOBRColumn" msprop:Generator_UserColumnName="NOBR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NAME_C" msprop:Generator_ColumnVarNameInTable="columnNAME_C" msprop:Generator_ColumnPropNameInRow="NAME_C" msprop:Generator_ColumnPropNameInTable="NAME_CColumn" msprop:Generator_UserColumnName="NAME_C" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EFFTYPE" msprop:Generator_ColumnVarNameInTable="columnEFFTYPE" msprop:Generator_ColumnPropNameInRow="EFFTYPE" msprop:Generator_ColumnPropNameInTable="EFFTYPEColumn" msprop:Generator_UserColumnName="EFFTYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EFFBA" msprop:Generator_ColumnVarNameInTable="columnEFFBA" msprop:Generator_ColumnPropNameInRow="EFFBA" msprop:Generator_ColumnPropNameInTable="EFFBAColumn" msprop:Generator_UserColumnName="EFFBA" type="xs:double" />
+              <xs:element name="EFFBB" msprop:Generator_ColumnVarNameInTable="columnEFFBB" msprop:Generator_ColumnPropNameInRow="EFFBB" msprop:Generator_ColumnPropNameInTable="EFFBBColumn" msprop:Generator_UserColumnName="EFFBB" type="xs:double" />
+              <xs:element name="EFFVAR" msprop:Generator_ColumnVarNameInTable="columnEFFVAR" msprop:Generator_ColumnPropNameInRow="EFFVAR" msprop:Generator_ColumnPropNameInTable="EFFVARColumn" msprop:Generator_UserColumnName="EFFVAR" type="xs:double" />
+              <xs:element name="EFFLVL" msprop:Generator_ColumnVarNameInTable="columnEFFLVL" msprop:Generator_ColumnPropNameInRow="EFFLVL" msprop:Generator_ColumnPropNameInTable="EFFLVLColumn" msprop:Generator_UserColumnName="EFFLVL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOBR" msprop:Generator_ColumnVarNameInTable="columnNOBR" msprop:Generator_ColumnPropNameInRow="NOBR" msprop:Generator_ColumnPropNameInTable="NOBRColumn" msprop:Generator_UserColumnName="NOBR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADATE" msprop:Generator_ColumnVarNameInTable="columnADATE" msprop:Generator_ColumnPropNameInRow="ADATE" msprop:Generator_ColumnPropNameInTable="ADATEColumn" msprop:Generator_UserColumnName="ADATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="JOBL" msprop:Generator_ColumnVarNameInTable="columnJOBL" msprop:Generator_ColumnPropNameInRow="JOBL" msprop:Generator_ColumnPropNameInTable="JOBLColumn" msprop:Generator_UserColumnName="JOBL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JOB_NAME" msprop:Generator_ColumnVarNameInTable="columnJOB_NAME" msprop:Generator_ColumnPropNameInRow="JOB_NAME" msprop:Generator_ColumnPropNameInTable="JOB_NAMEColumn" msprop:Generator_UserColumnName="JOB_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DEPT" />
+      <xs:field xpath="mstns:D_NO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

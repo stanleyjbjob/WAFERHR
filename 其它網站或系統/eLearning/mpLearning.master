@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mpLearning.master.cs" Inherits="mpLearning" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head  runat="server">
+    <title>未命名頁面</title>
+    <link href="css/StyleSheet.css" rel="stylesheet" type="text/css">
+           <asp:literal runat="server" id="ltModalProgress"></asp:literal>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+
+    <script type="text/javascript" src="Script/jsUpdateProgress.js"></script>
+
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+            <ProgressTemplate>
+                <asp:Panel ID="panelUpdateProgress" runat="server" CssClass="updateProgress" Style="left: 0px;
+                    top: 0px">
+                    <div style="position: relative; top: 30%; text-align: center;">
+                        <img src="Images/loading.gif" style="vertical-align: middle" alt="Processing" />
+                        資料讀取中，請稍後 ...
+                    </div>
+                </asp:Panel>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <asp:ModalPopupExtender ID="ModalProgress" runat="server" TargetControlID="panelUpdateProgress"
+            BackgroundCssClass="modalBackground" PopupControlID="panelUpdateProgress" Enabled="True" />
+        <div class="frame">
+            <div class="header">
+                <div class="headerMenu">
+                    <ul>
+                        <li><a href="Default.aspx?action=logout">
+                            <asp:Image ID="Image2" runat="server" SkinID="logoutImg" />&nbsp;登出</a></li>
+                    </ul>
+                </div>
+                <div class="mainMenu">
+                    <ul>
+                        <li>
+                            <asp:LinkButton ID="lbtnManage" runat="server">系統管理</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lbtnTest" runat="server">線上測試</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="lbtnLearning" runat="server">線上學習</asp:LinkButton></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subMenu">
+                <h4 class="Menu">
+                    線上學習</h4>
+                <p>
+                    &nbsp;</p>
+            </div>
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+            </asp:SiteMapPath>
+            <div id="content" style="width: 100%;">
+                <asp:ContentPlaceHolder ID="cph" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+                <asp:Panel ID="plFooter" runat="server" Width="100%">
+                    <div id="footerPage">
+                        <a href="http://www.jbjob.com.tw/" target="_blank">版權所有©2006 傑報資訊</a>
+                    </div>
+                </asp:Panel>
+                <asp:AlwaysVisibleControlExtender ID="avceFooter" runat="server" TargetControlID="plFooter"
+                    HorizontalSide="Center" VerticalSide="Bottom" />
+        </div>
+    </form>
+</body>
+</html>

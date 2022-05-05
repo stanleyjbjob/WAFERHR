@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 20.5" name="dcFlow">
+  <DataContextMoniker Name="/dcFlowDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1fc77752-96d3-47bb-a03d-1cd5ad77a2e0" absoluteBounds="0.75, 0.75, 2, 11.700981038411458">
+      <DataClassMoniker Name="/dcFlowDataContext/wfAppAbs" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d12bf0a2-91d3-4c3c-812e-a771cf309c31" absoluteBounds="0.765, 1.21, 1.9700000000000002, 11.140981038411457" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c6d96b78-91a1-437c-86b4-5dafd0a8ca6a" absoluteBounds="3.75, 0.75, 2, 9.1138635253906255">
+      <DataClassMoniker Name="/dcFlowDataContext/wfAppAbsc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7343524e-2b8c-4e33-8ec1-896ffd0633ff" absoluteBounds="3.765, 1.21, 1.9700000000000002, 8.553863525390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d3e7c81-19d9-4204-8c8b-84d131f938c1" absoluteBounds="6.75, 0.75, 2, 8.1898929850260416">
+      <DataClassMoniker Name="/dcFlowDataContext/wfAppCard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e937b54-ea18-44fa-8bb0-e1b4b52a4a83" absoluteBounds="6.765, 1.21, 1.9700000000000002, 7.629892985026042" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b1f7b40-6901-4363-8c0b-64a834c5d03b" absoluteBounds="9.75, 0.75, 2, 10.777010498046876">
+      <DataClassMoniker Name="/dcFlowDataContext/wfAppOt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15fb4b5f-47ec-4838-9250-cec84c90cff6" absoluteBounds="9.765, 1.21, 1.9700000000000002, 10.217010498046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aa558276-e3b6-4463-b03d-2bc349c6111e" absoluteBounds="3.75, 10.75, 2, 9.4834517415364559">
+      <DataClassMoniker Name="/dcFlowDataContext/wfAppShiftShort" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37b557a8-ab32-402c-83d3-b5acca8dae4d" absoluteBounds="3.765, 11.21, 1.9700000000000002, 8.9234517415364571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e4d5381-98fe-43de-95cb-927ae6efbd46" absoluteBounds="12.75, 0.75, 2, 8.5594812011718755">
+      <DataClassMoniker Name="/dcFlowDataContext/wfAppShiftLong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92368fa1-11ea-48a4-8f60-d860e1c4092e" absoluteBounds="12.765, 1.21, 1.9700000000000002, 7.9994812011718759" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e23eb25-0ba2-4d39-8193-d917b68d327b" absoluteBounds="3.375, 3, 2, 8.5594812011718755">
+      <DataClassMoniker Name="/dcFlowDataContext/wfFormApp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84f09b27-53d0-4a9b-ab0a-b41e28f98736" absoluteBounds="3.39, 3.46, 1.9700000000000002, 7.9994812011718759" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

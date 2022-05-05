@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TransCardDS" targetNamespace="http://tempuri.org/TransCardDS.xsd" xmlns:mstns="http://tempuri.org/TransCardDS.xsd" xmlns="http://tempuri.org/TransCardDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="hr" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="hr (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.hr.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="WorkDayTableAdapter" GeneratorDataComponentClassName="WorkDayTableAdapter" Name="WorkDay" UserDataComponentName="WorkDayTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         ATTEND.NOBR, ATTEND.ADATE, ROTE.ROTE, ROTE.ROTENAME, 
+                          ROTE.ON_TIME, ROTE.OFF_TIME, ROTE.WK_HRS, ROTE.RES_B_TIME, 
+                          ROTE.RES_E_TIME, ROTE.RES_B1_TIME, ROTE.RES_E1_TIME, 
+                          ROTE.RES_B2_TIME, ROTE.RES_E2_TIME, ROTE.RES_B3_TIME, 
+                          ROTE.RES_E3_TIME, ROTE.RES_B4_TIME, ROTE.RES_E4_TIME, ROTE.HELF, 
+                          ROTE.OFFTIME2, ROTE.ALLLATES, ROTE.ALLLATES1
+FROM             ATTEND INNER JOIN
+                          ROTE ON ATTEND.ROTE = ROTE.ROTE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOBR" DataSetColumn="NOBR" />
+              <Mapping SourceColumn="ADATE" DataSetColumn="ADATE" />
+              <Mapping SourceColumn="ROTE" DataSetColumn="ROTE" />
+              <Mapping SourceColumn="ROTENAME" DataSetColumn="ROTENAME" />
+              <Mapping SourceColumn="ON_TIME" DataSetColumn="ON_TIME" />
+              <Mapping SourceColumn="OFF_TIME" DataSetColumn="OFF_TIME" />
+              <Mapping SourceColumn="WK_HRS" DataSetColumn="WK_HRS" />
+              <Mapping SourceColumn="RES_B_TIME" DataSetColumn="RES_B_TIME" />
+              <Mapping SourceColumn="RES_E_TIME" DataSetColumn="RES_E_TIME" />
+              <Mapping SourceColumn="RES_B1_TIME" DataSetColumn="RES_B1_TIME" />
+              <Mapping SourceColumn="RES_E1_TIME" DataSetColumn="RES_E1_TIME" />
+              <Mapping SourceColumn="RES_B2_TIME" DataSetColumn="RES_B2_TIME" />
+              <Mapping SourceColumn="RES_E2_TIME" DataSetColumn="RES_E2_TIME" />
+              <Mapping SourceColumn="RES_B3_TIME" DataSetColumn="RES_B3_TIME" />
+              <Mapping SourceColumn="RES_E3_TIME" DataSetColumn="RES_E3_TIME" />
+              <Mapping SourceColumn="RES_B4_TIME" DataSetColumn="RES_B4_TIME" />
+              <Mapping SourceColumn="RES_E4_TIME" DataSetColumn="RES_E4_TIME" />
+              <Mapping SourceColumn="HELF" DataSetColumn="HELF" />
+              <Mapping SourceColumn="OFFTIME2" DataSetColumn="OFFTIME2" />
+              <Mapping SourceColumn="ALLLATES" DataSetColumn="ALLLATES" />
+              <Mapping SourceColumn="ALLLATES1" DataSetColumn="ALLLATES1" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByDate" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDate" GeneratorSourceName="FillByDate" GetMethodModifier="Public" GetMethodName="GetDataByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDate" UserSourceName="FillByDate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         ATTEND.NOBR, ATTEND.ADATE, ROTE.ROTE, ROTE.ROTENAME, 
+                          ROTE.ON_TIME, ROTE.OFF_TIME, ROTE.WK_HRS, ROTE.RES_B_TIME, 
+                          ROTE.RES_E_TIME, ROTE.RES_B1_TIME, ROTE.RES_E1_TIME, 
+                          ROTE.RES_B2_TIME, ROTE.RES_E2_TIME, ROTE.RES_B3_TIME, 
+                          ROTE.RES_E3_TIME, ROTE.RES_B4_TIME, ROTE.RES_E4_TIME, ROTE.HELF, 
+                          ROTE.OFFTIME2, ROTE.ALLLATES, ROTE.ALLLATES1
+FROM             ATTEND INNER JOIN
+                          ROTE ON ATTEND.ROTE = ROTE.ROTE
+WHERE         (ATTEND.NOBR = @NOBR) AND (ATTEND.ADATE = @ADATE)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="NOBR" ColumnName="NOBR" DataSourceName="SMCHR.dbo.ATTEND" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@NOBR" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ADATE" ColumnName="ADATE" DataSourceName="SMCHR.dbo.ATTEND" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@ADATE" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="ADATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AbsCheckTableAdapter" GeneratorDataComponentClassName="AbsCheckTableAdapter" Name="AbsCheck" UserDataComponentName="AbsCheckTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         ABS.NOBR, ABS.BDATE, ABS.BTIME, ABS.ETIME, ABS.TOL_HOURS, 
+                          ABS.H_CODE, HCODE_1.UNIT
+FROM             ABS INNER JOIN
+                          HCODE AS HCODE_1 ON ABS.H_CODE = HCODE_1.H_CODE
+WHERE         (HCODE_1.YEAR_REST IN ('0', '2', '4', '6'))
+UNION
+SELECT         ABS1.NOBR, ABS1.BDATE, ABS1.BTIME, ABS1.ETIME, ABS1.TOL_HOURS, 
+                          ABS1.H_CODE, HCODE.UNIT
+FROM             ABS1 INNER JOIN
+                          HCODE AS HCODE ON ABS1.H_CODE = HCODE.H_CODE
+WHERE         (HCODE.YEAR_REST IN ('0', '2', '4', '6'))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOBR" DataSetColumn="NOBR" />
+              <Mapping SourceColumn="BDATE" DataSetColumn="BDATE" />
+              <Mapping SourceColumn="BTIME" DataSetColumn="BTIME" />
+              <Mapping SourceColumn="ETIME" DataSetColumn="ETIME" />
+              <Mapping SourceColumn="TOL_HOURS" DataSetColumn="TOL_HOURS" />
+              <Mapping SourceColumn="H_CODE" DataSetColumn="H_CODE" />
+              <Mapping SourceColumn="UNIT" DataSetColumn="UNIT" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByNobr" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNobr" GeneratorSourceName="FillByNobr" GetMethodModifier="Public" GetMethodName="GetDataByNobr" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNobr" UserSourceName="FillByNobr">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         ABS.NOBR, ABS.BDATE, ABS.BTIME, ABS.ETIME, ABS.TOL_HOURS, 
+                          ABS.H_CODE, HCODE_1.UNIT
+FROM             ABS INNER JOIN
+                          HCODE AS HCODE_1 ON ABS.H_CODE = HCODE_1.H_CODE
+WHERE         (ABS.NOBR = @NOBR) AND (HCODE_1.YEAR_REST IN ('0', '2', '4', '6')) AND 
+                          (ABS.BDATE = @date)
+UNION
+SELECT         ABS1.NOBR, ABS1.BDATE, ABS1.BTIME, ABS1.ETIME, ABS1.TOL_HOURS, 
+                          ABS1.H_CODE, HCODE.UNIT
+FROM             ABS1 INNER JOIN
+                          HCODE AS HCODE ON ABS1.H_CODE = HCODE.H_CODE
+WHERE         (ABS1.NOBR = @NOBR) AND (HCODE.YEAR_REST IN ('0', '2', '4', '6')) AND 
+                          (ABS1.BDATE = @date)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="NOBR" ColumnName="NOBR" DataSourceName="SMCHR.dbo.ABS" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@NOBR" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="date" ColumnName="BDATE" DataSourceName="SMCHR.dbo.ABS" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@date" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="BDATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CARDTableAdapter" GeneratorDataComponentClassName="CARDTableAdapter" Name="CARD" UserDataComponentName="CARDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectName="SMCHR.dbo.CARD" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         NOBR, ADATE, ONTIME, REASON
+FROM             CARD</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOBR" DataSetColumn="NOBR" />
+              <Mapping SourceColumn="ADATE" DataSetColumn="ADATE" />
+              <Mapping SourceColumn="ONTIME" DataSetColumn="ONTIME" />
+              <Mapping SourceColumn="REASON" DataSetColumn="REASON" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectName="SMCHR.dbo.CARD" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDate" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDate" GeneratorSourceName="FillByDate" GetMethodModifier="Public" GetMethodName="GetDataByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDate" UserSourceName="FillByDate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ADATE, NOBR, ONTIME, REASON FROM CARD WHERE (NOBR = @NOBR) AND (ADATE BETWEEN @ADATE AND @DDATE) ORDER BY ADATE, ONTIME</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="NOBR" ColumnName="NOBR" DataSourceName="SMCHR.dbo.CARD" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@NOBR" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ADATE" ColumnName="ADATE" DataSourceName="SMCHR.dbo.CARD" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@ADATE" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="ADATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DDATE" ColumnName="ADATE" DataSourceName="SMCHR.dbo.CARD" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@DDATE" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="ADATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CARDLOSDTableAdapter" GeneratorDataComponentClassName="CARDLOSDTableAdapter" Name="CARDLOSD" UserDataComponentName="CARDLOSDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectName="SMCHR.dbo.CARDLOSD" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [CARDLOSD] ([CODE], [DESCR], [KEY_MAN], [KEY_DATE], [ATT]) VALUES (@CODE, @DESCR, @KEY_MAN, @KEY_DATE, @ATT)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@CODE" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="CODE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@DESCR" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DESCR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@KEY_MAN" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="KEY_MAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@KEY_DATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="KEY_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@ATT" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="ATT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         CARDLOSD.*
+FROM             CARDLOSD</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODE" DataSetColumn="CODE" />
+              <Mapping SourceColumn="DESCR" DataSetColumn="DESCR" />
+              <Mapping SourceColumn="KEY_MAN" DataSetColumn="KEY_MAN" />
+              <Mapping SourceColumn="KEY_DATE" DataSetColumn="KEY_DATE" />
+              <Mapping SourceColumn="ATT" DataSetColumn="ATT" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectName="SMCHR.dbo.CARDLOSD" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByCode" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCode" GeneratorSourceName="FillByCode" GetMethodModifier="Public" GetMethodName="GetDataByCode" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCode" UserSourceName="FillByCode">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         CARDLOSD.*
+FROM             CARDLOSD
+WHERE         (ATT = 1) AND (CODE = @CODE)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="CODE" ColumnName="CODE" DataSourceName="SMCHR.dbo.CARDLOSD" DataTypeServer="char(1)" DbType="AnsiString" Direction="Input" ParameterName="@CODE" Precision="0" ProviderType="Char" Scale="0" Size="1" SourceColumn="CODE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ATTENDTableAdapter" GeneratorDataComponentClassName="ATTENDTableAdapter" Name="ATTEND" UserDataComponentName="ATTENDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectName="WAFERHR.dbo.ATTEND" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [ATTEND] ([NOBR], [ADATE], [ROTE], [KEY_MAN], [KEY_DATE], [LATE_MINS], [E_MINS], [ABS], [ADJ_CODE], [CANT_ADJ], [SER], [NIGHT_HRS], [FOODAMT], [FOODSALCD], [FORGET], [ATT_HRS]) VALUES (@NOBR, @ADATE, @ROTE, @KEY_MAN, @KEY_DATE, @LATE_MINS, @E_MINS, @ABS, @ADJ_CODE, @CANT_ADJ, @SER, @NIGHT_HRS, @FOODAMT, @FOODSALCD, @FORGET, @ATT_HRS)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@NOBR" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ADATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ADATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@ROTE" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ROTE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@KEY_MAN" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="KEY_MAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@KEY_DATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="KEY_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@LATE_MINS" Precision="4" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="LATE_MINS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@E_MINS" Precision="4" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="E_MINS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@ABS" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="ABS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@ADJ_CODE" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="ADJ_CODE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@CANT_ADJ" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="CANT_ADJ" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@SER" Precision="2" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="SER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@NIGHT_HRS" Precision="7" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="NIGHT_HRS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@FOODAMT" Precision="3" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="FOODAMT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@FOODSALCD" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="FOODSALCD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@FORGET" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="FORGET" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ATT_HRS" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ATT_HRS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         ATTEND.*
+FROM             ATTEND</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE        ATTEND
+SET                  LATE_MINS = @LATE_MINS, E_MINS = @E_MINS, ABS = @ABS, 
+                          FORGET = @FORGET, KEY_MAN = @KEY_MAN, 
+                          KEY_DATE = @KEY_DATE
+WHERE         (NOBR = @NOBR) AND (ADATE = @ADATE)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="LATE_MINS" ColumnName="LATE_MINS" DataSourceName="WAFERHR.dbo.ATTEND" DataTypeServer="decimal(4, 0)" DbType="Decimal" Direction="Input" ParameterName="@LATE_MINS" Precision="4" ProviderType="Decimal" Scale="0" Size="5" SourceColumn="LATE_MINS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="E_MINS" ColumnName="E_MINS" DataSourceName="WAFERHR.dbo.ATTEND" DataTypeServer="decimal(4, 0)" DbType="Decimal" Direction="Input" ParameterName="@E_MINS" Precision="4" ProviderType="Decimal" Scale="0" Size="5" SourceColumn="E_MINS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ABS" ColumnName="ABS" DataSourceName="WAFERHR.dbo.ATTEND" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@ABS" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="ABS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="FORGET" ColumnName="FORGET" DataSourceName="WAFERHR.dbo.ATTEND" DataTypeServer="decimal(5, 2)" DbType="Decimal" Direction="Input" ParameterName="@FORGET" Precision="5" ProviderType="Decimal" Scale="2" Size="5" SourceColumn="FORGET" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="KEY_MAN" ColumnName="KEY_MAN" DataSourceName="WAFERHR.dbo.ATTEND" DataTypeServer="char(8)" DbType="AnsiString" Direction="Input" ParameterName="@KEY_MAN" Precision="0" ProviderType="Char" Scale="0" Size="8" SourceColumn="KEY_MAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="KEY_DATE" ColumnName="KEY_DATE" DataSourceName="WAFERHR.dbo.ATTEND" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@KEY_DATE" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="8" SourceColumn="KEY_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="NOBR" ColumnName="NOBR" DataSourceName="WAFERHR.dbo.ATTEND" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@NOBR" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ADATE" ColumnName="ADATE" DataSourceName="WAFERHR.dbo.ATTEND" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@ADATE" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="8" SourceColumn="ADATE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOBR" DataSetColumn="NOBR" />
+              <Mapping SourceColumn="ADATE" DataSetColumn="ADATE" />
+              <Mapping SourceColumn="ROTE" DataSetColumn="ROTE" />
+              <Mapping SourceColumn="KEY_MAN" DataSetColumn="KEY_MAN" />
+              <Mapping SourceColumn="KEY_DATE" DataSetColumn="KEY_DATE" />
+              <Mapping SourceColumn="LATE_MINS" DataSetColumn="LATE_MINS" />
+              <Mapping SourceColumn="E_MINS" DataSetColumn="E_MINS" />
+              <Mapping SourceColumn="ABS" DataSetColumn="ABS" />
+              <Mapping SourceColumn="ADJ_CODE" DataSetColumn="ADJ_CODE" />
+              <Mapping SourceColumn="CANT_ADJ" DataSetColumn="CANT_ADJ" />
+              <Mapping SourceColumn="SER" DataSetColumn="SER" />
+              <Mapping SourceColumn="NIGHT_HRS" DataSetColumn="NIGHT_HRS" />
+              <Mapping SourceColumn="FOODAMT" DataSetColumn="FOODAMT" />
+              <Mapping SourceColumn="FOODSALCD" DataSetColumn="FOODSALCD" />
+              <Mapping SourceColumn="FORGET" DataSetColumn="FORGET" />
+              <Mapping SourceColumn="ATT_HRS" DataSetColumn="ATT_HRS" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectName="WAFERHR.dbo.ATTEND" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDate" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDate" GeneratorSourceName="FillByDate" GetMethodModifier="Public" GetMethodName="GetDataByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDate" UserSourceName="FillByDate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         ATTEND.*
+FROM             ATTEND
+WHERE         (NOBR = @NOBR) AND (ADATE = @ADATE)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="NOBR" ColumnName="NOBR" DataSourceName="WAFERHR.dbo.ATTEND" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@NOBR" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ADATE" ColumnName="ADATE" DataSourceName="WAFERHR.dbo.ATTEND" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@ADATE" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="ADATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ATTCARDTableAdapter" GeneratorDataComponentClassName="ATTCARDTableAdapter" Name="ATTCARD" UserDataComponentName="ATTCARDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectName="WAFERHR.dbo.ATTCARD" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM ATTCARD
+WHERE         (NOBR = @NOBR) AND (ADATE = @ADATE) AND (T1 = @T1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="NOBR" ColumnName="NOBR" DataSourceName="WAFERHR.dbo.ATTCARD" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@NOBR" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ADATE" ColumnName="ADATE" DataSourceName="WAFERHR.dbo.ATTCARD" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@ADATE" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="ADATE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="T1" ColumnName="T1" DataSourceName="WAFERHR.dbo.ATTCARD" DataTypeServer="char(4)" DbType="AnsiString" Direction="Input" ParameterName="@T1" Precision="0" ProviderType="Char" Scale="0" Size="4" SourceColumn="T1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [ATTCARD] ([NOBR], [ADATE], [T1], [T2], [CODE], [SER], [KEY_MAN], [KEY_DATE], [DD1], [DD2], [LOST1], [LOST2], [TT1], [TT2], [NOMODY]) VALUES (@NOBR, @ADATE, @T1, @T2, @CODE, @SER, @KEY_MAN, @KEY_DATE, @DD1, @DD2, @LOST1, @LOST2, @TT1, @TT2, @NOMODY)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@NOBR" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ADATE" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ADATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@T1" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="T1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@T2" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="T2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@CODE" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="CODE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@SER" Precision="1" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="SER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@KEY_MAN" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="KEY_MAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@KEY_DATE" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="KEY_DATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@DD1" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DD1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@DD2" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DD2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@LOST1" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="LOST1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@LOST2" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="LOST2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@TT1" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="TT1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@TT2" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="TT2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@NOMODY" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="NOMODY" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         ATTCARD.*
+FROM             ATTCARD</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOBR" DataSetColumn="NOBR" />
+              <Mapping SourceColumn="ADATE" DataSetColumn="ADATE" />
+              <Mapping SourceColumn="T1" DataSetColumn="T1" />
+              <Mapping SourceColumn="T2" DataSetColumn="T2" />
+              <Mapping SourceColumn="CODE" DataSetColumn="CODE" />
+              <Mapping SourceColumn="SER" DataSetColumn="SER" />
+              <Mapping SourceColumn="KEY_MAN" DataSetColumn="KEY_MAN" />
+              <Mapping SourceColumn="KEY_DATE" DataSetColumn="KEY_DATE" />
+              <Mapping SourceColumn="DD1" DataSetColumn="DD1" />
+              <Mapping SourceColumn="DD2" DataSetColumn="DD2" />
+              <Mapping SourceColumn="LOST1" DataSetColumn="LOST1" />
+              <Mapping SourceColumn="LOST2" DataSetColumn="LOST2" />
+              <Mapping SourceColumn="TT1" DataSetColumn="TT1" />
+              <Mapping SourceColumn="TT2" DataSetColumn="TT2" />
+              <Mapping SourceColumn="NOMODY" DataSetColumn="NOMODY" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="hr (Web.config)" DbObjectName="WAFERHR.dbo.ATTCARD" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDate" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDate" GeneratorSourceName="FillByDate" GetMethodModifier="Public" GetMethodName="GetDataByDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDate" UserSourceName="FillByDate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         ATTCARD.*
+FROM             ATTCARD
+WHERE (NOBR = @NOBR) AND (ADATE = @ADATE)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="NOBR" ColumnName="NOBR" DataSourceName="WAFERHR.dbo.ATTCARD" DataTypeServer="char(10)" DbType="AnsiString" Direction="Input" ParameterName="@NOBR" Precision="0" ProviderType="Char" Scale="0" Size="10" SourceColumn="NOBR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ADATE" ColumnName="ADATE" DataSourceName="WAFERHR.dbo.ATTCARD" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@ADATE" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="ADATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TransCardDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TransCardDS" msprop:Generator_DataSetName="TransCardDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="WorkDay" msprop:Generator_UserTableName="WorkDay" msprop:Generator_RowDeletedName="WorkDayRowDeleted" msprop:Generator_RowChangedName="WorkDayRowChanged" msprop:Generator_RowClassName="WorkDayRow" msprop:Generator_RowChangingName="WorkDayRowChanging" msprop:Generator_RowEvArgName="WorkDayRowChangeEvent" msprop:Generator_RowEvHandlerName="WorkDayRowChangeEventHandler" msprop:Generator_TableClassName="WorkDayDataTable" msprop:Generator_TableVarName="tableWorkDay" msprop:Generator_RowDeletingName="WorkDayRowDeleting" msprop:Generator_TablePropName="WorkDay">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOBR" msprop:Generator_UserColumnName="NOBR" msprop:Generator_ColumnPropNameInRow="NOBR" msprop:Generator_ColumnVarNameInTable="columnNOBR" msprop:Generator_ColumnPropNameInTable="NOBRColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADATE" msprop:Generator_UserColumnName="ADATE" msprop:Generator_ColumnPropNameInRow="ADATE" msprop:Generator_ColumnVarNameInTable="columnADATE" msprop:Generator_ColumnPropNameInTable="ADATEColumn" type="xs:dateTime" />
+              <xs:element name="ROTE" msprop:Generator_UserColumnName="ROTE" msprop:Generator_ColumnPropNameInRow="ROTE" msprop:Generator_ColumnVarNameInTable="columnROTE" msprop:Generator_ColumnPropNameInTable="ROTEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROTENAME" msprop:Generator_UserColumnName="ROTENAME" msprop:Generator_ColumnPropNameInRow="ROTENAME" msprop:Generator_ColumnVarNameInTable="columnROTENAME" msprop:Generator_ColumnPropNameInTable="ROTENAMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ON_TIME" msprop:Generator_UserColumnName="ON_TIME" msprop:Generator_ColumnPropNameInRow="ON_TIME" msprop:Generator_ColumnVarNameInTable="columnON_TIME" msprop:Generator_ColumnPropNameInTable="ON_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OFF_TIME" msprop:Generator_UserColumnName="OFF_TIME" msprop:Generator_ColumnPropNameInRow="OFF_TIME" msprop:Generator_ColumnVarNameInTable="columnOFF_TIME" msprop:Generator_ColumnPropNameInTable="OFF_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WK_HRS" msprop:Generator_UserColumnName="WK_HRS" msprop:Generator_ColumnPropNameInRow="WK_HRS" msprop:Generator_ColumnVarNameInTable="columnWK_HRS" msprop:Generator_ColumnPropNameInTable="WK_HRSColumn" type="xs:decimal" />
+              <xs:element name="RES_B_TIME" msprop:Generator_UserColumnName="RES_B_TIME" msprop:Generator_ColumnPropNameInRow="RES_B_TIME" msprop:Generator_ColumnVarNameInTable="columnRES_B_TIME" msprop:Generator_ColumnPropNameInTable="RES_B_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RES_E_TIME" msprop:Generator_UserColumnName="RES_E_TIME" msprop:Generator_ColumnPropNameInRow="RES_E_TIME" msprop:Generator_ColumnVarNameInTable="columnRES_E_TIME" msprop:Generator_ColumnPropNameInTable="RES_E_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RES_B1_TIME" msprop:Generator_UserColumnName="RES_B1_TIME" msprop:Generator_ColumnPropNameInRow="RES_B1_TIME" msprop:Generator_ColumnVarNameInTable="columnRES_B1_TIME" msprop:Generator_ColumnPropNameInTable="RES_B1_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RES_E1_TIME" msprop:Generator_UserColumnName="RES_E1_TIME" msprop:Generator_ColumnPropNameInRow="RES_E1_TIME" msprop:Generator_ColumnVarNameInTable="columnRES_E1_TIME" msprop:Generator_ColumnPropNameInTable="RES_E1_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RES_B2_TIME" msprop:Generator_UserColumnName="RES_B2_TIME" msprop:Generator_ColumnPropNameInRow="RES_B2_TIME" msprop:Generator_ColumnVarNameInTable="columnRES_B2_TIME" msprop:Generator_ColumnPropNameInTable="RES_B2_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RES_E2_TIME" msprop:Generator_UserColumnName="RES_E2_TIME" msprop:Generator_ColumnPropNameInRow="RES_E2_TIME" msprop:Generator_ColumnVarNameInTable="columnRES_E2_TIME" msprop:Generator_ColumnPropNameInTable="RES_E2_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RES_B3_TIME" msprop:Generator_UserColumnName="RES_B3_TIME" msprop:Generator_ColumnPropNameInRow="RES_B3_TIME" msprop:Generator_ColumnVarNameInTable="columnRES_B3_TIME" msprop:Generator_ColumnPropNameInTable="RES_B3_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RES_E3_TIME" msprop:Generator_UserColumnName="RES_E3_TIME" msprop:Generator_ColumnPropNameInRow="RES_E3_TIME" msprop:Generator_ColumnVarNameInTable="columnRES_E3_TIME" msprop:Generator_ColumnPropNameInTable="RES_E3_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RES_B4_TIME" msprop:Generator_UserColumnName="RES_B4_TIME" msprop:Generator_ColumnPropNameInRow="RES_B4_TIME" msprop:Generator_ColumnVarNameInTable="columnRES_B4_TIME" msprop:Generator_ColumnPropNameInTable="RES_B4_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RES_E4_TIME" msprop:Generator_UserColumnName="RES_E4_TIME" msprop:Generator_ColumnPropNameInRow="RES_E4_TIME" msprop:Generator_ColumnVarNameInTable="columnRES_E4_TIME" msprop:Generator_ColumnPropNameInTable="RES_E4_TIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HELF" msprop:Generator_UserColumnName="HELF" msprop:Generator_ColumnPropNameInRow="HELF" msprop:Generator_ColumnVarNameInTable="columnHELF" msprop:Generator_ColumnPropNameInTable="HELFColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="OFFTIME2" msprop:Generator_UserColumnName="OFFTIME2" msprop:Generator_ColumnPropNameInRow="OFFTIME2" msprop:Generator_ColumnVarNameInTable="columnOFFTIME2" msprop:Generator_ColumnPropNameInTable="OFFTIME2Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALLLATES" msprop:Generator_UserColumnName="ALLLATES" msprop:Generator_ColumnPropNameInRow="ALLLATES" msprop:Generator_ColumnVarNameInTable="columnALLLATES" msprop:Generator_ColumnPropNameInTable="ALLLATESColumn" type="xs:decimal" />
+              <xs:element name="ALLLATES1" msprop:Generator_UserColumnName="ALLLATES1" msprop:Generator_ColumnPropNameInRow="ALLLATES1" msprop:Generator_ColumnVarNameInTable="columnALLLATES1" msprop:Generator_ColumnPropNameInTable="ALLLATES1Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AbsCheck" msprop:Generator_UserTableName="AbsCheck" msprop:Generator_RowDeletedName="AbsCheckRowDeleted" msprop:Generator_RowChangedName="AbsCheckRowChanged" msprop:Generator_RowClassName="AbsCheckRow" msprop:Generator_RowChangingName="AbsCheckRowChanging" msprop:Generator_RowEvArgName="AbsCheckRowChangeEvent" msprop:Generator_RowEvHandlerName="AbsCheckRowChangeEventHandler" msprop:Generator_TableClassName="AbsCheckDataTable" msprop:Generator_TableVarName="tableAbsCheck" msprop:Generator_RowDeletingName="AbsCheckRowDeleting" msprop:Generator_TablePropName="AbsCheck">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOBR" msprop:Generator_UserColumnName="NOBR" msprop:Generator_ColumnPropNameInRow="NOBR" msprop:Generator_ColumnVarNameInTable="columnNOBR" msprop:Generator_ColumnPropNameInTable="NOBRColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BDATE" msprop:Generator_UserColumnName="BDATE" msprop:Generator_ColumnPropNameInRow="BDATE" msprop:Generator_ColumnVarNameInTable="columnBDATE" msprop:Generator_ColumnPropNameInTable="BDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BTIME" msprop:Generator_UserColumnName="BTIME" msprop:Generator_ColumnPropNameInRow="BTIME" msprop:Generator_ColumnVarNameInTable="columnBTIME" msprop:Generator_ColumnPropNameInTable="BTIMEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ETIME" msprop:Generator_UserColumnName="ETIME" msprop:Generator_ColumnPropNameInRow="ETIME" msprop:Generator_ColumnVarNameInTable="columnETIME" msprop:Generator_ColumnPropNameInTable="ETIMEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOL_HOURS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TOL_HOURS" msprop:Generator_ColumnPropNameInRow="TOL_HOURS" msprop:Generator_ColumnVarNameInTable="columnTOL_HOURS" msprop:Generator_ColumnPropNameInTable="TOL_HOURSColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="H_CODE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="H_CODE" msprop:Generator_ColumnPropNameInRow="H_CODE" msprop:Generator_ColumnVarNameInTable="columnH_CODE" msprop:Generator_ColumnPropNameInTable="H_CODEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UNIT" msdata:ReadOnly="true" msprop:Generator_UserColumnName="UNIT" msprop:Generator_ColumnPropNameInRow="UNIT" msprop:Generator_ColumnVarNameInTable="columnUNIT" msprop:Generator_ColumnPropNameInTable="UNITColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Card" msprop:Generator_UserTableName="Card" msprop:Generator_RowDeletedName="CardRowDeleted" msprop:Generator_RowChangedName="CardRowChanged" msprop:Generator_RowClassName="CardRow" msprop:Generator_RowChangingName="CardRowChanging" msprop:Generator_RowEvArgName="CardRowChangeEvent" msprop:Generator_RowEvHandlerName="CardRowChangeEventHandler" msprop:Generator_TableClassName="CardDataTable" msprop:Generator_TableVarName="tableCard" msprop:Generator_RowDeletingName="CardRowDeleting" msprop:Generator_TablePropName="Card">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dDateTime" msprop:Generator_UserColumnName="dDateTime" msprop:Generator_ColumnVarNameInTable="columndDateTime" msprop:Generator_ColumnPropNameInRow="dDateTime" msprop:Generator_ColumnPropNameInTable="dDateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dDate" msprop:Generator_UserColumnName="dDate" msprop:Generator_ColumnVarNameInTable="columndDate" msprop:Generator_ColumnPropNameInRow="dDate" msprop:Generator_ColumnPropNameInTable="dDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sTime" msprop:Generator_UserColumnName="sTime" msprop:Generator_ColumnVarNameInTable="columnsTime" msprop:Generator_ColumnPropNameInRow="sTime" msprop:Generator_ColumnPropNameInTable="sTimeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="bLos" msprop:Generator_UserColumnName="bLos" msprop:Generator_ColumnPropNameInRow="bLos" msprop:Generator_ColumnVarNameInTable="columnbLos" msprop:Generator_ColumnPropNameInTable="bLosColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CARD" msprop:Generator_UserTableName="CARD" msprop:Generator_RowDeletedName="CARDRowDeleted" msprop:Generator_RowChangedName="CARDRowChanged" msprop:Generator_RowClassName="CARDRow" msprop:Generator_RowChangingName="CARDRowChanging" msprop:Generator_RowEvArgName="CARDRowChangeEvent" msprop:Generator_RowEvHandlerName="CARDRowChangeEventHandler" msprop:Generator_TableClassName="CARDDataTable" msprop:Generator_TableVarName="tableCARD" msprop:Generator_RowDeletingName="CARDRowDeleting" msprop:Generator_TablePropName="CARD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOBR" msprop:Generator_UserColumnName="NOBR" msprop:Generator_ColumnVarNameInTable="columnNOBR" msprop:Generator_ColumnPropNameInRow="NOBR" msprop:Generator_ColumnPropNameInTable="NOBRColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADATE" msprop:Generator_UserColumnName="ADATE" msprop:Generator_ColumnVarNameInTable="columnADATE" msprop:Generator_ColumnPropNameInRow="ADATE" msprop:Generator_ColumnPropNameInTable="ADATEColumn" type="xs:dateTime" />
+              <xs:element name="ONTIME" msprop:Generator_UserColumnName="ONTIME" msprop:Generator_ColumnVarNameInTable="columnONTIME" msprop:Generator_ColumnPropNameInRow="ONTIME" msprop:Generator_ColumnPropNameInTable="ONTIMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REASON" msprop:Generator_UserColumnName="REASON" msprop:Generator_ColumnPropNameInRow="REASON" msprop:Generator_ColumnVarNameInTable="columnREASON" msprop:Generator_ColumnPropNameInTable="REASONColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CARDLOSD" msprop:Generator_UserTableName="CARDLOSD" msprop:Generator_RowDeletedName="CARDLOSDRowDeleted" msprop:Generator_RowChangedName="CARDLOSDRowChanged" msprop:Generator_RowClassName="CARDLOSDRow" msprop:Generator_RowChangingName="CARDLOSDRowChanging" msprop:Generator_RowEvArgName="CARDLOSDRowChangeEvent" msprop:Generator_RowEvHandlerName="CARDLOSDRowChangeEventHandler" msprop:Generator_TableClassName="CARDLOSDDataTable" msprop:Generator_TableVarName="tableCARDLOSD" msprop:Generator_RowDeletingName="CARDLOSDRowDeleting" msprop:Generator_TablePropName="CARDLOSD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODE" msprop:Generator_UserColumnName="CODE" msprop:Generator_ColumnPropNameInRow="CODE" msprop:Generator_ColumnVarNameInTable="columnCODE" msprop:Generator_ColumnPropNameInTable="CODEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCR" msprop:Generator_UserColumnName="DESCR" msprop:Generator_ColumnPropNameInRow="DESCR" msprop:Generator_ColumnVarNameInTable="columnDESCR" msprop:Generator_ColumnPropNameInTable="DESCRColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KEY_MAN" msprop:Generator_UserColumnName="KEY_MAN" msprop:Generator_ColumnPropNameInRow="KEY_MAN" msprop:Generator_ColumnVarNameInTable="columnKEY_MAN" msprop:Generator_ColumnPropNameInTable="KEY_MANColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KEY_DATE" msprop:Generator_UserColumnName="KEY_DATE" msprop:Generator_ColumnPropNameInRow="KEY_DATE" msprop:Generator_ColumnVarNameInTable="columnKEY_DATE" msprop:Generator_ColumnPropNameInTable="KEY_DATEColumn" type="xs:dateTime" />
+              <xs:element name="ATT" msprop:Generator_UserColumnName="ATT" msprop:Generator_ColumnPropNameInRow="ATT" msprop:Generator_ColumnVarNameInTable="columnATT" msprop:Generator_ColumnPropNameInTable="ATTColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Abs" msprop:Generator_UserTableName="Abs" msprop:Generator_RowDeletedName="AbsRowDeleted" msprop:Generator_RowChangedName="AbsRowChanged" msprop:Generator_RowClassName="AbsRow" msprop:Generator_RowChangingName="AbsRowChanging" msprop:Generator_RowEvArgName="AbsRowChangeEvent" msprop:Generator_RowEvHandlerName="AbsRowChangeEventHandler" msprop:Generator_TableClassName="AbsDataTable" msprop:Generator_TableVarName="tableAbs" msprop:Generator_RowDeletingName="AbsRowDeleting" msprop:Generator_TablePropName="Abs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dDateTimeB" msprop:Generator_UserColumnName="dDateTimeB" msprop:Generator_ColumnPropNameInRow="dDateTimeB" msprop:Generator_ColumnVarNameInTable="columndDateTimeB" msprop:Generator_ColumnPropNameInTable="dDateTimeBColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dDateTimeE" msprop:Generator_UserColumnName="dDateTimeE" msprop:Generator_ColumnPropNameInRow="dDateTimeE" msprop:Generator_ColumnVarNameInTable="columndDateTimeE" msprop:Generator_ColumnPropNameInTable="dDateTimeEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dDateB" msprop:Generator_UserColumnName="dDateB" msprop:Generator_ColumnPropNameInRow="dDateB" msprop:Generator_ColumnVarNameInTable="columndDateB" msprop:Generator_ColumnPropNameInTable="dDateBColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dDateE" msprop:Generator_UserColumnName="dDateE" msprop:Generator_ColumnPropNameInRow="dDateE" msprop:Generator_ColumnVarNameInTable="columndDateE" msprop:Generator_ColumnPropNameInTable="dDateEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sTimeB" msprop:Generator_UserColumnName="sTimeB" msprop:Generator_ColumnPropNameInRow="sTimeB" msprop:Generator_ColumnVarNameInTable="columnsTimeB" msprop:Generator_ColumnPropNameInTable="sTimeBColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sTimeE" msprop:Generator_UserColumnName="sTimeE" msprop:Generator_ColumnPropNameInRow="sTimeE" msprop:Generator_ColumnVarNameInTable="columnsTimeE" msprop:Generator_ColumnPropNameInTable="sTimeEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sHcode" msprop:Generator_UserColumnName="sHcode" msprop:Generator_ColumnPropNameInRow="sHcode" msprop:Generator_ColumnVarNameInTable="columnsHcode" msprop:Generator_ColumnPropNameInTable="sHcodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sUnit" msprop:Generator_UserColumnName="sUnit" msprop:Generator_ColumnPropNameInRow="sUnit" msprop:Generator_ColumnVarNameInTable="columnsUnit" msprop:Generator_ColumnPropNameInTable="sUnitColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="iTotal" msprop:Generator_UserColumnName="iTotal" msprop:Generator_ColumnPropNameInRow="iTotal" msprop:Generator_ColumnVarNameInTable="columniTotal" msprop:Generator_ColumnPropNameInTable="iTotalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="iDay" msprop:Generator_UserColumnName="iDay" msprop:Generator_ColumnPropNameInRow="iDay" msprop:Generator_ColumnVarNameInTable="columniDay" msprop:Generator_ColumnPropNameInTable="iDayColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="iHour" msprop:Generator_UserColumnName="iHour" msprop:Generator_ColumnPropNameInRow="iHour" msprop:Generator_ColumnVarNameInTable="columniHour" msprop:Generator_ColumnPropNameInTable="iHourColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="iMin" msprop:Generator_UserColumnName="iMin" msprop:Generator_ColumnPropNameInRow="iMin" msprop:Generator_ColumnVarNameInTable="columniMin" msprop:Generator_ColumnPropNameInTable="iMinColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ATTEND" msprop:Generator_UserTableName="ATTEND" msprop:Generator_RowDeletedName="ATTENDRowDeleted" msprop:Generator_RowChangedName="ATTENDRowChanged" msprop:Generator_RowClassName="ATTENDRow" msprop:Generator_RowChangingName="ATTENDRowChanging" msprop:Generator_RowEvArgName="ATTENDRowChangeEvent" msprop:Generator_RowEvHandlerName="ATTENDRowChangeEventHandler" msprop:Generator_TableClassName="ATTENDDataTable" msprop:Generator_TableVarName="tableATTEND" msprop:Generator_RowDeletingName="ATTENDRowDeleting" msprop:Generator_TablePropName="ATTEND">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOBR" msprop:Generator_UserColumnName="NOBR" msprop:Generator_ColumnVarNameInTable="columnNOBR" msprop:Generator_ColumnPropNameInRow="NOBR" msprop:Generator_ColumnPropNameInTable="NOBRColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADATE" msprop:Generator_UserColumnName="ADATE" msprop:Generator_ColumnVarNameInTable="columnADATE" msprop:Generator_ColumnPropNameInRow="ADATE" msprop:Generator_ColumnPropNameInTable="ADATEColumn" type="xs:dateTime" />
+              <xs:element name="ROTE" msprop:Generator_UserColumnName="ROTE" msprop:Generator_ColumnVarNameInTable="columnROTE" msprop:Generator_ColumnPropNameInRow="ROTE" msprop:Generator_ColumnPropNameInTable="ROTEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KEY_MAN" msprop:Generator_UserColumnName="KEY_MAN" msprop:Generator_ColumnVarNameInTable="columnKEY_MAN" msprop:Generator_ColumnPropNameInRow="KEY_MAN" msprop:Generator_ColumnPropNameInTable="KEY_MANColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KEY_DATE" msprop:Generator_UserColumnName="KEY_DATE" msprop:Generator_ColumnVarNameInTable="columnKEY_DATE" msprop:Generator_ColumnPropNameInRow="KEY_DATE" msprop:Generator_ColumnPropNameInTable="KEY_DATEColumn" type="xs:dateTime" />
+              <xs:element name="LATE_MINS" msprop:Generator_UserColumnName="LATE_MINS" msprop:Generator_ColumnVarNameInTable="columnLATE_MINS" msprop:Generator_ColumnPropNameInRow="LATE_MINS" msprop:Generator_ColumnPropNameInTable="LATE_MINSColumn" type="xs:decimal" />
+              <xs:element name="E_MINS" msprop:Generator_UserColumnName="E_MINS" msprop:Generator_ColumnVarNameInTable="columnE_MINS" msprop:Generator_ColumnPropNameInRow="E_MINS" msprop:Generator_ColumnPropNameInTable="E_MINSColumn" type="xs:decimal" />
+              <xs:element name="ABS" msprop:Generator_UserColumnName="ABS" msprop:Generator_ColumnVarNameInTable="columnABS" msprop:Generator_ColumnPropNameInRow="ABS" msprop:Generator_ColumnPropNameInTable="ABSColumn" type="xs:boolean" />
+              <xs:element name="ADJ_CODE" msprop:Generator_UserColumnName="ADJ_CODE" msprop:Generator_ColumnVarNameInTable="columnADJ_CODE" msprop:Generator_ColumnPropNameInRow="ADJ_CODE" msprop:Generator_ColumnPropNameInTable="ADJ_CODEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CANT_ADJ" msprop:Generator_UserColumnName="CANT_ADJ" msprop:Generator_ColumnVarNameInTable="columnCANT_ADJ" msprop:Generator_ColumnPropNameInRow="CANT_ADJ" msprop:Generator_ColumnPropNameInTable="CANT_ADJColumn" type="xs:boolean" />
+              <xs:element name="SER" msprop:Generator_UserColumnName="SER" msprop:Generator_ColumnVarNameInTable="columnSER" msprop:Generator_ColumnPropNameInRow="SER" msprop:Generator_ColumnPropNameInTable="SERColumn" type="xs:decimal" />
+              <xs:element name="NIGHT_HRS" msprop:Generator_UserColumnName="NIGHT_HRS" msprop:Generator_ColumnVarNameInTable="columnNIGHT_HRS" msprop:Generator_ColumnPropNameInRow="NIGHT_HRS" msprop:Generator_ColumnPropNameInTable="NIGHT_HRSColumn" type="xs:decimal" />
+              <xs:element name="FOODAMT" msprop:Generator_UserColumnName="FOODAMT" msprop:Generator_ColumnVarNameInTable="columnFOODAMT" msprop:Generator_ColumnPropNameInRow="FOODAMT" msprop:Generator_ColumnPropNameInTable="FOODAMTColumn" type="xs:decimal" />
+              <xs:element name="FOODSALCD" msprop:Generator_UserColumnName="FOODSALCD" msprop:Generator_ColumnVarNameInTable="columnFOODSALCD" msprop:Generator_ColumnPropNameInRow="FOODSALCD" msprop:Generator_ColumnPropNameInTable="FOODSALCDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FORGET" msprop:Generator_UserColumnName="FORGET" msprop:Generator_ColumnVarNameInTable="columnFORGET" msprop:Generator_ColumnPropNameInRow="FORGET" msprop:Generator_ColumnPropNameInTable="FORGETColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ATT_HRS" msprop:Generator_UserColumnName="ATT_HRS" msprop:Generator_ColumnVarNameInTable="columnATT_HRS" msprop:Generator_ColumnPropNameInRow="ATT_HRS" msprop:Generator_ColumnPropNameInTable="ATT_HRSColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ATTCARD" msprop:Generator_UserTableName="ATTCARD" msprop:Generator_RowDeletedName="ATTCARDRowDeleted" msprop:Generator_RowChangedName="ATTCARDRowChanged" msprop:Generator_RowClassName="ATTCARDRow" msprop:Generator_RowChangingName="ATTCARDRowChanging" msprop:Generator_RowEvArgName="ATTCARDRowChangeEvent" msprop:Generator_RowEvHandlerName="ATTCARDRowChangeEventHandler" msprop:Generator_TableClassName="ATTCARDDataTable" msprop:Generator_TableVarName="tableATTCARD" msprop:Generator_RowDeletingName="ATTCARDRowDeleting" msprop:Generator_TablePropName="ATTCARD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOBR" msprop:Generator_UserColumnName="NOBR" msprop:Generator_ColumnVarNameInTable="columnNOBR" msprop:Generator_ColumnPropNameInRow="NOBR" msprop:Generator_ColumnPropNameInTable="NOBRColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADATE" msprop:Generator_UserColumnName="ADATE" msprop:Generator_ColumnVarNameInTable="columnADATE" msprop:Generator_ColumnPropNameInRow="ADATE" msprop:Generator_ColumnPropNameInTable="ADATEColumn" type="xs:dateTime" />
+              <xs:element name="T1" msprop:Generator_UserColumnName="T1" msprop:Generator_ColumnVarNameInTable="columnT1" msprop:Generator_ColumnPropNameInRow="T1" msprop:Generator_ColumnPropNameInTable="T1Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="T2" msprop:Generator_UserColumnName="T2" msprop:Generator_ColumnVarNameInTable="columnT2" msprop:Generator_ColumnPropNameInRow="T2" msprop:Generator_ColumnPropNameInTable="T2Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODE" msprop:Generator_UserColumnName="CODE" msprop:Generator_ColumnVarNameInTable="columnCODE" msprop:Generator_ColumnPropNameInRow="CODE" msprop:Generator_ColumnPropNameInTable="CODEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SER" msprop:Generator_UserColumnName="SER" msprop:Generator_ColumnVarNameInTable="columnSER" msprop:Generator_ColumnPropNameInRow="SER" msprop:Generator_ColumnPropNameInTable="SERColumn" type="xs:decimal" />
+              <xs:element name="KEY_MAN" msprop:Generator_UserColumnName="KEY_MAN" msprop:Generator_ColumnVarNameInTable="columnKEY_MAN" msprop:Generator_ColumnPropNameInRow="KEY_MAN" msprop:Generator_ColumnPropNameInTable="KEY_MANColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KEY_DATE" msprop:Generator_UserColumnName="KEY_DATE" msprop:Generator_ColumnVarNameInTable="columnKEY_DATE" msprop:Generator_ColumnPropNameInRow="KEY_DATE" msprop:Generator_ColumnPropNameInTable="KEY_DATEColumn" type="xs:dateTime" />
+              <xs:element name="DD1" msprop:Generator_UserColumnName="DD1" msprop:Generator_ColumnVarNameInTable="columnDD1" msprop:Generator_ColumnPropNameInRow="DD1" msprop:Generator_ColumnPropNameInTable="DD1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DD2" msprop:Generator_UserColumnName="DD2" msprop:Generator_ColumnVarNameInTable="columnDD2" msprop:Generator_ColumnPropNameInRow="DD2" msprop:Generator_ColumnPropNameInTable="DD2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LOST1" msprop:Generator_UserColumnName="LOST1" msprop:Generator_ColumnVarNameInTable="columnLOST1" msprop:Generator_ColumnPropNameInRow="LOST1" msprop:Generator_ColumnPropNameInTable="LOST1Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LOST2" msprop:Generator_UserColumnName="LOST2" msprop:Generator_ColumnVarNameInTable="columnLOST2" msprop:Generator_ColumnPropNameInRow="LOST2" msprop:Generator_ColumnPropNameInTable="LOST2Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TT1" msprop:Generator_UserColumnName="TT1" msprop:Generator_ColumnVarNameInTable="columnTT1" msprop:Generator_ColumnPropNameInRow="TT1" msprop:Generator_ColumnPropNameInTable="TT1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TT2" msprop:Generator_UserColumnName="TT2" msprop:Generator_ColumnVarNameInTable="columnTT2" msprop:Generator_ColumnPropNameInRow="TT2" msprop:Generator_ColumnPropNameInTable="TT2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMODY" msprop:Generator_UserColumnName="NOMODY" msprop:Generator_ColumnVarNameInTable="columnNOMODY" msprop:Generator_ColumnPropNameInRow="NOMODY" msprop:Generator_ColumnPropNameInTable="NOMODYColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

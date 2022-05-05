@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ezFlowManage">
+</Property><Property Name="方案檔" Value="D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\ezFlowManage.sln">
+</Property><Property Name="使用者選項檔" Value="D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\ezFlowManage.suo">
+</Property><Property Name="Date" Value="2012年6月1日">
+</Property><Property Name="Time" Value="下午 18:47">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ezFlowManage.sln" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\ezFlowManage.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ezFlowManage.suo" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\ezFlowManage.suo">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ezFlowManage.csproj" Description="專案檔已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\ezFlowManage.csproj">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="FlowDS.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\FlowDS.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmDeptSelector.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmDeptSelector.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmDeptSelector.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmDeptSelector.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmEmpSelector.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmEmpSelector.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmEmpSelector.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmEmpSelector.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmFlowTreeSelector.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmFlowTreeSelector.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmFlowTreeSelector.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmFlowTreeSelector.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmMain.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmMain.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmMain.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmMain.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ProcessDS.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\ProcessDS.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Program.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Properties\AssemblyInfo.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Properties\Resources.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Properties\Settings.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="app.config" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\app.config">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="FlowDS.xsc" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\FlowDS.xsc">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="FlowDS.xsd" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\FlowDS.xsd">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="FlowDS.xss" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\FlowDS.xss">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ProcessDS.xsc" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\ProcessDS.xsc">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ProcessDS.xsd" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\ProcessDS.xsd">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ProcessDS.xss" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\ProcessDS.xss">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Properties\Settings.settings" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmDeptSelector.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmDeptSelector.resx">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmEmpSelector.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmEmpSelector.resx">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmFlowTreeSelector.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmFlowTreeSelector.resx">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="fmMain.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\fmMain.resx">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="Properties\Resources.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ezFlowManage.csproj" Description="專案轉換成功">
+</Event><Event ErrorLevel="3" Project="ezFlowManage" Source="ezFlowManage.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="AutoExportOrg" Source="..\AutoExportOrg\AutoExportOrg.csproj" Description="警告: 專案檔正備份到與原始方案相對路徑不同的相對路徑。不同的資料夾階層架構可能會在開啟或建置備份方案和專案時產生問題。">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\AutoExportOrg.csproj" Description="專案檔已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\AutoExportOrg.csproj">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\Auto.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\Auto.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\Auto.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\Auto.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\FlowDS.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\FlowDS.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\ProcessDS.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\ProcessDS.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\Program.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\Program.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\Properties\AssemblyInfo.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\Properties\Resources.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\Properties\Settings.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\app.config" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\app.config">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\FlowDS.xsc" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\FlowDS.xsc">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\FlowDS.xsd" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\FlowDS.xsd">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\FlowDS.xss" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\FlowDS.xss">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\ProcessDS.xsc" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\ProcessDS.xsc">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\ProcessDS.xsd" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\ProcessDS.xsd">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\ProcessDS.xss" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\ProcessDS.xss">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\Properties\Settings.settings" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\Auto.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\Auto.resx">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\Properties\Resources.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\AutoExportOrg\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="AutoExportOrg" Source="..\AutoExportOrg\AutoExportOrg.csproj" Description="專案檔不需要轉換。">
+</Event><Event ErrorLevel="3" Project="AutoExportOrg" Source="..\AutoExportOrg\AutoExportOrg.csproj" Description="不需要轉換">
+</Event><Event ErrorLevel="1" Project="asWebServices" Source="..\asWebServices\asWebServices\asWebServices.csproj" Description="警告: 專案檔正備份到與原始方案相對路徑不同的相對路徑。不同的資料夾階層架構可能會在開啟或建置備份方案和專案時產生問題。">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\asWebServices.csproj" Description="專案檔已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\asWebServices.csproj">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Auto.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Auto.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Auto.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Auto.Designer.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\FlowDS.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\FlowDS.Designer.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Program.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Program.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Properties\AssemblyInfo.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Properties\Resources.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Properties\Settings.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\wcCS.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\wcCS.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\AbscWS\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\AbscWS\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\AbsWS\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\AbsWS\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\CardWS\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\CardWS\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\DynamicSrv\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\DynamicSrv\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\OtWS\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\OtWS\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\RepairWS\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\RepairWS\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Properties\Settings.settings" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\app.config" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\app.config">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\AbsWS\AbsWS.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\AbsWS\AbsWS.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\AbsWS\AbsWS.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\AbsWS\AbsWS.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\AbsWS\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\AbsWS\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\AbscWS\AbscWS.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\AbscWS\AbscWS.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\AbscWS\AbscWS.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\AbscWS\AbscWS.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\AbscWS\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\AbscWS\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\CardWS\CardWS.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\CardWS\CardWS.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\CardWS\CardWS.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\CardWS\CardWS.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\CardWS\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\CardWS\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\OtWS\OtWS.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\OtWS\OtWS.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\OtWS\OtWS.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\OtWS\OtWS.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\OtWS\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\OtWS\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\RepairWS\RepairWS.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\RepairWS\RepairWS.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\FlowDS.xsc" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\FlowDS.xsc">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\FlowDS.xsd" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\FlowDS.xsd">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\FlowDS.xss" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\FlowDS.xss">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\DynamicSrv\Service.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\DynamicSrv\Service.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\RepairWS\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\RepairWS\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\RepairWS\RepairWS.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\RepairWS\RepairWS.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\DynamicSrv\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\DynamicSrv\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Web References\DynamicSrv\Service.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Web References\DynamicSrv\Service.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Auto.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Auto.resx">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\Properties\Resources.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\ezFlowManage\Backup\asWebServices\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="..\asWebServices\asWebServices\asWebServices.csproj" Description="專案檔不需要轉換。">
+</Event><Event ErrorLevel="3" Project="asWebServices" Source="..\asWebServices\asWebServices\asWebServices.csproj" Description="不需要轉換">
+</Event><Event ErrorLevel="0" Project="" Source="ezFlowManage.sln" Description="方案轉換成功">
+</Event><Event ErrorLevel="3" Project="" Source="ezFlowManage.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ezFlowManage" Source="ezFlowManage.csproj" Description="掃描完成: 專案檔不需要升級。">
+</Event></UpgradeLog>

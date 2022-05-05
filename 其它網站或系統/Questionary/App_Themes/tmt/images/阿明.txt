@@ -1,0 +1,7 @@
+小明
+請用smc的theme來改
+把css檔中
+.frame那行的內容
+background-image:url(images/main_title_right.gif);background-repeat:no-repeat;background-position:100% 0%;
+刪掉
+檔案都蓋過去就好了

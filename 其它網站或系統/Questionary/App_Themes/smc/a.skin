@@ -1,0 +1,51 @@
+﻿<%--
+預設面板範本。下列面板僅提供做為範例的用途。
+
+1. 具名控制面板。SkinId 應為唯一定義，因為在相同主題中，一個控制項型別不能具有重複的 SkinId。
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. 預設面板。SkinId 未定義。在相同主題中，每個控制項型別只能有一個預設控制面板。
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+
+--%>
+<asp:GridView runat="server" BackColor="White" BorderWidth="0" CellPadding="4" ForeColor="#333333" style="font-size:10pt;">
+        <FooterStyle BackColor="#CCCCCC" />
+        <RowStyle BackColor="#F2F2F2" CssClass="Grid" />
+        <SelectedRowStyle BackColor="#FF9900" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#EEEEEE" ForeColor="#333333" HorizontalAlign="Right" />
+        <HeaderStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+        <AlternatingRowStyle BackColor="White" />
+    </asp:GridView>
+    
+<asp:SiteMapPath runat="server" Font-Size="9pt" PathSeparator=" > " style="width:100%;padding:4 4 4 4;">
+        <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+        <CurrentNodeStyle ForeColor="#333333" />
+        <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+        <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+    </asp:SiteMapPath>
+
+<asp:Button runat="server" CssClass="Button" />
+
+<asp:TreeView runat="server" ExpandDepth="30" CssClass="TreeView">
+	</asp:TreeView>
+
+<asp:Label runat="server" CssClass="Label"></asp:Label>
+<asp:Label SkinID="Msg" runat="server" CssClass="LabelMsg"></asp:Label>
+<asp:Label SkinID="Name" runat="server" CssClass="LabelName"></asp:Label>
+<asp:Label SkinID="Notice" runat="server" CssClass="LabelNotice"></asp:Label>
+
+<asp:Image SkinID="login_tl1" ImageUrl="images/login_01.gif"  runat="server" />
+<asp:Image SkinID="login_tc1" ImageUrl="images/login_02.gif"  runat="server" />
+<asp:Image SkinID="login_tr1" ImageUrl="images/login_03.gif"  runat="server" />
+<asp:Image SkinID="login_tl2" ImageUrl="images/login_04.gif"  runat="server" />
+<asp:Image SkinID="login_tr2" ImageUrl="images/login_06.gif"  runat="server" />
+<asp:Image SkinID="login_tl3" ImageUrl="images/login_07.gif"  runat="server" />
+<asp:Image SkinID="login_tc3" ImageUrl="images/login_08.gif"  runat="server" />
+<asp:Image SkinID="login_tr3" ImageUrl="images/login_09.gif"  runat="server" />
+
+<asp:Image SkinID="logoutImg" ImageUrl="images/icon_logout.gif"  runat="server" />
+<asp:Image SkinID="SetupImg" ImageUrl="images/icon_setup.gif"  runat="server" />

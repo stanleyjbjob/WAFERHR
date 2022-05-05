@@ -1,0 +1,41 @@
+body 
+{
+	margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px;
+}
+
+.menuItem td 
+{
+	font-size:smaller;
+	font-weight:normal;
+	background: url(images/d19_1.gif) no-repeat;
+	width: 116px;
+	height: 20px;
+	text-align: center;
+}
+
+.menuPopup 
+{
+	font-size:smaller;	
+	font-weight:normal;
+	background: url(images/d19_1.gif) no-repeat;
+	width: 116px;
+	height: 20px;
+	text-align: center;
+}
+
+.menuSelectedItem td 
+{
+	font-size:smaller;
+	font-weight:normal;	
+	background: url(images/d19_2.gif) no-repeat;
+	width: 116px;
+	height: 20px;
+	text-align: center;
+}
+
+.menuItemHover
+{
+	font-size:inherit;
+	font-weight:bold;
+}
+

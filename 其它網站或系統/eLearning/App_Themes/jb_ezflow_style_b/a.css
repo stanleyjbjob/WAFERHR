@@ -1,0 +1,407 @@
+﻿html
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	padding: 0;
+	margin: 0;
+	background: #EEEEEE;
+}
+body.LoginPage
+{
+	background: #EEEEEE;
+}
+div
+{
+	/*整體字型設定*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #666666;
+	letter-spacing: 1px;
+}
+#scalePage
+{
+	/*全頁*/
+	width: 100%;
+	background: #666666;
+}
+#mainPage
+{
+	/*主頁容器置中*/
+	width: 100%; /*網頁寬度百分比，設像素須注意topPage的位置，不建議*/
+	margin: 0 auto;
+	background: #EEEEEE;
+	background-image: url('images/main_title_bg.gif');
+	background-position: 0 0;
+	background-repeat: repeat-x;
+}
+#titlePage
+{
+	/*標題容器*/
+	height: 100px; /*background:#ED3467;*/
+	background-image: url('images/main_title.gif');
+	background-position: left;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+#topPage
+{
+	/*頁首容器*/
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#top
+{
+	/*頁首*/
+	margin: 0 auto;
+	display: table;
+	padding: 0;
+}
+#top li
+{
+	/*頁首元素*/
+	list-style-type: none;
+	color: #FFFFFF;
+	text-align: center;
+	border-right: 1px solid #666666;
+	float: left;
+	width: 80px;
+	padding: 0;
+	margin: 0;
+}
+#top li.end
+{
+	/*頁首最末元素*/
+	border-right: none;
+}
+#top li a
+{
+	/*頁首連結樣式*/
+	display: block;
+	color: #666666;
+	text-decoration: none;
+	padding: 4px 0 0 0;
+}
+#top li a:hover
+{
+	/*頁首連結效果*/
+	background: #666666;
+	color: #FFFFFF;
+}
+/*RadioItem*/
+a.RadioItem:link
+{
+	text-decoration: none;
+}
+a.RadioItem:active
+{
+	background: #CC0000;
+}
+a.RadioItem:hover
+{
+	/*頁首連結效果*/
+	background: #666666;
+	color: #FFFFFF;
+}
+#naviPage
+{
+	/*導覽列容器*/
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: #333333;
+	text-align: center;
+	border-bottom: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+}
+#navi
+{
+	/*導覽列*/
+	margin: 0 auto;
+	width: 568px; /* n x li width + n x 線段 */
+	display: table;
+	padding: 0;
+}
+#navi li
+{
+	/*導覽列元素*/
+	list-style-type: none;
+	color: #FFFFFF;
+	text-align: center;
+	float: left;
+	border-left: 1px solid #FFFFFF;
+	width: 80px;
+	padding: 0;
+	margin: 0;
+}
+#navi li.end
+{
+	/*導覽列最末元素*/
+	border-right: 1px solid #FFFFFF;
+}
+#navi li a
+{
+	/*導覽列連結樣式*/
+	display: block;
+	background: #333333;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 4px 0 2px 0;
+}
+#navi li a:hover
+{
+	/*導覽列連結效果*/
+	background: #FFFFFF;
+	color: #000000;
+}
+#menuPage
+{
+	/*選單容器*/
+	width: 15%;
+	background: #666666;
+	float: left;
+	display: block;
+	margin: 0 0 0 0;
+	border: 3px solid #CCCCCC;
+}
+#menu
+{
+	/*選單*/
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	display: inline-block;
+}
+#menu li
+{
+	/*選單元素*/
+	list-style-type: none;
+	color: #FFFFFF;
+	text-align: center;
+	border-bottom: 1px dotted #FFFFFF;
+}
+#menu li.end
+{
+	/*選單最末元素*/
+	border-bottom: none;
+}
+#menu li a
+{
+	/*選單連結樣式*/
+	display: block;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 3px 0 2px 0;
+}
+#menu li a:hover
+{
+	/*選單連結效果*/
+	color: #FFFFFF;
+	background: #333333;
+}
+#detailPage
+{
+	/*主要內容容器*/
+	display: block;
+	float: left;
+	width: 65%;
+	padding: 1%;
+	background: #FFFFFF;
+}
+#sidePage
+{
+	/*邊欄容器*/
+	display: block;
+	float: right;
+	width: 15%;
+	margin: 0 0 0 0;
+	padding: 1%;
+}
+#footerPage
+{
+	/*頁尾容器*/
+	background: #CCCCCC;
+	text-align: center;
+	clear: both;
+	margin: 0 0 0 0;
+	padding: 3px 20px 3px 20px;
+}
+h1
+{
+	padding: 0;
+	margin: 0;
+}
+/*控制表格*/
+.TableFullBorder
+{
+	width: 100%;
+}
+.TableFullBorder, .TableFullBorder td
+{
+	border: 1px #CCCCCC solid;
+	border-collapse: collapse;
+	padding: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.TableFullBorder th
+{
+	border: 1px #CCCCCC solid;
+	border-collapse: collapse;
+	padding: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-weight: normal;
+	background-color: #666666;
+}
+.TableFullBorder .MyCalendar td
+{
+	padding: 0;
+}
+/*控制Button*/
+.ButtonExit
+{
+	font-size: 10pt;
+	background-color: #EEEEEE;
+	border: solid 1px #CCCCCC;
+	color: #333333;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+/*控制TextBox*/
+.txtBoxLine
+{
+	border-top-style: none;
+	border-bottom: 1px solid;
+	border-right-style: none;
+	border-left-style: none;
+}
+.txtCode
+{
+	border-top-style: none;
+	border-bottom: 2px solid;
+	border-right-style: none;
+	border-left-style: none;
+	width: 80px;
+}
+.txtName
+{
+	border-top-style: none;
+	border-bottom: 2px solid;
+	border-right-style: none;
+	border-left-style: none;
+	width: 160px;
+}
+.txtPath
+{
+	border-top-style: none;
+	border-bottom: 2px solid;
+	border-right-style: none;
+	border-left-style: none;
+	width: 100%;
+}
+.txtOrder
+{
+	border-top-style: none;
+	border-bottom: 2px solid;
+	border-right-style: none;
+	border-left-style: none;
+	width: 30px;
+}
+.txtDescription
+{
+	border-top-style: none;
+	border-bottom: 2px solid;
+	border-right-style: none;
+	border-left-style: none;
+	width: 100%;
+}
+.txtDateTime
+{
+	border-top-style: none;
+	border-bottom: 2px solid;
+	border-right-style: none;
+	border-left-style: none;
+	width: 160px;
+}
+.txtDate
+{
+	border-top-style: none;
+	border-bottom: 2px solid;
+	border-right-style: none;
+	border-left-style: none;
+	width: 70px;
+}
+.txtTime
+{
+	border-top-style: none;
+	border-bottom: 2px solid;
+	border-right-style: none;
+	border-left-style: none;
+	width: 30px;
+}
+
+.ThisIsForm
+{
+	scrollbar-face-color: #EEEEEE;
+	scrollbar-arrow-color: #666666;
+	scrollbar-track-color: #EEEEEE;
+	scrollbar-shadow-color: #FFFFFF;
+	scrollbar-3dlight-color: #FFFFFF;
+	background-color: #5191B7;
+	margin: 0;
+	padding: 0;
+}
+
+.ThisIsForm_all
+{
+	padding: 0px 0px 0px 25px;
+	background-image: url(images/form_bg.gif);
+	background-repeat: repeat-y;
+	background-position: 0% 0%;
+	width: 835px;
+}
+.UserData
+{
+	padding: 3px 3px 3px 3px;
+	width: 795px;
+	border: solid 1px #9DB7D0;
+}
+.mainheader
+{
+	color: #005AAA;
+	margin-bottom: 0px;
+	padding: 20px 0px 0px 25px;
+	background-image: url(images/form_02.gif);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	height: 50px;
+	width: 835px;
+}
+.qheader
+{
+	background: #EEEEEE;
+	color: #333333;
+	font-weight: bold;
+	width: 100%;
+}
+.mainfooter
+{
+	margin-top: 0;
+	padding: 0px 0px 0px 25px;
+	color: #FFFFFF;
+	background-image: url(images/form_04.gif);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	height: 40px;
+	width: 835px;
+}

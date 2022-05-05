@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Bll.Flow.Vdb" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfFormTreeTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FormTreeTable" nillable="true" type="tns:FormTreeTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFormTreeTable" nillable="true" type="tns:ArrayOfFormTreeTable" />
+  <xs:complexType name="FormTreeTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NavigateUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentNodeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Path" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FormTreeTable" nillable="true" type="tns:FormTreeTable" />
+  <xs:complexType name="ArrayOfFlowSignTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlowSignTable" nillable="true" type="tns:FlowSignTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlowSignTable" nillable="true" type="tns:ArrayOfFlowSignTable" />
+  <xs:complexType name="FlowSignTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApParmID" type="xs:int" />
+      <xs:element minOccurs="0" name="AppDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AppDept" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AppDeptPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AppName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlowProgress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfoFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfoTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfoType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfoUse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParmUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PendingDay" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessCheckAuto" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessNodeAuto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowSignTable" nillable="true" type="tns:FlowSignTable" />
+  <xs:complexType name="ArrayOfFlowSignCompleteTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlowSignCompleteTable" nillable="true" type="tns:FlowSignCompleteTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlowSignCompleteTable" nillable="true" type="tns:ArrayOfFlowSignCompleteTable" />
+  <xs:complexType name="FlowSignCompleteTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApViewID" type="xs:int" />
+      <xs:element minOccurs="0" name="AppDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AppName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlowProgress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfoFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfoTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfoType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfoUse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PendingDay" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessCheckAuto" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessNodeAuto" type="xs:int" />
+      <xs:element minOccurs="0" name="ViewUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowSignCompleteTable" nillable="true" type="tns:FlowSignCompleteTable" />
+  <xs:complexType name="ArrayOfFlowSearchIngTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlowSearchIngTable" nillable="true" type="tns:FlowSearchIngTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlowSearchIngTable" nillable="true" type="tns:ArrayOfFlowSearchIngTable" />
+  <xs:complexType name="FlowSearchIngTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApViewID" type="xs:int" />
+      <xs:element minOccurs="0" name="AppDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FlowProgress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HistoryUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessID" type="xs:int" />
+      <xs:element minOccurs="0" name="SignDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SignName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ViewUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowSearchIngTable" nillable="true" type="tns:FlowSearchIngTable" />
+  <xs:complexType name="ArrayOfFlowSearchCompleteTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlowSearchCompleteTable" nillable="true" type="tns:FlowSearchCompleteTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlowSearchCompleteTable" nillable="true" type="tns:ArrayOfFlowSearchCompleteTable" />
+  <xs:complexType name="FlowSearchCompleteTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApViewID" type="xs:int" />
+      <xs:element minOccurs="0" name="AppDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FormName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HistoryUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessID" type="xs:int" />
+      <xs:element minOccurs="0" name="ViewUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowSearchCompleteTable" nillable="true" type="tns:FlowSearchCompleteTable" />
+  <xs:complexType name="ArrayOfRolesTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RolesTable" nillable="true" type="tns:RolesTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRolesTable" nillable="true" type="tns:ArrayOfRolesTable" />
+  <xs:complexType name="RolesTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeptID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeptName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PosID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PosName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RolesTable" nillable="true" type="tns:RolesTable" />
+  <xs:complexType name="ArrayOfCheckAgentDefaultTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CheckAgentDefaultTable" nillable="true" type="tns:CheckAgentDefaultTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCheckAgentDefaultTable" nillable="true" type="tns:ArrayOfCheckAgentDefaultTable" />
+  <xs:complexType name="CheckAgentDefaultTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateD" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SourceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceNobr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceRole" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetName1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetName2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetName3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetNobr1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetNobr2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetNobr3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetRole1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetRole2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetRole3" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CheckAgentDefaultTable" nillable="true" type="tns:CheckAgentDefaultTable" />
+  <xs:complexType name="ArrayOfFlowAbsTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlowAbsTable" nillable="true" type="tns:FlowAbsTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlowAbsTable" nillable="true" type="tns:ArrayOfFlowAbsTable" />
+  <xs:complexType name="FlowAbsTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApViewID" type="xs:int" />
+      <xs:element minOccurs="0" name="Approver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Dept" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeptName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlowAbsd" nillable="true" type="tns:ArrayOfFlowAbsdTable" />
+      <xs:element minOccurs="0" name="FlowAbsdD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HcodeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nobr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessID" type="xs:int" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalDay" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalHour" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ViewUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YYMM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowAbsTable" nillable="true" type="tns:FlowAbsTable" />
+  <xs:complexType name="ArrayOfFlowAbsdTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlowAbsdTable" nillable="true" type="tns:FlowAbsdTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlowAbsdTable" nillable="true" type="tns:ArrayOfFlowAbsdTable" />
+  <xs:complexType name="FlowAbsdTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SernoAdd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SernoSubtract" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UseHour" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowAbsdTable" nillable="true" type="tns:FlowAbsdTable" />
+  <xs:complexType name="ArrayOfFlowOtTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlowOtTable" nillable="true" type="tns:FlowOtTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlowOtTable" nillable="true" type="tns:ArrayOfFlowOtTable" />
+  <xs:complexType name="FlowOtTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApViewID" type="xs:int" />
+      <xs:element minOccurs="0" name="Approver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Dept" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeptName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Meal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NameC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nobr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtHour" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OtTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OvertimeCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessID" type="xs:int" />
+      <xs:element minOccurs="0" name="ResHour" type="xs:decimal" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalHour" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ViewUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YYMM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowOtTable" nillable="true" type="tns:FlowOtTable" />
+  <xs:simpleType name="FormCategroy">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Abs">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Abs1">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Absc">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Ot">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Card">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ShiftLong">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ShiftShort">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FormCategroy" nillable="true" type="tns:FormCategroy" />
+</xs:schema>

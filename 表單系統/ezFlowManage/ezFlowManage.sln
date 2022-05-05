@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ezFlowManage", "ezFlowManage.csproj", "{0098CDC8-9501-43F7-A34C-A23A14FA99FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoExportOrg", "Backup\AutoExportOrg\AutoExportOrg.csproj", "{EFFB386C-9FB4-4522-A053-3C7D4BEFBEEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0098CDC8-9501-43F7-A34C-A23A14FA99FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0098CDC8-9501-43F7-A34C-A23A14FA99FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0098CDC8-9501-43F7-A34C-A23A14FA99FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0098CDC8-9501-43F7-A34C-A23A14FA99FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFFB386C-9FB4-4522-A053-3C7D4BEFBEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFFB386C-9FB4-4522-A053-3C7D4BEFBEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFFB386C-9FB4-4522-A053-3C7D4BEFBEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFFB386C-9FB4-4522-A053-3C7D4BEFBEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

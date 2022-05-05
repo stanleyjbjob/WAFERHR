@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8">-->
+<title>ezQuestionnaire</title>
+<style>
+td{font-size:10pt;color:#666666;}
+a{width:90%;font-weight:bold;height:30px;border:solid 1px #333333;padding:8px 0 0 0;}
+a:link{color:#FFFFFF;background:#0A7BC6;text-decoration:none;}
+a:visited{color:#FFFFFF;background:#0A7BC6;text-decoration:none;}
+a:hover{color:#FFFFFF;background:#CC0000;text-decoration:none;}
+</style>
+</head>
+<body bgcolor="#EBEBEB">
+
+<div align="center">
+	<table border="0" width="720px" cellspacing="0" cellpadding="0" id="table1">
+		<tr>
+			<td><img border="0" src="http://{System.Url.Host}/Questionary/images/q_01.gif" width="720" height="120"></td>
+		</tr>
+		<tr>
+			<td background="http://{System.Url.Host}/Questionary/images/q_02.gif" align="center">
+			<h4>
+                {sCourseName}課後問卷調查通知</h4>
+			<table border="0" width="640px" cellspacing="0" cellpadding="4" id="table2">
+				<tr>
+					<td>姓　　名</td>
+					<td align="left">{sName}</td>
+					<td>
+                        講師姓名</td>
+					<td align="left">{sDocentName}</td>
+				</tr>
+				<tr>
+					<td>部門名稱</td>
+					<td align="left">{sDeptName}</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>上課時間</td>
+					<td align="left" colspan="3">從{dSchoolDateB}到{dSchoolDateE}止</td>
+				</tr>
+                <tr>
+                    <td>
+                        問卷填寫時間</td>
+                    <td align="left" colspan="3">
+                        從{dDateB}到{dDateE}止</td>
+                </tr>
+			</table><br>
+			<a href='http://{System.Url.Host}/Questionary/qWrite.aspx?Code=&TypeCode={sTypeCode}&Nobr={sNobr}&PW={sPW}'>【請點此前往填寫問卷】</a>
+			</td>
+		</tr>
+		<tr>
+			<td><img border="0" src="http://{System.Url.Host}/Questionary/images/q_03.gif" width="720" height="30"></td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

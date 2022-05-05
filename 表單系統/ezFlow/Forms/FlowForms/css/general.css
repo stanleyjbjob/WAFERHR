@@ -1,0 +1,107 @@
+body {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: medium;
+	font-weight: normal;
+	color: #000000;
+  /*background-color: #f6f6f6; */
+}
+
+td, th, input, select, textarea {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+
+a:link {
+  color: #0240a3;
+}
+
+a:visited {
+  color: #0240a3;
+}
+
+a:active {
+  color: #000000;
+}
+
+img {
+  border: none;
+}
+
+legend {
+  white-space: nowrap;
+}
+
+
+
+/* --- loader ---*/
+
+#loader {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#loader td {
+  padding: 3px;
+  background: #ffffff;
+}
+
+#loader p {
+  border: 3px solid #6E89DD;
+  padding: 10px;
+  margin: 0;
+  background: #EEF0FC;
+}
+
+#loader img {
+  float: left;
+  margin-right: 12px;
+}
+
+#loader strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+#loaderContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: expression('absolute');
+  height: expression(document.documentElement.scrollHeight+'px');
+  width: expression(document.documentElement.scrollWidth+'px');
+  z-index: 1000;
+}
+
+#loaderContainer td {
+	padding-top: 150px;
+	vertical-align: top;
+	text-align: center;
+	background-image: url(../images/semi-transparent.gif);
+}
+
+#loaderContainer td td {
+	padding-top: 3px;
+	text-align: left;
+}
+
+.modalBackground { 
+background-color:Gray; 
+filter:alpha(opacity=70); 
+opacity:0.7; 
+} 
+
+
+        .txtBoxLine { BORDER-TOP-STYLE: none; BORDER-BOTTOM: 1px solid; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none }
+        .style1 { FONT-WEIGHT: bold; }
+        .UltraWebGrid1-ic { BORDER-RIGHT: #aab883 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aab883 0px solid; PADDING-LEFT: 5px;  BORDER-LEFT: #aab883 0px solid; CURSOR: default; COLOR: #333333; BORDER-BOTTOM: #aab883 1px solid; FONT-FAMILY: Verdana; HEIGHT: 35px; BACKGROUND-COLOR: #fafcf1 }
+        .UltraWebGrid1-sic { BACKGROUND-COLOR: #beca98 }
+        .UltraWebGrid1-0-ic { BORDER-RIGHT: #aab883 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aab883 0px solid; PADDING-LEFT: 5px;  BORDER-LEFT: #aab883 0px solid; CURSOR: default; COLOR: #333333; BORDER-BOTTOM: #aab883 1px solid; FONT-FAMILY: Verdana; HEIGHT: 35px; BACKGROUND-COLOR: #fafcf1 }
+        .UltraWebGrid1-ecc { BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px }
+        .UltraWebGrid1-hc { BORDER-RIGHT: #666666 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: white 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BORDER-LEFT: white 1px solid; CURSOR: default; COLOR: black; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #cbd6a6; TEXT-ALIGN: center }
+        .UltraWebGrid1-shc { BORDER-RIGHT: #aab883 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: white 0px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BORDER-LEFT: white 0px solid; CURSOR: default; COLOR: #333333; BORDER-BOTTOM: #aab883 1px solid; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #beca98; TEXT-ALIGN: center }
+        .WebPanel2ctl { BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; BORDER-LEFT: #999999 1px solid; WIDTH: 100%; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: verdana,helvetica,arial; BACKGROUND-COLOR: whitesmoke }
+        .WebPanel2hdrxpnd { PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px }
+        .WebPanel2pnl { PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 1px; PADDING-TOP: 2px }	

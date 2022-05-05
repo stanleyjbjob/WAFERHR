@@ -1,0 +1,240 @@
+﻿html{SCROLLBAR-FACE-COLOR: #CCCCCC;
+      SCROLLBAR-ARROW-COLOR: #666666;
+      SCROLLBAR-TRACK-COLOR: #EEEEEE;
+      SCROLLBAR-SHADOW-COLOR: #CCCCCC;
+      SCROLLBAR-3DLIGHT-COLOR: #CCCCCC;}
+body 
+{padding:0;
+margin:0;
+background-image : url(images/main_bg.gif);
+      background-repeat : repeat-x;
+      background-position : 0% 0%;
+      background-color:#CCCCCC;}
+
+
+.MyCalendar .ajax__calendar_container {
+    border:1px solid #646464;
+    background-color: lemonchiffon;
+    color: red;
+}
+a:link{font-size:10pt;color:#0066CC;text-decoration:none;}
+a:visited{font-size:10pt;color:#0066CC;text-decoration:none;}
+a:hover{font-size:10pt;color:#FF6600;text-decoration:underline;}
+
+hr{text-align:left;color:#EEEEEE;height:5px;}
+h5{color:#666666;margin-top:16px;margin-bottom:10px;padding:6px,0px,0px,6px;background-color:#EEEEEE;}
+h3{color:#666666;margin-top:16px;margin-bottom:10px;padding:6px,0px,0px,6px;background-color:#C0C0FF;}
+h4{color:#CC0000;}
+
+b{color:#666666;}
+
+
+/* IE needs height:512px BUT this height:512px below must be removed to display correctly in Mozilla */
+
+#reportresults, .projectadministration,#projectadministration, #adminedit, #timesheet,.timesheet, #addhours,.addhours, #projectreport, #resourcereport {
+	height: 470px;
+}
+/* Mozilla needs min-height:512px (IE will ignore this min-height) */
+#reportresults,.projectadministration, #projectadministration, #adminedit, #timesheet,.timesheet, #addhours,.addhours, #projectreport, #resourcereport {
+	min-height: 470px;
+}
+
+#reportresults, .projectadministration,#projectadministration, #adminedit, #projectreport, #resourcereport {
+	padding: 10px;
+	border: 1px solid #000000;
+	background: #FFFFFF;
+	color: #666666;
+	
+}
+
+#breadcrumbfull 
+{
+	padding-left: 20px;
+}
+
+#breadcrumb {
+	padding-top: 0px;
+	padding-left: 1px;
+	background: #919191;
+	color: #FFFFFF;
+	font-size: 10px;
+	font-weight: bold;
+	height: 10px;
+}
+
+
+
+
+table.main{background-image : url(images/style_01_bg.gif);
+      background-repeat : repeat-y;
+      background-position : 50% 0%;}
+      
+table.login{background-image : url(images/style_01_login_bg.gif);
+      background-repeat : repeat-y;
+      background-position : 50% 0%;}
+
+table.error{background-image : url(images/style_01_error_bg.gif);
+      background-repeat : repeat-y;
+      background-position : 50% 0%;}
+
+td.title{background-image : url(images/bg.gif);text-align:left;}
+td.logintitle{background-image : url(images/style_01_login_01.gif);width:580px;height:120px;}
+td.errortitle{background-image : url(images/style_01_error_01.gif);width:580px;height:120px;}
+td.end{background-image : url(images/style_01_03.gif);width:770px;height:20px;}
+td.loginend{background-image : url(images/style_01_login_03.gif);width:580px;height:60px;}
+td.errorend{background-image : url(images/style_01_error_03.gif);width:580px;height:60px;}
+td.menu{text-align:center;vertical-align:top;width:160px;}
+td.content{text-align:left;vertical-align:top;background-color:transparent;}
+
+.Button_01
+{
+    padding-top:4px;
+    background-color:#666666;
+    border:solid 1px #CCCCCC;
+    color:#FFFFFF;
+    padding:4,4,0,4;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#999999, endColorStr=#000000, gradientType=0);
+}
+.Text_01
+{
+    border:solid 1px #CCCCCC;
+    color:#666666;
+}
+.Text_int
+{
+	TEXT-ALIGN:right;	
+}
+.Label_01
+{
+    font-size:10pt;
+    color:#666666;
+}
+
+ /*SideMenu的CSS設定，SideMenu主要用於含子選單網頁直排Tag*/
+ .SideMenu
+ {
+    border:solid 1px #CCCCCC;width:100px;
+ }
+ .SideMenuSta a:link{letter-spacing:2px;color:#EEEEEE;}
+ .SideMenuSta a:visited{letter-spacing:2px;color:#EEEEEE;}
+ .SideMenuSta a:hover{letter-spacing:2px;color:#FFFFFF;text-decoration:underline;}
+ .SideMenuSta td
+ {
+    border:solid 1px #404040;
+    font-size:10pt;
+    padding-top:4px;
+    text-align:center;
+    background-color:#404040;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#999999, endColorStr=#000000, gradientType=0);
+ }
+ .SideMenuStaHor td
+ {
+    border:solid 1px #FFFFFF;
+    font-size:10pt;
+    padding-top:4px;
+    text-align:center;
+    background-color:#999999;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FFCC00, endColorStr=#FF6600, gradientType=0);
+ }
+ 
+ .SideMenuStaVis a:link{letter-spacing:2px;color:#EEEEEE;}
+ .SideMenuStaVis a:visited{letter-spacing:2px;color:#EEEEEE;}
+ .SideMenuStaVis a:hover{letter-spacing:2px;color:#FFFFFF;text-decoration:underline;}
+ .SideMenuStaVis td
+ {
+    border:solid 1px #025583;
+    font-size:10pt;
+    padding-top:4px;
+    text-align:center;
+    background-color:#025583;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#6699CC, endColorStr=#025583, gradientType=0);
+ }
+ /*SideMenu的子選單*/
+ .SideMenuDyn a:link{letter-spacing:2px;color:#EEEEEE;}
+ .SideMenuDyn a:visited{letter-spacing:2px;color:#EEEEEE;}
+ .SideMenuDyn a:hover{letter-spacing:2px;color:#FFFFFF;text-decoration:underline;}
+ .SideMenuDyn td
+ {
+    border:solid 1px #666666;
+    font-size:10pt;
+    padding-top:4px;
+    text-align:center;
+    background-color:#666666;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#999999, endColorStr=#666666, gradientType=0);
+ }
+ .SideMenuDynHor td
+ {
+    border:solid 1px #FFFFFF;
+    font-size:10pt;
+    padding-top:4px;
+    text-align:center;
+    background-color:#999999;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FFCC00, endColorStr=#FF6600, gradientType=0);
+ }
+ 
+ .SideMenuDynVis a:link{letter-spacing:2px;color:#EEEEEE;}
+ .SideMenuDynVis a:visited{letter-spacing:2px;color:#EEEEEE;}
+ .SideMenuDynVis a:hover{letter-spacing:2px;color:#FFFFFF;text-decoration:underline;}
+ .SideMenuDynVis td
+ {
+    border:solid 1px #025583;
+    font-size:10pt;
+    padding-top:4px;
+    text-align:center;
+    background-color:#025583;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#6699CC, endColorStr=#005AAA, gradientType=0);
+ }
+
+/* --- loader ---*/
+
+#loader {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#loader td {
+  padding: 3px;
+  background: #ffffff;
+}
+
+#loader p {
+  border: 3px solid #6E89DD;
+  padding: 10px;
+  margin: 0;
+  background: #EEF0FC;
+}
+
+#loader img {
+  float: left;
+  margin-right: 12px;
+}
+
+#loader strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+#loaderContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: expression('absolute');
+  height: expression(document.documentElement.scrollHeight+'px');
+  width: expression(document.documentElement.scrollWidth+'px');
+  z-index: 1000;
+}
+
+#loaderContainer td {
+	padding-top: 150px;
+	vertical-align: top;
+	text-align: center;
+	background-image: url(../images/semi-transparent.gif);
+}
+
+#loaderContainer td td {
+	padding-top: 3px;
+	text-align: left;
+}

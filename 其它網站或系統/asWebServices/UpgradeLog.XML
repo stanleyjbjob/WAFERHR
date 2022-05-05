@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="asWebServices">
+</Property><Property Name="方案檔" Value="D:\Source\ezFlow_WAFER\Tools Source\asWebServices\asWebServices.sln">
+</Property><Property Name="使用者選項檔" Value="D:\Source\ezFlow_WAFER\Tools Source\asWebServices\asWebServices.suo">
+</Property><Property Name="Date" Value="2010年2月11日">
+</Property><Property Name="Time" Value="下午 13:24">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="asWebServices.sln" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices.sln">
+</Event><Event ErrorLevel="0" Project="" Source="asWebServices.suo" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices.suo">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\asWebServices.csproj" Description="專案檔已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\asWebServices.csproj">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Auto.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Auto.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Auto.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Auto.Designer.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\FlowDS.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\FlowDS.Designer.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Program.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Program.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Properties\AssemblyInfo.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Properties\Resources.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Properties\Settings.Designer.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\wcCS.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\wcCS.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\AbscWS\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\AbscWS\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\AbsWS\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\AbsWS\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\CardWS\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\CardWS\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\DynamicSrv\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\DynamicSrv\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\OtWS\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\OtWS\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\RepairWS\Reference.cs" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\RepairWS\Reference.cs">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Properties\Settings.settings" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\app.config" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\app.config">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\AbsWS\AbsWS.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\AbsWS\AbsWS.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\AbsWS\AbsWS.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\AbsWS\AbsWS.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\AbsWS\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\AbsWS\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\AbscWS\AbscWS.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\AbscWS\AbscWS.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\AbscWS\AbscWS.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\AbscWS\AbscWS.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\AbscWS\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\AbscWS\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\CardWS\CardWS.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\CardWS\CardWS.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\CardWS\CardWS.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\CardWS\CardWS.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\CardWS\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\CardWS\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\OtWS\OtWS.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\OtWS\OtWS.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\OtWS\OtWS.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\OtWS\OtWS.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\OtWS\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\OtWS\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\RepairWS\RepairWS.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\RepairWS\RepairWS.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\FlowDS.xsc" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\FlowDS.xsc">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\FlowDS.xsd" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\FlowDS.xsd">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\FlowDS.xss" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\FlowDS.xss">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\DynamicSrv\Service.wsdl" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\DynamicSrv\Service.wsdl">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\RepairWS\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\RepairWS\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\RepairWS\RepairWS.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\RepairWS\RepairWS.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\DynamicSrv\Reference.map" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\DynamicSrv\Reference.map">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Web References\DynamicSrv\Service.disco" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Web References\DynamicSrv\Service.disco">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Auto.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Auto.resx">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\Properties\Resources.resx" Description="檔案已成功備份為 D:\Source\ezFlow_WAFER\Tools Source\asWebServices\Backup\asWebServices\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\asWebServices.csproj" Description="專案轉換成功">
+</Event><Event ErrorLevel="3" Project="asWebServices" Source="asWebServices\asWebServices.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="asWebServices.sln" Description="方案轉換成功">
+</Event><Event ErrorLevel="3" Project="" Source="asWebServices.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="asWebServices" Source="asWebServices\asWebServices.csproj" Description="掃描完成: 專案檔不需要升級。">
+</Event></UpgradeLog>

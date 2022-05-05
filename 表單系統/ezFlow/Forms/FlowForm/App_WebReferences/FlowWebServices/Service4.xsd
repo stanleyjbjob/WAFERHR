@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/ezFlow_CHPT/WebServices/Service.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System.Data.Linq" />
+  <xs:complexType name="BASETTS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="APGRPCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AP_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BASE" nillable="true" type="tns:BASE" />
+      <xs:element minOccurs="0" name="CALABS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CALOT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CARCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CARD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CINDT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="COMP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COUNT_PASS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CardID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardJobEnName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardJobName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DEPT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPT1" nillable="true" type="tns:DEPT" />
+      <xs:element minOccurs="0" name="DEPTM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPTS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPTS1" nillable="true" type="tns:DEPTS" />
+      <xs:element minOccurs="0" name="DI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoorGuard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMPCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FIXRATE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FULATT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GRP_AMT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HOLICD" nillable="true" type="tns:HOLICD" />
+      <xs:element minOccurs="0" name="HOLI_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INDT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="INSG_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IS_SELFOUT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JOB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JOB1" nillable="true" type="tns:JOB" />
+      <xs:element minOccurs="0" name="JOBL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JOBO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JOBS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MANG" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MANG1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MANGE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MENO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOCARD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOEAT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOOLDRET" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOOT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NORET" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOSPAMT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOSPEC" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOTER" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOTLATE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOWAGE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOWEL" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ONLYONTIME" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OUDT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OUTCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OilSubsidy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OldSaladr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutPost" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PASS_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RETCHOO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RETDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RETDATE1" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RETRATE" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ROTET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReinstateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SALADR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SALTP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STDT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="STINDT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="STOUDT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TAX_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TAX_EDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TTSCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TTSCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WK_YRS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WORKCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YR_DAYS" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BASETTS" nillable="true" type="tns:BASETTS" />
+  <xs:complexType name="BASE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ABS" nillable="true" type="tns:ArrayOfABS" />
+      <xs:element minOccurs="0" name="ABS1" nillable="true" type="tns:ArrayOfABS1" />
+      <xs:element minOccurs="0" name="ACCOUNT_MA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ACCOUNT_NA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ACCOUNT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ADDR1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ADDR2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ARMY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ARMY_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATTEND" nillable="true" type="tns:ArrayOfATTEND" />
+      <xs:element minOccurs="0" name="Aboriginal" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AdditionDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AdditionNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdmitDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BANKNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANK_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BASECD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BASETTS" nillable="true" type="tns:ArrayOfBASETTS" />
+      <xs:element minOccurs="0" name="BBCALL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BIRDT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BLOOD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BORN_ADDR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CARD" nillable="true" type="tns:ArrayOfCARD" />
+      <xs:element minOccurs="0" name="CONT_GSM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONT_GSM2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONT_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONT_MAN2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONT_REL1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONT_REL2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONT_TEL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONT_TEL2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COUNTRY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COUNT_MA" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CandidateWays" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contract" nillable="true" type="tns:ArrayOfContract" />
+      <xs:element minOccurs="0" name="Disability" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EMAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GSM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gift" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IntroductionBonus" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Introductor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MARRY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MATNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME_AD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME_C" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME_E" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME_P" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR_B" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="N_NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PASSWORD" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="PHOTO" nillable="true" type="q1:Binary" />
+      <xs:element minOccurs="0" name="POSTCODE1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POSTCODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRETAX" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PROVINCE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRO_ADDR1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRO_ADDR2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRO_ID1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRO_ID2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRO_MAN1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRO_MAN2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRO_TEL1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRO_TEL2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBTEL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TAXCNT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TAXNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEL1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEL2" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="up1_file" nillable="true" type="q2:Binary" />
+      <xs:element minOccurs="0" name="up1_name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="up2_file" nillable="true" type="q3:Binary" />
+      <xs:element minOccurs="0" name="up2_name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="up3_file" nillable="true" type="q4:Binary" />
+      <xs:element minOccurs="0" name="up3_name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="up4_file" nillable="true" type="q5:Binary" />
+      <xs:element minOccurs="0" name="up4_name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="up5_file" nillable="true" type="q6:Binary" />
+      <xs:element minOccurs="0" name="up5_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BASE" nillable="true" type="tns:BASE" />
+  <xs:complexType name="ArrayOfABS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ABS" nillable="true" type="tns:ABS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfABS" nillable="true" type="tns:ArrayOfABS" />
+  <xs:complexType name="ABS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATTEND" nillable="true" type="tns:ATTEND" />
+      <xs:element minOccurs="0" name="A_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BASE" nillable="true" type="tns:BASE" />
+      <xs:element minOccurs="0" name="BDATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BTIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Balance" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EDATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ETIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HCODE" nillable="true" type="tns:HCODE" />
+      <xs:element minOccurs="0" name="H_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LeaveHours" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOTEDIT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SERNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SYSCREATE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SYSCREATE1" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TOL_DAY" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOL_HOURS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="YYMM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nocalc" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ABS" nillable="true" type="tns:ABS" />
+  <xs:complexType name="ATTEND">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ABS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ABS1" nillable="true" type="tns:ArrayOfABS" />
+      <xs:element minOccurs="0" name="ABS11" nillable="true" type="tns:ArrayOfABS1" />
+      <xs:element minOccurs="0" name="ADATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ADJ_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATTCARD" nillable="true" type="tns:ArrayOfATTCARD" />
+      <xs:element minOccurs="0" name="ATT_HRS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BASE" nillable="true" type="tns:BASE" />
+      <xs:element minOccurs="0" name="CANT_ADJ" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CARD" nillable="true" type="tns:ArrayOfCARD" />
+      <xs:element minOccurs="0" name="E_MINS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FOODAMT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FOODSALCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FORGET" type="xs:decimal" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LATE_MINS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NIGAMT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NIGHT_HRS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OT" nillable="true" type="tns:ArrayOfOT" />
+      <xs:element minOccurs="0" name="ROTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROTE1" nillable="true" type="tns:ROTE" />
+      <xs:element minOccurs="0" name="SER" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SPECAMT" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SPECSALCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATIONAMT" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATTEND" nillable="true" type="tns:ATTEND" />
+  <xs:complexType name="ArrayOfABS1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ABS1" nillable="true" type="tns:ABS1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfABS1" nillable="true" type="tns:ArrayOfABS1" />
+  <xs:complexType name="ABS1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ABORD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ATTEND" nillable="true" type="tns:ATTEND" />
+      <xs:element minOccurs="0" name="BASE" nillable="true" type="tns:BASE" />
+      <xs:element minOccurs="0" name="BDATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BDATE2" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BTIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BTIME2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BTIME3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CFM_MAN_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUST" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EDATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EDATE2" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ETIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ETIME2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ETIME3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GO_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HCODE" nillable="true" type="tns:HCODE" />
+      <xs:element minOccurs="0" name="H_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOT_DISP" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ONETOMANY" type="xs:boolean" />
+      <xs:element minOccurs="0" name="REASON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEQ" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TARGET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOL_HOURS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="YYMM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ABS1" nillable="true" type="tns:ABS1" />
+  <xs:complexType name="HCODE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ABS" nillable="true" type="tns:ArrayOfABS" />
+      <xs:element minOccurs="0" name="ABS1" nillable="true" type="tns:ArrayOfABS1" />
+      <xs:element minOccurs="0" name="ABST" nillable="true" type="tns:ArrayOfABST" />
+      <xs:element minOccurs="0" name="ABSUNIT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ATT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CALOT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CHE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DATEMIN" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DATEUNIT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DISCONTENT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DISPLAYFORM" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DIS_APP" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EFF_FOOD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EF_NIGHT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FLAG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HTYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H_CODE_DISP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H_ENAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IN_HOLI" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MANG" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MAX_NUM" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MIN_NUM" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOAWARD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOT_DEL" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOT_SUM" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SEX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SORT" type="xs:int" />
+      <xs:element minOccurs="0" name="STATION" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UNIT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YEAR_REST" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HCODE" nillable="true" type="tns:HCODE" />
+  <xs:complexType name="ArrayOfABST">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ABST" nillable="true" type="tns:ABST" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfABST" nillable="true" type="tns:ArrayOfABST" />
+  <xs:complexType name="ABST">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="A_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EDATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HCODE" nillable="true" type="tns:HCODE" />
+      <xs:element minOccurs="0" name="H_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOL_HOURS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="T_CODE1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="T_CODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="T_CODE3" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ABST" nillable="true" type="tns:ABST" />
+  <xs:complexType name="ArrayOfATTCARD">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ATTCARD" nillable="true" type="tns:ATTCARD" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfATTCARD" nillable="true" type="tns:ArrayOfATTCARD" />
+  <xs:complexType name="ATTCARD">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ATTEND" nillable="true" type="tns:ATTEND" />
+      <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DD1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DD2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOST1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LOST2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMODY" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SER" type="xs:decimal" />
+      <xs:element minOccurs="0" name="T1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="T2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TT1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TT2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATTCARD" nillable="true" type="tns:ATTCARD" />
+  <xs:complexType name="ArrayOfCARD">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CARD" nillable="true" type="tns:CARD" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCARD" nillable="true" type="tns:ArrayOfCARD" />
+  <xs:complexType name="CARD">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ATTEND" nillable="true" type="tns:ATTEND" />
+      <xs:element minOccurs="0" name="BASE" nillable="true" type="tns:BASE" />
+      <xs:element minOccurs="0" name="CARDNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DAYS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IPADD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MENO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOT_TRAN" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ONTIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REASON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERNO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CARD" nillable="true" type="tns:CARD" />
+  <xs:complexType name="ArrayOfOT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OT" nillable="true" type="tns:OT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOT" nillable="true" type="tns:ArrayOfOT" />
+  <xs:complexType name="OT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATTEND" nillable="true" type="tns:ATTEND" />
+      <xs:element minOccurs="0" name="BDATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BTIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CANT_ADJ" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DIFF" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EAT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ETIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FIX_AMT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FOOD_CNT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FOOD_PRI" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FST_HOURS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HOT_133" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HOT_166" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HOT_200" type="xs:decimal" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOFOOD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOFOOD1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOP_H_100" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOP_H_133" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOP_H_167" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOP_H_200" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOP_W_100" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOP_W_133" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOP_W_167" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOP_W_200" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOTMODI" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NOT_EXP" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOT_H_133" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOT_H_167" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOT_H_200" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOT_W_100" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOT_W_133" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOT_W_167" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOT_W_200" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OTNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OTRATE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OTRCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OT_CAR" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OT_DEPT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OT_EDATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OT_FOOD" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OT_FOOD1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OT_FOODH" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OT_FOODH1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OT_HRS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OT_ROTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RES" type="xs:boolean" />
+      <xs:element minOccurs="0" name="REST_EXP" type="xs:decimal" />
+      <xs:element minOccurs="0" name="REST_HRS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SALARY" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUM" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SYSCREAT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SYSCREAT1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SYS_OT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TOP_H_200" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOP_W_100" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOP_W_133" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOP_W_167" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOP_W_200" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOT_EXP" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOT_HOURS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOT_H_200" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOT_W_100" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOT_W_133" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOT_W_167" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TOT_W_200" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WOT_133" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WOT_166" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WOT_200" type="xs:decimal" />
+      <xs:element minOccurs="0" name="YYMM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OT" nillable="true" type="tns:OT" />
+  <xs:complexType name="ROTE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AFT_NIGHTAMT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ALLLATES" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ALLLATES1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ATTEND" nillable="true" type="tns:ArrayOfATTEND" />
+      <xs:element minOccurs="0" name="ATT_END" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BCOLOR" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BEF_NIGHTAMT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CALOT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DK_HRS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EARAWARD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FCOLOR" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FOODAMT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FOODAMT1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FOODAMTO" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FOODRULE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FOODSALCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HELF" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HOLI_MINS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MO_HRS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NIGHT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NIGHTAMT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NIGHTAMT1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NIGHTRULE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NIGHTSALCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOTFOOD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OFFTIME2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OFF_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ON_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OT_BEGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OVERDAY" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OVER_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RATE2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RES_B1_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RES_B2_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RES_B3_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RES_B4_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RES_B_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RES_E1_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RES_E2_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RES_E3_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RES_E4_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RES_E_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROTE1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROTENAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROTE_DISP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPECAMT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SPECAMT1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SPECAMT2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SPECRULE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPECSALCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STR_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WK_HRS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WK_HRSA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WK_HRSB" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WR_HRSA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WR_HRSB" type="xs:decimal" />
+      <xs:element minOccurs="0" name="YRREST_HRS" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ROTE" nillable="true" type="tns:ROTE" />
+  <xs:complexType name="ArrayOfATTEND">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ATTEND" nillable="true" type="tns:ATTEND" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfATTEND" nillable="true" type="tns:ArrayOfATTEND" />
+  <xs:complexType name="ArrayOfBASETTS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BASETTS" nillable="true" type="tns:BASETTS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBASETTS" nillable="true" type="tns:ArrayOfBASETTS" />
+  <xs:complexType name="ArrayOfContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contract" nillable="true" type="tns:Contract" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContract" nillable="true" type="tns:ArrayOfContract" />
+  <xs:complexType name="Contract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AlertDay" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AutoKey" type="xs:int" />
+      <xs:element minOccurs="0" name="BASE" nillable="true" type="tns:BASE" />
+      <xs:element minOccurs="0" name="ContractType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContractType1" nillable="true" type="tns:ContractType" />
+      <xs:element minOccurs="0" name="Ddate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KeyDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KeyMan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nobr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NotifyMessageGuid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkAdr" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contract" nillable="true" type="tns:Contract" />
+  <xs:complexType name="ContractType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlertDefaultDays" type="xs:int" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contract" nillable="true" type="tns:ArrayOfContract" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KeyDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KeyMan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MonthSpan" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContractType" nillable="true" type="tns:ContractType" />
+  <xs:complexType name="DEPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AMT" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BASETTS" nillable="true" type="tns:ArrayOfBASETTS" />
+      <xs:element minOccurs="0" name="DDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DEPT_GROUP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPT_TREE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D_ENAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D_NO_DISP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NEW_DEPT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OLD_DEPT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PNS" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RES" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DEPT" nillable="true" type="tns:DEPT" />
+  <xs:complexType name="DEPTS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BASETTS" nillable="true" type="tns:ArrayOfBASETTS" />
+      <xs:element minOccurs="0" name="CR_ACNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DR_ACNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D_NO_DISP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OLD_DEPT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBS" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DEPTS" nillable="true" type="tns:DEPTS" />
+  <xs:complexType name="HOLICD">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BASETTS" nillable="true" type="tns:ArrayOfBASETTS" />
+      <xs:element minOccurs="0" name="DATE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HOLI_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HOLI_CODE_DISP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HOLI_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOSET" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HOLICD" nillable="true" type="tns:HOLICD" />
+  <xs:complexType name="JOB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BASETTS" nillable="true" type="tns:ArrayOfBASETTS" />
+      <xs:element minOccurs="0" name="JOB1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JOBL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JOBLB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JOBLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JOB_DISP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JOB_ENAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JOB_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JOB_TREE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OLD_JOB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WORKAMT" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JOB" nillable="true" type="tns:JOB" />
+</xs:schema>
